@@ -51,6 +51,11 @@
     --light-gray: #5f6368;
     }
     
+    .schedule-room{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
     /* Dashboard stat cards text colors - black in light mode, white in dark mode */
     .stat-card small {
     color: #000000 !important;
@@ -2745,6 +2750,31 @@
     .shiny-download-btn i {
         font-size: 18px;
     }
+
+    /* Medium size variant for shiny download buttons */
+    .shiny-download-btn.medium {
+        padding: 16px 40px;
+        font-size: 17px;
+    }
+
+    /* Small size variant for shiny download buttons */
+    .shiny-download-btn.small {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+
+  /* Official Loading button variant (light green, shiny) */
+  .official-loading-btn {
+    background: linear-gradient(135deg, #9AE6A0 0%, #57C84A 100%);
+    color: #012a0c; /* dark green text for contrast */
+    box-shadow: 0 6px 18px rgba(89, 201, 103, 0.28);
+  }
+
+  .official-loading-btn:hover {
+    background: linear-gradient(135deg, #7ED957 0%, #49b035 100%);
+    box-shadow: 0 8px 24px rgba(89, 201, 103, 0.38);
+  }
+
     
     .emergency-modal-header {
     display: flex;
@@ -6933,7 +6963,7 @@
     
     <!-- Dashboard Section -->
     <div id="dashboard" class="content-section active">
-    <h1 class="page-title">Student Dashboard</h1>
+    <h1 class="page-title">Faculty Dashboard</h1>
     
     <div class="quick-actions">
     <a href="#" class="quick-action-btn" data-section="schedule">
@@ -6955,12 +6985,13 @@
     
     <div class="stats-grid">
     <div class="stat-card" onclick="openStatCardModal('units')" style="cursor: pointer;">
-    <div class="stat-value">14</div>
-    <div class="stat-label" style="color:var(--text-color)">Current Units</div>
+    <div class="stat-value">40</div>
+    <div class="stat-label" style="color:var(--text-color)">Section Counts</div>
     </div>
     <div class="stat-card" onclick="openStatCardModal('gwa')" style="cursor: pointer;">
-    <div class="stat-value">3.25</div>
-    <div class="stat-label" style="color:var(--text-color)">Current GWA</div>
+    <div class="stat-value">CC03</div>
+    <div class="stat-value">CC02</div>
+    <div class="stat-label" style="color:var(--text-color)">Course/Subject Counts</div>
     </div>
     <div class="stat-card" onclick="openStatCardModal('requirements')" style="cursor: pointer;">
     <div class="stat-value" id="pending-requirements-count">12</div>
@@ -8555,9 +8586,9 @@
     <!-- Subjects Section -->
     <div id="subjects" class="content-section">
     <div class="breadcrumb">
-    <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Academic Load</span>
+    <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Teaching Load</span>
     </div>
-    <h1 class="page-title">Academic Load</h1>
+    <h1 class="page-title">Teaching Load</h1>
     <div class="card">
     <div class="card-header">
     <h2 class="card-title">Registered Subjects / Courses (2025-2026, 4th Year, First Trimester)</h2>
@@ -8633,20 +8664,36 @@
     <div class="breadcrumb">
     <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Weekly Schedule</span>
     </div>
-    <h1 class="page-title">Weekly Schedule</h1>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+      <h1 class="page-title">Weekly Schedule</h1>
+      <button class="shiny-download-btn shining official-loading-btn small" id="official-loading-btn" style="position: relative; overflow: hidden;">
+        <i class="fas fa-download"></i>
+        Official Loading
+      </button>
+    </div>
     <div class="card">
     <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
     <h2 class="card-title">Weekly Schedule of Classes</h2>
     <div style="display: flex; gap: 15px; align-items: center;">
-    <!-- Legend - Right side only -->
-    <div style="display: flex; align-items: center; gap: 8px;">
-    <div style="width: 16px; height: 16px; background-color: #28a745; border-radius: 3px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></div>
-    <span style="font-size: 12px; font-weight: 500;">1 Official Loading</span>
-    </div>
-    <div style="display: flex; align-items: center; gap: 8px;">
-    <div style="width: 16px; height: 16px; background-color: #6c757d; border-radius: 3px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></div>
-    <span style="font-size: 12px; font-weight: 500;">Regular</span>
-    </div>
+      <!-- Legend: Official Loading + restored class types -->
+      <div class="schedule-legend" style="display:flex; gap:12px; align-items:center;">
+        <div style="display:flex; align-items:center; gap:6px;">
+          <div style="width:16px; height:16px; background-color: #9AE6A0; border-radius:3px; box-shadow:0 2px 4px rgba(0,0,0,0.1);"></div>
+          <span style="font-size:12px; font-weight:500;">Official Loading</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:6px;">
+          <div style="width:16px; height:16px; background-color: #6c757d; border-radius:3px; box-shadow:0 2px 4px rgba(0,0,0,0.1);"></div>
+          <span style="font-size:12px; font-weight:500;">Regular Class</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:6px;">
+          <div style="width:16px; height:16px; background-color: #f59e0b; border-radius:3px; box-shadow:0 2px 4px rgba(0,0,0,0.1);"></div>
+          <span style="font-size:12px; font-weight:500;">Special Class</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:6px;">
+          <div style="width:16px; height:16px; background-color: #7c3aed; border-radius:3px; box-shadow:0 2px 4px rgba(0,0,0,0.1);"></div>
+          <span style="font-size:12px; font-weight:500;">Laboratoryy Class</span>
+        </div>
+      </div>
     </div>
     </div>
     <div class="schedule-container">
@@ -8655,10 +8702,10 @@
     <div class="schedule-header" style="background-color: #f8f9fa; color: #000;">Time</div>
     <div class="schedule-header" style="background-color: #7c3aed; color: white;">Monday</div>
     <div class="schedule-header" style="background-color: #7c3aed; color: white;">Tuesday</div>
-    <div class="schedule-header" style="background-color: #7c3aed; color: white;">Wednesday</div>
+    <div class="schedule-header" style="background-color: #f59e0b; color: white;">Wednesday</div>
     <div class="schedule-header" style="background-color: #7c3aed; color: white;">Thursday</div>
-    <div class="schedule-header" style="background-color: #f59e0b; color: white;">Friday</div>
-    <div class="schedule-header" style="background-color: #7c3aed; color: white;">Saturday</div>
+    <div class="schedule-header" style="background-color: #7c3aed; color: white;">Friday</div>
+    <div class="schedule-header" style="background-color: #f59e0b; color: white;">Saturday</div>
     <div class="schedule-header" style="background-color: #7c3aed; color: white;">Sunday</div>
     
     <!-- Time Slots and Schedule Items -->
@@ -8730,7 +8777,10 @@
     <div class="schedule-item">
     <div class="schedule-subject">OLSA01</div>
     <div class="schedule-time">LFAU211M001</div>
-    <div class="schedule-room">B1.28    (120)</div>
+    <div class="schedule-room">
+      <span class="left-text">B1.28</span>
+      <span class="right-text" style="color: white;">(120)</span>
+    </div>
     </div>
     </div>
     <div class="schedule-cell"></div>
@@ -8738,10 +8788,13 @@
     <div class="schedule-cell">
     <div class="schedule-item">
     <div class="schedule-subject">OLSA01</div>
-    <div class="schedule-time">Sir. Joriz C</div>
-    <div class="schedule-room">B1.28</div>
-    </div>
-    </div>
+<div class="schedule-time">LFAU211M001</div>
+<div class="schedule-room">
+    <span class="left-text">B1.28</span>
+    <span class="right-text" style="color: white;">(120)</span>
+</div>
+</div>
+    </div>  
     <div class="schedule-cell"></div>
     
     <!-- 4:30 PM - 6:00 PM -->
@@ -8750,18 +8803,24 @@
     <div class="schedule-cell"></div>
     <div class="schedule-cell">
     <div class="schedule-item">
-    <div class="schedule-subject1">OLIPT2</div>
-    <div class="schedule-time">Sir. Joriz Chiong</div>
-    <div class="schedule-room">B1.28</div>
+    <div class="schedule-subject1">WS1</div>
+<div class="schedule-time">LFAU211M001</div>
+<div class="schedule-room">
+    <span class="left-text">B1.28</span>
+    <span class="right-text" style="color: white;">(120)</span>
+</div>
     </div>
     </div>
     <div class="schedule-cell"></div>
     <div class="schedule-cell"></div>
     <div class="schedule-cell">
     <div class="schedule-item">
-    <div class="schedule-subject1">OLIPT2</div>
-    <div class="schedule-time">Sir. Joriz Chiong</div>
-    <div class="schedule-room">B1.28</div>
+    <div class="schedule-subject1">OLSA01</div>
+<div class="schedule-time">LFAU211M001</div>
+<div class="schedule-room">
+    <span class="left-text">B1.28</span>
+    <span class="right-text" style="color: white;">(120)</span>
+</div>
     </div>
     </div>
     <div class="schedule-cell"></div>
@@ -9261,7 +9320,7 @@
     <!-- Clearance Section -->
     <div id="clearance" class="content-section">
     <div class="breadcrumb">
-    <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Clearance Tracker</span>
+    <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Clearance Faculty</span>
     </div>
     <h1 class="page-title">Clearance Status</h1>
     
@@ -11315,7 +11374,7 @@
     </table>
     
     <div class="document-footer">
-    <p style="color:var(--text-color)">Current Units: <strong>14</strong></p>
+    <p style="color:var(--text-color)">Section Counts: <strong>1</strong></p>
     <p>Status: <strong>Officially Registered</strong></p>
     <p>Date Registered: <strong>August 13, 2025</strong></p>
     </div>
@@ -11794,7 +11853,7 @@
         // Set content based on card type
         const cardContents = {
             'units': {
-                title: '<i class="fas fa-book"></i> Current Units',
+                title: '<i class="fas fa-book"></i> Section Counts',
                 content: `
                     <div style="text-align: center; margin-bottom: 30px;">
                         <div style="font-size: 64px; font-weight: bold; color: var(--primary);">14</div>
