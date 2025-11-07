@@ -6872,22 +6872,22 @@
     
     <div class="nav-category">ACADEMICS</div>
     <li class="nav-item" data-section="profile">
-    <a href="#"><i class="fas fa-user-graduate"></i> Student Profile</a>
+    <a href="#"><i class="fas fa-user-graduate"></i> Faculty Profile</a>
     </li>
     <li class="nav-item" data-section="subjects">
-    <a href="#"><i class="fas fa-book"></i> Academic Load</a>
+    <a href="#"><i class="fas fa-book"></i> Official Class roster</a>
     </li>
     <li class="nav-item" data-section="schedule">
-    <a href="#"><i class="fas fa-calendar-alt"></i> Weekly Schedule</a>
+    <a href="#"><i class="fas fa-calendar-alt"></i> Weekly Schedule of Classes</a>
     </li>
     <li class="nav-item" data-section="grades">
-    <a href="#"><i class="fas fa-chart-bar"></i> Academic Grades</a>
+    <a href="#"><i class="fas fa-chart-bar"></i> ECR and eGrades</a>
     </li>
     <li class="nav-item" data-section="prospectus">
     <a href="#"><i class="fas fa-book-open"></i> Curriculum Prospectus</a>
     </li>
     <li class="nav-item" data-section="digital-credentials">
-    <a href="#"><i class="fas fa-certificate"></i> Digital Credentials</a>
+    <a href="#"><i class="fas fa-certificate"></i> Retention Monitor</a>
     </li>
     
     <div class="nav-category">ADMINISTRATIVE SERVICES</div>
@@ -6896,7 +6896,10 @@
     <span class="notification-badge" id="requirements-badge">12</span>
     </li>
     <li class="nav-item" data-section="account">
-    <a href="#"><i class="fas fa-money-bill-wave"></i> Account & Settlements</a>
+    <a href="#"><i class="fas fa-money-bill-wave"></i> Availability & Subject Preferences</a>
+    </li>
+    <li class="nav-item" data-section="NEW">
+    <a href="#"><i class="fas fa-plus-circle"></i>Events/Training/Services</a>
     </li>
     <li class="nav-item" data-section="clearance">
     <a href="#"><i class="fas fa-file-invoice"></i> Clearance Tracker</a>
@@ -6984,251 +6987,29 @@
     </div>
     
     <div class="stats-grid">
-    <div class="stat-card" onclick="openStatCardModal('units')" style="cursor: pointer;">
+    <div class="stat-card" onclick="openStatCardModal('section-counts')" style="cursor: pointer;">
     <div class="stat-value">40</div>
     <div class="stat-label" style="color:var(--text-color)">Section Counts</div>
     </div>
-    <div class="stat-card" onclick="openStatCardModal('gwa')" style="cursor: pointer;">
-    <div class="stat-value">CC03</div>
-    <div class="stat-value">CC02</div>
+    
+    <div class="stat-card" onclick="openStatCardModal('course-subject-counts')" style="cursor: pointer;">
+    <div class="stat-value">15</div>
     <div class="stat-label" style="color:var(--text-color)">Course/Subject Counts</div>
     </div>
-    <div class="stat-card" onclick="openStatCardModal('requirements')" style="cursor: pointer;">
-    <div class="stat-value" id="pending-requirements-count">12</div>
-    <div class="stat-label" style="color:var(--text-color)"> Pending Requirements</div>
-    </div>
-    <div class="stat-card" onclick="openStatCardModal('balance')" style="cursor: pointer;">
-    <div class="stat-value">₱ 0.00
     
-    </div>
-    <div class="stat-label" style="color:var(--text-color)">Balance Due</div>
+    <div class="stat-card" onclick="openStatCardModal('campus-birth-load')" style="cursor: pointer;">
+    <div class="stat-value">350</div>
+    <div class="stat-label" style="color:var(--text-color)">Campus Bith Load</div>
     </div>
     
-    <div class="stat-card" id="ojt-summary-card" onclick="openStatCardModal('ojt')" style="cursor: pointer;">
-    <div class="stat-value" id="ojt-summary">
-    <div style="display:flex;flex-direction:column;gap:6px;">
-    
-    <div style="display:flex;align-items:center;">
-    <span style="color:var(--text-color);font-size:20px;line-height:1.4;">ICCT Colleges INC. Antipolo Campus  <hr> </span>
-    </div>
-    <div style="display:flex;align-items:center;">
-    <small style="color:var(--text-color);font-size:13px;line-height:1.3;">ICCT Bldg,. Gen. Luna Rd. <br>cor. Ressurection St.,
-    <br>Bgy. San Roque, Antipolo City, Rizal
-    </small>
-    </div>
-    </div>
+    <div class="stat-card" onclick="openStatCardModal('length-services')" style="cursor: pointer;">
+    <div class="stat-value">5 Years</div>
+    <div class="stat-label" style="color:var(--text-color)">Length & services</div>
     </div>
     
-    <div class="stat-label" style="color:var(--text-color)">OJT/Intern</div>
-    </div>                
-    
-    <div class="stat-card" id="integration-summary-card" onclick="openStatCardModal('integration')" style="cursor: pointer;">
-    <div class="stat-value" id="integration-summary">
-    <div style="display:flex;flex-direction:column;gap:6px;">
-    <div style="display:flex;align-items:center;">
-    <span style="color:var(--text-color);font-size:18px;line-height:1.4;">Integration Activities</span>
-    </div>
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;">
-    <small style="color:var(--text-color);font-size:15px;">Status:</small>
-    <i class="fas fa-check-circle" style="color:var(--success)"></i>
-    </div>
-    </div>
-    </div>
-    <div class="stat-label" style="color:var(--text-color)">Integration</div>
-    </div>
-    
-    <div class="stat-card" id="scholarship-summary-card" onclick="openStatCardModal('scholarship')" style="cursor: pointer;">
-    <div class="stat-value" id="scholarship-summary">
-    <div style="display:flex;flex-direction:column;gap:6px;">
-    <div style="display:flex;align-items:center;color:var(--text-color);">
-    <span style="text-align:center;font-size:23px;line-height:1.4;">Ynares Youth  (2022)  <hr></span>
-    </div>
-    </div>
-    </div>
-    <div class="stat-label" style="color:var(--text-color)">Scholarship(s)</div>
-    </div>                                             
-    
-    <div class="stat-card" id="uniforms-summary-card" onclick="openStatCardModal('uniforms')" style="cursor: pointer;">
-    <div class="stat-value" id="uniforms-summary">
-    <div style="display:flex;flex-direction:column;gap:6px;">
-    <div data-uniform="BSIT" style="display:flex;justify-content:space-between;align-items:center;">
-    <small style="color:var(--text-color); font-size:20px;">BSIT Uniform</small>
-    <i class="fas fa-check-circle" style="color:var(--success)"></i>
-    </div>
-    <div data-uniform="COLLEGE P.E" style="display:flex;justify-content:space-between;align-items:center;">
-    <small style="color:var(--text-color);font-size:20px;">College P.E.</small>
-    <i class="fas fa-check-circle" style="color:var(--success)"></i>
-    </div>
-    <div data-uniform="NSTP" style="display:flex;justify-content:space-between;align-items:center;">
-    <small style="color:var(--text-color);font-size:20px;">NSTP Uniform</small>
-    <i class="fas fa-check-circle" style="color:var(--success)"></i>
-    </div>
-    </div>
-    </div>
-    <div class="stat-label" style="color:var(--text-color)">Uniform Compliance <command type="command" label="" icon="" /></div>
-    </div>
-    
-    <div class="stat-card" id="seminars-summary-card" onclick="openStatCardModal('seminars')" style="cursor: pointer;">
-    <div class="stat-value" id="seminars-summary">
-    <div style="display:flex;flex-direction:column;gap:6px;">
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-    <small style="color:var(--text-color); font-size:20px;">Orientation Seminar</small>
-    <i class="fas fa-check-circle" style="color:var(--success)"></i>
-    </div>
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-    <small style="color:var(--text-color);font-size:20px;">Industry Visit</small>
-    <i class="fas fa-check-circle" style="color:var(--success)"></i>
-    </div>
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-    <small style="color:var(--text-color); font-size:20px;">Historical Field Trip</small>
-    <i class="fas fa-times-circle" style="color:var(--danger)"></i>
-    </div>
-    </div>
-    </div>
-    <div class="stat-label" style="color:var(--text-color)">Seminars/Fieldtrips</div>
-    </div>
-    
-    <div class="stat-card" id="attendance-summary-card" onclick="openStatCardModal('attendance')" style="cursor: pointer;">
-    <div class="stat-value" id="attendance-summary">
-    <div style="display:flex;flex-direction:column;gap:6px;">
-    <div style="margin-bottom:8px">
-    <small style="color:var(--text-color);font-weight:500;font-size:19px;"><b>4th Year (1st Trime)</b></small>
-    </div>
-    
-    
-    <div style="display:flex;justify-content:center;align-items:center;">
-    <small style="color:red;font-weight:600;">Absences</small>
-    </div>
-    
-    <div style="display:flex;justify-content:space-around;align-items:center;margin-top:10px;padding-top:10px;border-top:1px solid var(--border-color);">
-    <div style="text-align:center;">
-    <small style="color:var(--text-color);display:block;margin-bottom:4px;">Pre</small>
-    <span style="color:var(--text-color);font-weight:600;"></span> <br><hr>
-    </div>
-    <div style="text-align:center;">
-    <small style="color:var(--text-color);display:block;margin-bottom:4px;">Mid</small>
-    <span style="color:var(--text-color);font-weight:600;"></span><br><hr>
-    </div>
-    <div style="text-align:center;">
-    <small style="color:var(--text-color);display:block;margin-bottom:4px;">Fin</small>
-    <span style="color:var(--danger);font-weight:600;">2<hr></span>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div class="stat-label"style="color:var(--text-color)">Retention</div>
-    </div>
-    
-    <div class="stat-card small-card" onclick="openStatCardModal('radiology')" style="cursor: pointer;">
-    <div class="stat-value">
-    <div style="display:flex;flex-direction:column;gap:6px;">
-    <div style="margin-bottom:8px">
-    <small style="color:var(--text-color);font-weight:400;font-size:19px;"><b>Radiology Report</b></small>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:4px;">
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-    <small style="color:var(--text-color);font-weight:400;font-size:15px;">1st Yr</small>
-    <div style="display:flex;align-items:center;gap:4px;">
-    <small style="color:var(--text-color);font-weight:400; font-size:15px;">Sep 5, 2022<hr></small>
-    <i class="fas fa-check-circle" style="color:var(--success)"></i>
-    </div>
-    </div>
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-    <small style="color:var(--text-color);font-weight:400;font-size:15px;">2nd Yr</small>
-    <div style="display:flex;align-items:center;gap:4px;">
-    <small style="color:var(--text-color);font-weight:400;font-size:15px;">Aug 20, 2023<hr></small>
-    <i class="fas fa-check-circle" style="color:var(--success)"></i>
-    </div>
-    </div>
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-    <small style="color:var(--text-color);font-weight:400;font-size:15px;">3rd Yr</small>
-    <div style="display:flex;align-items:center;gap:4px;">
-    <small style="color:var(--text-color);font-weight:400;font-size:15px;">Sep 10, 2024 <hr></small>
-    <i class="fas fa-check-circle" style="color:var(--success)"></i>
-    </div>
-    </div>
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-    <small style="color:var(--text-color);font-weight:400;font-size:15px;">4th Yr</small>
-    <div style="display:flex;align-items:center;gap:4px;">
-    <small style="color:var(--text-color);font-weight:400;font-size:15px;">Oct 15, 2025<hr></small>
-    <i class="fas fa-check-circle" style="color:var(--success)"></i>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div class="stat-label" style="color:var(--text-color)">Wellness & Care</div>
-    </div>
-    
-    <div class="stat-card" id="drug-test-summary-card" onclick="openStatCardModal('drugtest')" style="cursor: pointer;">
-    <div class="stat-value" id="drug-test-summary">
-    <div style="display:flex;flex-direction:column;gap:6px;">
-    <div style="margin-bottom:8px">
-    <small style="color:var(--text-color);font-weight:400;font-size:19px;"><b>Substance Screening</b></small>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:4px;">
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-    <small style="color:var(--text-color);font-weight:400;font-size:15px;">1st Yr</small>
-    <div style="display:flex;align-items:center;gap:4px;">
-    <small style="color:var(--text-color);font-weight:400;font-size:15px;">Sep 15,2022 <hr></small>
-    <i class="fas fa-check-circle" style="color:var(--success)"></i>
-    </div>
-    </div>
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-    <small style="color:var(--text-color);font-weight:400;font-size:15px;">2nd Yr</small>
-    <div style="display:flex;align-items:center;gap:4px;">
-    <small style="color:var(--text-color);font-weight:400;font-size:15px;">Sep 18, 2023
-    <hr></small>
-    <i class="fas fa-check-circle" style="color:var(--success)"></i>
-    </div>
-    </div>
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-    <small style="color:var(--text-color);font-weight:400;font-size:15px;">3rd Yr</small>
-    <div style="display:flex;align-items:center;gap:4px;">
-    <small style="color:var(--text-color);font-weight:400;font-size:15px;">Sep 18, 2023<hr style="color:var(--gray)"></small>
-    <i class="fas fa-check-circle" style="color:var(--success)"></i>
-    </div>
-    </div>
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-    <small style="color:var(--text-color);font-weight:400;font-size:15px;">4th Yr</small>
-    <div style="display:flex;align-items:center;gap:4px;">
-    <small style="color:var(--text-color);font-weight:400;font-size:15px;">Sep 16, 2025<hr></small>
-    <i class="fas fa-check-circle" style="color:var(--success)"></i>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div class="stat-label" style="color:var(--text-color)">Wellness & Care</div>
-    </div>
-    
-    <div class="stat-card" id="academic-status-card" onclick="openStatCardModal('academic-status')" style="cursor: pointer;">
-    <div class="stat-value" id="academic-status-summary">
-    <div style="display:flex;flex-direction:column;gap:6px;">
-    <div style="margin-bottom:8px">
-    <small style="color:var(--text-color);font-weight:500;font-size:19px;"><b>3rd Year (3rd Trime)</b></small>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:4px;">
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-    <small style="color:var(--text-color);font-weight:400;font-size:15px;">Passed</small>
-    <span style="color:var(--success);font-weight:400;font-size:16px;font-size:15px;">2<hr></span>
-    </div>
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-    <small style="color:var(--text-color);font-weight:400;font-size:15px">INC</small>
-    <span style="color:var(--danger);font-weight:400;font-size:16px;"></span>
-    </div>
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-    <small style="color:var(--text-color);font-weight:400;font-size:15px;">Dropped</small>
-    <span style="color:var(--danger);font-weight:400;font-size:16px;font-size:15px;">2<hr></span>
-    </div>
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-    <small style="color:var(--text-color);font-weight:400;font-size:15px;">FAILED</small>
-    <span style="color:var(--danger);font-weight:400;font-size:15px;"></span>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div class="stat-label" style="color:var(--text-color)">Academic Status</div>
+    <div class="stat-card" onclick="openStatCardModal('ecr-upload')" style="cursor: pointer;">
+    <div class="stat-value">12</div>
+    <div class="stat-label" style="color:var(--text-color)">Ecr Upload</div>
     </div>
     </div>
     
@@ -7847,44 +7628,110 @@
     </div>
     
     <!-- Digital Credentials Section -->
-    <div id="digital-credentials" class="content-section">
-    <div class="breadcrumb">
-    <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Digital Credentials</span>
-    </div>
-    <h1 class="page-title">Digital Credentials</h1>
-    
-    <div class="digital-credentials-container">
-    <div class="credentials-definition-box">
-    <div class="credentials-icon">
-    <i class="fas fa-certificate"></i>
-    </div>
-    <h2>What are Digital Credentials?</h2>
-    <p class="definition-text">
-    Digital credentials are secure, verifiable electronic documents that certify a student's academic achievements, qualifications, and skills. These credentials are tamper-proof, easily shareable, and can be instantly verified by employers, educational institutions, or other organizations worldwide.
-    </p>
-    <div class="credentials-features">
-    <div class="feature-item">
-    <i class="fas fa-shield-alt"></i>
-    <span>Secure & Verified</span>
-    </div>
-    <div class="feature-item">
-    <i class="fas fa-share-alt"></i>
-    <span>Easy to Share</span>
-    </div>
-    <div class="feature-item">
-    <i class="fas fa-check-circle"></i>
-    <span>Instantly Verifiable</span>
-    </div>
-    <div class="feature-item">
-    <i class="fas fa-globe"></i>
-    <span>Globally Recognized</span>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    
-    <!-- Profile Section -->
+<div id="digital-credentials" class="content-section">
+<div class="breadcrumb">
+<a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Retention Monitor</span>
+</div>
+<h1 class="page-title">Retention Monitor</h1>
+<p style="color: var(--gray); margin-bottom: 30px;">Monitor student absences and reasons per section for retention support.</p>
+
+<!-- Summary Cards -->
+<div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; margin-bottom: 30px;">
+<div style="background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%); border-radius: var(--border-radius); padding: 20px; text-align: center; box-shadow: var(--box-shadow);">
+<h3 style="font-size: 14px; margin-bottom: 10px; color: #333; font-weight: 600;">Total Absences</h3>
+<div style="font-size: 32px; font-weight: 700; color: #333;">5</div>
+</div>
+<div style="background: linear-gradient(135deg, #cfe2ff 0%, #9ec5fe 100%); border-radius: var(--border-radius); padding: 20px; text-align: center; box-shadow: var(--box-shadow);">
+<h3 style="font-size: 14px; margin-bottom: 10px; color: #333; font-weight: 600;">Health</h3>
+<div style="font-size: 32px; font-weight: 700; color: #333;">1</div>
+</div>
+<div style="background: linear-gradient(135deg, #fff3cd 0%, #ffe69c 100%); border-radius: var(--border-radius); padding: 20px; text-align: center; box-shadow: var(--box-shadow);">
+<h3 style="font-size: 14px; margin-bottom: 10px; color: #333; font-weight: 600;">Family</h3>
+<div style="font-size: 32px; font-weight: 700; color: #333;">1</div>
+</div>
+<div style="background: linear-gradient(135deg, #e0cffc 0%, #c29ffa 100%); border-radius: var(--border-radius); padding: 20px; text-align: center; box-shadow: var(--box-shadow);">
+<h3 style="font-size: 14px; margin-bottom: 10px; color: #333; font-weight: 600;">Personal</h3>
+<div style="font-size: 32px; font-weight: 700; color: #333;">1</div>
+</div>
+<div style="background: linear-gradient(135deg, #d1e7dd 0%, #a3cfbb 100%); border-radius: var(--border-radius); padding: 20px; text-align: center; box-shadow: var(--box-shadow);">
+<h3 style="font-size: 14px; margin-bottom: 10px; color: #333; font-weight: 600;">Financial</h3>
+<div style="font-size: 32px; font-weight: 700; color: #333;">2</div>
+</div>
+</div>
+
+<!-- Filters -->
+<div style="display: flex; gap: 15px; align-items: center; margin-bottom: 20px; flex-wrap: wrap;">
+<label style="font-weight: 600; color: var(--text-color);">Filter by Section:</label>
+<select style="padding: 8px 12px; border: 1px solid var(--border-color); border-radius: var(--border-radius); background: var(--card-bg); color: var(--text-color); font-size: 14px;">
+<option>All Sections</option>
+<option>BSIT-3A</option>
+<option>BSIT-3B</option>
+</select>
+
+<label style="font-weight: 600; color: var(--text-color);">Reason:</label>
+<select style="padding: 8px 12px; border: 1px solid var(--border-color); border-radius: var(--border-radius); background: var(--card-bg); color: var(--text-color); font-size: 14px;">
+<option>All</option>
+<option>Health</option>
+<option>Family</option>
+<option>Personal</option>
+<option>Financial</option>
+</select>
+
+<button style="padding: 8px 16px; background: var(--light-gray); border: 1px solid var(--border-color); border-radius: var(--border-radius); cursor: pointer; font-size: 14px; color: var(--text-color);">Clear</button>
+</div>
+
+<!-- Table -->
+<div style="background: var(--card-bg); border-radius: var(--border-radius); padding: 0; box-shadow: var(--box-shadow); border: 1px solid var(--border-color); overflow: hidden;">
+<table style="width: 100%; border-collapse: collapse;">
+<thead style="background: #4E65FF; color: white;">
+<tr>
+<th style="padding: 15px; text-align: left; font-weight: 600; font-size: 14px;">Date</th>
+<th style="padding: 15px; text-align: left; font-weight: 600; font-size: 14px;">Student</th>
+<th style="padding: 15px; text-align: left; font-weight: 600; font-size: 14px;">Section</th>
+<th style="padding: 15px; text-align: left; font-weight: 600; font-size: 14px;">Subject</th>
+<th style="padding: 15px; text-align: left; font-weight: 600; font-size: 14px;">Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr style="transition: background 0.3s;">
+<td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-color);">2025-09-18</td>
+<td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-color);">Juan Dela Cruz</td>
+<td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-color);">BSIT-3A</td>
+<td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-color);">IT 201 – Database Systems</td>
+<td style="padding: 15px; border-bottom: 1px solid var(--border-color);"><a href="#" style="color: #0066CC; text-decoration: none; font-weight: 500;">Health Issues</a></td>
+</tr>
+<tr>
+<td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-color);">2025-09-20</td>
+<td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-color);">Maria Santos</td>
+<td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-color);">BSIT-3A</td>
+<td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-color);">CS 105 – Web Programming</td>
+<td style="padding: 15px; border-bottom: 1px solid var(--border-color);"><a href="#" style="color: #00994D; text-decoration: none; font-weight: 500;">Financial Issues</a></td>
+</tr>
+<tr>
+<td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-color);">2025-09-20</td>
+<td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-color);">Pedro Lopez</td>
+<td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-color);">BSIT-3B</td>
+<td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-color);">CS 105 – Web Programming</td>
+<td style="padding: 15px; border-bottom: 1px solid var(--border-color);"><a href="#" style="color: #CC6600; text-decoration: none; font-weight: 500;">Family Concerns</a></td>
+</tr>
+<tr>
+<td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-color);">2025-09-21</td>
+<td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-color);">Ana Cruz</td>
+<td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-color);">BSIT-3B</td>
+<td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-color);">IT 201 – Database Systems</td>
+<td style="padding: 15px; border-bottom: 1px solid var(--border-color);"><a href="#" style="color: #00994D; text-decoration: none; font-weight: 500;">Financial Issues</a></td>
+</tr>
+<tr>
+<td style="padding: 15px; color: var(--text-color);">2025-09-21</td>
+<td style="padding: 15px; color: var(--text-color);">Lito Reyes</td>
+<td style="padding: 15px; color: var(--text-color);">BSIT-3A</td>
+<td style="padding: 15px; color: var(--text-color);">IT 201 – Database Systems</td>
+<td style="padding: 15px;"><a href="#" style="color: #7B3FF2; text-decoration: none; font-weight: 500;">Personal Reasons</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>    <!-- Profile Section -->
     <div id="profile" class="content-section">
     <div class="breadcrumb">
     <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Student Profile</span>
@@ -8876,94 +8723,171 @@
     </div>
     </div>
     
-    <!-- Grades Section -->
-    <div id="grades" class="content-section">
-    <div class="breadcrumb">
-    <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Academic Grades</span>
-    </div>
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-    <h1 class="page-title" style="margin: 0;">Academic Grades</h1>
-    <button class="doc-btn medium" id="grades-download-btn" style="width: auto; position: relative; overflow: hidden;">
-      <i class="fas fa-download"></i> Download for Free
-      <span class="shimmer"></span>
-    </button>
-    </div>
-    <div class="card">
-    <div class="card-header">
-    <h2 class="card-title">Summary of Grades</h2>
-    </div>
-    <div class="table-container">
-    <table>
-    <thead>
-    <tr>
-    <th>Curriculum<br> Year</th>
-    <th>Academic Term</th>
-    <th>Course/<br>Subject Code</th>
-    <th>Course/<br>Subject Title</th>
-    <th>Professor</th>
-    <th>Prelim</th>
-    <th>Midterm</th>
-    <th>Final</th>
-    <th>Status</th>
-    <th>Remarks</th>
-    </tr>
-    <thead>
-    <tbody>
-    <tr>
-    <td>3rd Year</td>
-    <td>3rd Trime</td>
-    <td>OLS01</td>
-    <td>Applications Development and <br>Emerging Technologies</td>
-    <td>Chiong, Joriz</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td style="color: var(--danger); font-weight: 600">Dropped</td>
-    <td style="color: var(--danger); font-weight: 600">Due November 16, 2025</td>
-    </tr>
-    <tr>
-    <td>3rd Year</td>
-    <td>3rd Trime</td>
-    <td>OLIPT2</td>
-    <td>Information Assurance and Security 2</td>
-    <td>Chiong, Joriz</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td style="color: var(--danger); font-weight: 600;">Dropped</td>
-    <td style="color: var(--danger); font-weight: 600;">Due on November 16, 2025</td>
-    </tr>
-    <tr>
-    <td>3rd Year</td>
-    <td>3rd Trime</td>
-    <td>CPPROG1</td>
-    <td>Event Driven Programming</td>
-    <td>Chiong, Joriz</td>
-    <td><span class="grade grade-good">2.25</span></td>
-    <td><span class="grade grade-good">2.50</span></td>
-    <td><span class="grade grade-good">2.50</span></td>
-    <td style="color: var(--success); font-weight: 600;">Passed</td>
-    <td>-</td>
-    </tr>
-    <tr>
-    <td>3rd Year</td>
-    <td>3rd Trime</td>
-    <td>OLCISCO</td>
-    <td>Cisco Networking 2</td>
-    <td>Chiong, Joriz</td>
-    <td>-</td>
-    <td><span class="grade grade-excellent">2.00</span></td>
-    <td><span class="grade grade-excellent">2.00</span></td>
-    <td style="color: var(--success); font-weight: 600;">Passed</td>
-    <td>-</td>
-    </tr>
-    </tbody>
-    </table>
-    </div>
-    </div>
-    </div>
-    
-    <!-- Uniforms Section -->
+<!-- Grades Section -->
+<div id="grades" class="content-section">
+<div class="breadcrumb">
+<a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>eCR Upload & Monitoring</span>
+</div>
+<h1 class="page-title">eCR Upload & Monitoring</h1>
+<p style="color: var(--gray); margin-bottom: 30px;">e-Grades</p>
+
+<!-- Academic Year Selector -->
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+<select style="padding: 10px 15px; border: 1px solid var(--border-color); border-radius: var(--border-radius); background: var(--card-bg); color: var(--text-color); font-size: 16px; font-weight: 600;">
+<option>AY 2025–2026 • 1st Trim</option>
+<option>AY 2024–2025 • 3rd Trim</option>
+<option>AY 2024–2025 • 2nd Trim</option>
+</select>
+<div style="display: flex; gap: 10px;">
+<input type="text" placeholder="Search course, section, file..." style="padding: 10px 15px; border: 1px solid var(--border-color); border-radius: var(--border-radius); background: var(--card-bg); color: var(--text-color); width: 300px;">
+<button style="padding: 10px 20px; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); cursor: pointer; color: var(--text-color);">Light</button>
+<button style="padding: 10px 20px; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); cursor: pointer; color: var(--text-color);">Dark</button>
+<button style="padding: 10px 20px; background: var(--primary); border: none; border-radius: var(--border-radius); cursor: pointer; color: white; font-weight: 600;">Cool</button>
+</div>
+</div>
+
+<!-- Main Container -->
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+
+<!-- Upload Section -->
+<div style="background: var(--card-bg); border-radius: var(--border-radius); padding: 25px; box-shadow: var(--box-shadow); border: 1px solid var(--border-color);">
+<h2 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: var(--text-color);">Upload eCR (Drag & Drop or Browse)</h2>
+
+<div style="border: 2px dashed var(--border-color); border-radius: var(--border-radius); padding: 60px 40px; text-align: center; background: rgba(0, 0, 0, 0.02); cursor: pointer;">
+<i class="fas fa-cloud-upload-alt" style="font-size: 48px; color: var(--primary); margin-bottom: 15px; display: block;"></i>
+<h3 style="font-size: 18px; margin-bottom: 10px; color: var(--text-color);">Drag & drop your eCR files here</h3>
+<p style="color: var(--gray); font-size: 14px; margin-bottom: 15px;">Accepted: .xlsm, .xlsx, .csv, .pdf • You may upload multiple files</p>
+<button style="background: var(--primary); color: white; border: none; padding: 12px 24px; border-radius: var(--border-radius); cursor: pointer; font-size: 14px; font-weight: 600; margin-top: 15px;">Browse Files</button>
+</div>
+
+<div style="background: rgba(30, 58, 95, 0.05); border-left: 4px solid var(--primary); padding: 15px; border-radius: 4px; margin-top: 20px;">
+<small style="color: var(--text-color); font-size: 13px;"><strong>Tip:</strong> Filename format helps auto-tag course/section: <span style="color: var(--primary); font-weight: 600;">AY_Term_Dept_Campus_Faculty_Course_Section_Day_Time.xlsm</span></small>
+</div>
+</div>
+
+<!-- Summary Section -->
+<div style="background: var(--card-bg); border-radius: var(--border-radius); padding: 25px; box-shadow: var(--box-shadow); border: 1px solid var(--border-color);">
+<h2 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: var(--text-color);">Summary</h2>
+
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 20px;">
+<div style="background: rgba(0, 0, 0, 0.02); padding: 15px; border-radius: var(--border-radius); text-align: center;">
+<div style="font-size: 24px; font-weight: 700; color: var(--text-color); margin-bottom: 5px;">4</div>
+<div style="font-size: 12px; color: var(--gray);">Total</div>
+</div>
+<div style="background: rgba(0, 0, 0, 0.02); padding: 15px; border-radius: var(--border-radius); text-align: center;">
+<div style="font-size: 24px; font-weight: 700; color: var(--text-color); margin-bottom: 5px;">1</div>
+<div style="font-size: 12px; color: var(--gray);">Pending</div>
+</div>
+<div style="background: rgba(0, 0, 0, 0.02); padding: 15px; border-radius: var(--border-radius); text-align: center;">
+<div style="font-size: 24px; font-weight: 700; color: var(--text-color); margin-bottom: 5px;">1</div>
+<div style="font-size: 12px; color: var(--gray);">Submitted</div>
+</div>
+<div style="background: rgba(0, 0, 0, 0.02); padding: 15px; border-radius: var(--border-radius); text-align: center;">
+<div style="font-size: 24px; font-weight: 700; color: var(--text-color); margin-bottom: 5px;">1</div>
+<div style="font-size: 12px; color: var(--gray);">Approved</div>
+</div>
+</div>
+
+<div style="margin-bottom: 20px;">
+<div style="display: flex; gap: 15px; align-items: center; margin-bottom: 15px; flex-wrap: wrap;">
+<label style="font-weight: 600; color: var(--text-color); font-size: 14px;">Filter: All statuses</label>
+<div style="display: flex; gap: 10px;">
+<button style="padding: 8px 16px; background: var(--success); color: white; border: none; border-radius: var(--border-radius); font-size: 13px; font-weight: 600; cursor: pointer;">Submit Selected</button>
+<button style="padding: 8px 16px; background: #d4ff00; color: #333; border: none; border-radius: var(--border-radius); font-size: 13px; font-weight: 600; cursor: pointer;">Withdraw Selected</button>
+<button style="padding: 8px 16px; background: #ff9999; color: white; border: none; border-radius: var(--border-radius); font-size: 13px; font-weight: 600; cursor: pointer;">Delete Selected</button>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Uploads Table -->
+<div style="background: var(--card-bg); border-radius: var(--border-radius); padding: 25px; box-shadow: var(--box-shadow); border: 1px solid var(--border-color);">
+<h2 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: var(--text-color);">My eCR Uploads</h2>
+
+<div style="overflow-x: auto;">
+<table style="width: 100%; border-collapse: collapse;">
+<thead>
+<tr style="background: var(--table-header-bg);">
+<th style="padding: 12px; text-align: left; font-size: 13px; font-weight: 600; color: var(--gray); border-bottom: 1px solid var(--border-color);"><input type="checkbox"></th>
+<th style="padding: 12px; text-align: left; font-size: 13px; font-weight: 600; color: var(--gray); border-bottom: 1px solid var(--border-color);">Filename</th>
+<th style="padding: 12px; text-align: left; font-size: 13px; font-weight: 600; color: var(--gray); border-bottom: 1px solid var(--border-color);">eCR ver</th>
+<th style="padding: 12px; text-align: left; font-size: 13px; font-weight: 600; color: var(--gray); border-bottom: 1px solid var(--border-color);">Course</th>
+<th style="padding: 12px; text-align: left; font-size: 13px; font-weight: 600; color: var(--gray); border-bottom: 1px solid var(--border-color);">Section</th>
+<th style="padding: 12px; text-align: left; font-size: 13px; font-weight: 600; color: var(--gray); border-bottom: 1px solid var(--border-color);">Uploaded</th>
+<th style="padding: 12px; text-align: left; font-size: 13px; font-weight: 600; color: var(--gray); border-bottom: 1px solid var(--border-color);">Status</th>
+<th style="padding: 12px; text-align: left; font-size: 13px; font-weight: 600; color: var(--gray); border-bottom: 1px solid var(--border-color);">Reviewer</th>
+<th style="padding: 12px; text-align: left; font-size: 13px; font-weight: 600; color: var(--gray); border-bottom: 1px solid var(--border-color);">Staff Name</th>
+<th style="padding: 12px; text-align: left; font-size: 13px; font-weight: 600; color: var(--gray); border-bottom: 1px solid var(--border-color);">Notes</th>
+<th style="padding: 12px; text-align: left; font-size: 13px; font-weight: 600; color: var(--gray); border-bottom: 1px solid var(--border-color);">Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr style="transition: background 0.3s;">
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);"><input type="checkbox"></td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">2025T1_CS_ANTIPOLO_CHIONG_JORIZ D_IPT2_OLCC02_MTH_18-21_eCRv18.xlsm</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">v18</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">MTH</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">18-21</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">Nov 05, 2025, 01:40 PM</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px;"><span style="padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; background: rgba(40, 167, 69, 0.1); color: var(--success);">Submitted</span></td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">—</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">—</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">—</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px;">
+<button style="padding: 4px 12px; background: #d4ff00; color: #333; border: none; border-radius: 4px; font-size: 11px; font-weight: 600; cursor: pointer;">Withdraw</button>
+</td>
+</tr>
+<tr>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);"><input type="checkbox"></td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">2025T1_CS_ANTIPOLO_CRUZ_MARIA_SOFApP_OLCC02_TF_15-16_eCRv18.xlsm</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">v18</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">TF</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">15-16</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">Nov 02, 2025, 01:40 PM</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px;"><span style="padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; background: rgba(255, 193, 7, 0.1); color: #856404;">Pending</span></td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">—</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">—</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">—</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; display: flex; gap: 8px;">
+<button style="padding: 4px 12px; background: var(--success); color: white; border: none; border-radius: 4px; font-size: 11px; font-weight: 600; cursor: pointer;">Submit</button>
+<button style="padding: 4px 12px; background: #ff9999; color: white; border: none; border-radius: 4px; font-size: 11px; font-weight: 600; cursor: pointer;">Delete</button>
+</td>
+</tr>
+<tr>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);"><input type="checkbox"></td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">2025T1_CS_ANTIPOLO_DIMAANO_R_ALG1_OLCC01_WS_19-21.xlsx</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">—</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">OLCC01</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">WS</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">Nov 06, 2025, 06:28 AM</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px;"><span style="padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; background: rgba(40, 167, 69, 0.2); color: var(--success);">Approved</span></td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">Registrar Office</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">Rene (Registrar)</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">Validated by Registrar</td>
+<td style="padding: 12px; border-bottom: 1px solid var(--border-color); font-size: 13px; color: var(--text-color);">No actions</td>
+</tr>
+<tr>
+<td style="padding: 12px; font-size: 13px; color: var(--text-color);"><input type="checkbox"></td>
+<td style="padding: 12px; font-size: 13px; color: var(--text-color);">2025T1_CS_ANTIPOLO_GOMEZ_K_ARSYS_OLCC03_SAT_08-12.csv</td>
+<td style="padding: 12px; font-size: 13px; color: var(--text-color);">—</td>
+<td style="padding: 12px; font-size: 13px; color: var(--text-color);">OLCC03</td>
+<td style="padding: 12px; font-size: 13px; color: var(--text-color);">SAT</td>
+<td style="padding: 12px; font-size: 13px; color: var(--text-color);">Oct 30, 2025, 01:40 PM</td>
+<td style="padding: 12px; font-size: 13px;"><span style="padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; background: rgba(220, 53, 69, 0.1); color: var(--danger);">Rejected</span></td>
+<td style="padding: 12px; font-size: 13px; color: var(--text-color);">Registrar Office</td>
+<td style="padding: 12px; font-size: 13px; color: var(--text-color);">Rene (Registrar)</td>
+<td style="padding: 12px; font-size: 13px; color: var(--text-color);">Missing Finals; please reupload</td>
+<td style="padding: 12px; font-size: 13px;">
+<button style="padding: 4px 12px; background: var(--primary); color: white; border: none; border-radius: 4px; font-size: 11px; font-weight: 600; cursor: pointer;">Resubmit</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>    <!-- Uniforms Section -->
     <div id="uniforms" class="content-section">
     <div class="breadcrumb">
     <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Uniforms Compliance</span>
