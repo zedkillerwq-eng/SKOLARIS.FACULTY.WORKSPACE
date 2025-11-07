@@ -6853,6 +6853,240 @@
     background: var(--primary-dark);
     }
     
+    /* SkoLink Styles */
+    .skolink-compose-header {
+    background: linear-gradient(135deg, #4A7BA7 0%, #5A8BC0 100%);
+    padding: 25px 30px;
+    border-radius: 8px 8px 0 0;
+    margin: -20px -20px 0 -20px;
+    }
+    
+    .skolink-compose-header h2 {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    }
+    
+    .skolink-compose-body {
+    padding: 30px;
+    }
+    
+    .skolink-form-section {
+    margin-bottom: 25px;
+    }
+    
+    .skolink-section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 12px;
+    }
+    
+    .skolink-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    }
+    
+    .skolink-form-group {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .skolink-form-group label {
+    font-size: 13px;
+    color: var(--text-color);
+    margin-bottom: 6px;
+    font-weight: 500;
+    }
+    
+    .skolink-input,
+    .skolink-select {
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    }
+    
+    .skolink-input:focus,
+    .skolink-select:focus {
+    outline: none;
+    border-color: #4A7BA7;
+    box-shadow: 0 0 0 3px rgba(74, 123, 167, 0.1);
+    }
+    
+    .skolink-input[readonly] {
+    background-color: var(--light-gray);
+    cursor: not-allowed;
+    }
+    
+    .dark-mode .skolink-input[readonly] {
+    background-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    .skolink-recipient-box {
+    background: rgba(74, 123, 167, 0.1);
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid rgba(74, 123, 167, 0.2);
+    }
+    
+    .skolink-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-color);
+    }
+    
+    .skolink-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    }
+    
+    .skolink-textarea {
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    min-height: 150px;
+    resize: vertical;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    }
+    
+    .skolink-textarea:focus {
+    outline: none;
+    border-color: #4A7BA7;
+    box-shadow: 0 0 0 3px rgba(74, 123, 167, 0.1);
+    }
+    
+    .skolink-upload-area {
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: var(--card-bg);
+    }
+    
+    .skolink-upload-area:hover {
+    border-color: #4A7BA7;
+    background: rgba(74, 123, 167, 0.05);
+    }
+    
+    .skolink-upload-area.dragover {
+    border-color: #4A7BA7;
+    background: rgba(74, 123, 167, 0.1);
+    }
+    
+    .skolink-file-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    background: rgba(74, 123, 167, 0.1);
+    border-radius: 6px;
+    border: 1px solid rgba(74, 123, 167, 0.2);
+    }
+    
+    .skolink-file-item i {
+    color: #4A7BA7;
+    font-size: 18px;
+    }
+    
+    .skolink-file-item span {
+    flex: 1;
+    font-size: 14px;
+    color: var(--text-color);
+    }
+    
+    .skolink-remove-file {
+    background: none;
+    border: none;
+    color: var(--danger);
+    cursor: pointer;
+    padding: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    }
+    
+    .skolink-remove-file:hover {
+    transform: scale(1.2);
+    }
+    
+    .skolink-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid var(--border-color);
+    }
+    
+    .skolink-btn-cancel,
+    .skolink-btn-send {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    }
+    
+    .skolink-btn-cancel {
+    background: var(--light-gray);
+    color: var(--text-color);
+    }
+    
+    .skolink-btn-cancel:hover {
+    background: var(--gray);
+    color: white;
+    }
+    
+    .skolink-btn-send {
+    background: linear-gradient(135deg, #4A7BA7 0%, #5A8BC0 100%);
+    color: white;
+    }
+    
+    .skolink-btn-send:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 123, 167, 0.4);
+    }
+    
+    /* Responsive Design for SkoLink */
+    @media (max-width: 768px) {
+    .skolink-form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .skolink-compose-body {
+        padding: 20px;
+    }
+    
+    .skolink-actions {
+        flex-direction: column;
+    }
+    
+    .skolink-btn-cancel,
+    .skolink-btn-send {
+        width: 100%;
+    }
+    }
+    
     </style>
     </head>
     <body>
@@ -6931,6 +7165,9 @@
     </li>
     <li class="nav-item" data-section="feedback">
     <a href="#"><i class="fas fa-comments"></i> Feedback & Faculty Evaluation</a>
+    </li>
+    <li class="nav-item" data-section="skolink">
+    <a href="#"><i class="fas fa-paper-plane"></i> SkoLink</a>
     </li>
     <li class="nav-item" data-section="settings">
     <a href="#"><i class="fas fa-cog"></i> Settings</a>
@@ -11080,6 +11317,110 @@
     </div>
     </div>
     
+    <!-- SkoLink Section -->
+    <div id="skolink" class="content-section">
+    <div class="breadcrumb">
+    <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>SkoLink</span>
+    </div>
+    <h1 class="page-title">SkoLink - Compose Message</h1>
+    
+    <div class="card" style="max-width: 900px; margin: 0 auto;">
+    <div class="skolink-compose-header">
+    <h2><i class="fas fa-paper-plane"></i> Compose Message</h2>
+    </div>
+    
+    <div class="skolink-compose-body">
+    <!-- Sender Section -->
+    <div class="skolink-form-section">
+    <h3 class="skolink-section-title">Sender</h3>
+    <div class="skolink-form-row">
+    <div class="skolink-form-group">
+    <label for="sender-name">Name</label>
+    <input type="text" id="sender-name" class="skolink-input" value="JORIZ D. CHIONG" readonly>
+    </div>
+    <div class="skolink-form-group">
+    <label for="sender-section">Section</label>
+    <select id="sender-section" class="skolink-select">
+    <option value="">Select Section</option>
+    <option value="BSIT-1A">BSIT-1A</option>
+    <option value="BSIT-1B">BSIT-1B</option>
+    <option value="BSIT-2A">BSIT-2A</option>
+    <option value="BSIT-2B">BSIT-2B</option>
+    <option value="BSCS-1A">BSCS-1A</option>
+    <option value="BSCS-2A">BSCS-2A</option>
+    </select>
+    </div>
+    <div class="skolink-form-group">
+    <label for="sender-course">Course/Subject</label>
+    <select id="sender-course" class="skolink-select">
+    <option value="">Select Course/Subject</option>
+    <option value="Programming 1">Programming 1</option>
+    <option value="Database Systems">Database Systems</option>
+    <option value="Web Development">Web Development</option>
+    <option value="Data Structures">Data Structures</option>
+    <option value="Computer Networks">Computer Networks</option>
+    </select>
+    </div>
+    </div>
+    </div>
+    
+    <!-- Recipient Section -->
+    <div class="skolink-form-section">
+    <h3 class="skolink-section-title">Recipient</h3>
+    <div class="skolink-recipient-box">
+    <label class="skolink-checkbox">
+    <input type="checkbox" id="all-students-checkbox">
+    <span>All Students</span>
+    </label>
+    </div>
+    <div class="skolink-form-group" style="margin-top: 15px;">
+    <input type="text" id="search-student" class="skolink-input" placeholder="Search student ID No...">
+    </div>
+    </div>
+    
+    <!-- Subject Section -->
+    <div class="skolink-form-section">
+    <h3 class="skolink-section-title">Subject</h3>
+    <div class="skolink-form-group">
+    <input type="text" id="message-subject" class="skolink-input" placeholder="Subject">
+    </div>
+    </div>
+    
+    <!-- Message Section -->
+    <div class="skolink-form-section">
+    <h3 class="skolink-section-title">Message</h3>
+    <div class="skolink-form-group">
+    <textarea id="message-content" class="skolink-textarea" placeholder="Type in your message.."></textarea>
+    </div>
+    </div>
+    
+    <!-- Attach a file Section -->
+    <div class="skolink-form-section">
+    <h3 class="skolink-section-title">Attach a file</h3>
+    <div class="skolink-upload-area" id="upload-area">
+    <i class="fas fa-cloud-upload-alt" style="font-size: 48px; color: #4A7BA7; margin-bottom: 10px;"></i>
+    <p style="margin: 10px 0; color: #4A7BA7; font-weight: 500;">Click or drag a file to upload</p>
+    <p style="margin: 5px 0; font-size: 12px; color: #6c757d;">Maximum file size: 10MB</p>
+    <input type="file" id="file-upload" style="display: none;">
+    </div>
+    <div id="file-preview" style="margin-top: 15px; display: none;">
+    <div class="skolink-file-item">
+    <i class="fas fa-file"></i>
+    <span id="file-name"></span>
+    <button class="skolink-remove-file" onclick="removeFile()"><i class="fas fa-times"></i></button>
+    </div>
+    </div>
+    </div>
+    
+    <!-- Action Buttons -->
+    <div class="skolink-actions">
+    <button class="skolink-btn-cancel" onclick="cancelMessage()">Cancel</button>
+    <button class="skolink-btn-send" onclick="sendMessage()">Send Message</button>
+    </div>
+    </div>
+    </div>
+    </div>
+    
     <!-- Settings Section -->
     <div id="settings" class="content-section">
     <div class="breadcrumb">
@@ -14553,7 +14894,130 @@
         }
     });
     
+    // SkoLink Functionality
+    // File upload functionality
+    const uploadArea = document.getElementById('upload-area');
+    const fileUpload = document.getElementById('file-upload');
+    const filePreview = document.getElementById('file-preview');
+    const fileName = document.getElementById('file-name');
+    
+    if (uploadArea && fileUpload) {
+        // Click to upload
+        uploadArea.addEventListener('click', function() {
+            fileUpload.click();
+        });
+        
+        // File selection
+        fileUpload.addEventListener('change', function(e) {
+            handleFileSelect(e.target.files);
+        });
+        
+        // Drag and drop
+        uploadArea.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+        
+        uploadArea.addEventListener('dragleave', function(e) {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+        });
+        
+        uploadArea.addEventListener('drop', function(e) {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            handleFileSelect(e.dataTransfer.files);
+        });
+    }
+    
+    function handleFileSelect(files) {
+        if (files.length > 0) {
+            const file = files[0];
+            const maxSize = 10 * 1024 * 1024; // 10MB
+            
+            if (file.size > maxSize) {
+                alert('File size exceeds 10MB limit');
+                return;
+            }
+            
+            fileName.textContent = file.name;
+            filePreview.style.display = 'block';
+        }
+    }
+    
     }); // End DOMContentLoaded
+    
+    // SkoLink Functions (outside DOMContentLoaded for onclick access)
+    function removeFile() {
+        const fileUpload = document.getElementById('file-upload');
+        const filePreview = document.getElementById('file-preview');
+        fileUpload.value = '';
+        filePreview.style.display = 'none';
+    }
+    
+    function cancelMessage() {
+        if (confirm('Are you sure you want to cancel? All unsaved changes will be lost.')) {
+            // Reset form
+            document.getElementById('sender-section').value = '';
+            document.getElementById('sender-course').value = '';
+            document.getElementById('all-students-checkbox').checked = false;
+            document.getElementById('search-student').value = '';
+            document.getElementById('message-subject').value = '';
+            document.getElementById('message-content').value = '';
+            removeFile();
+        }
+    }
+    
+    function sendMessage() {
+        const section = document.getElementById('sender-section').value;
+        const course = document.getElementById('sender-course').value;
+        const subject = document.getElementById('message-subject').value;
+        const message = document.getElementById('message-content').value;
+        
+        // Validation
+        if (!section) {
+            alert('Please select a section');
+            return;
+        }
+        
+        if (!course) {
+            alert('Please select a course/subject');
+            return;
+        }
+        
+        if (!subject.trim()) {
+            alert('Please enter a subject');
+            return;
+        }
+        
+        if (!message.trim()) {
+            alert('Please enter a message');
+            return;
+        }
+        
+        // Simulate sending message
+        const loadingMsg = document.createElement('div');
+        loadingMsg.style.cssText = 'position: fixed; top: 20px; right: 20px; background: #4A7BA7; color: white; padding: 15px 25px; border-radius: 8px; z-index: 10000; box-shadow: 0 4px 12px rgba(0,0,0,0.2);';
+        loadingMsg.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending message...';
+        document.body.appendChild(loadingMsg);
+        
+        setTimeout(function() {
+            loadingMsg.remove();
+            
+            const successMsg = document.createElement('div');
+            successMsg.style.cssText = 'position: fixed; top: 20px; right: 20px; background: #28a745; color: white; padding: 15px 25px; border-radius: 8px; z-index: 10000; box-shadow: 0 4px 12px rgba(0,0,0,0.2);';
+            successMsg.innerHTML = '<i class="fas fa-check-circle"></i> Message sent successfully!';
+            document.body.appendChild(successMsg);
+            
+            setTimeout(function() {
+                successMsg.remove();
+            }, 3000);
+            
+            // Reset form after successful send
+            cancelMessage();
+        }, 1500);
+    }
+    
     </script>
     
     </body>
