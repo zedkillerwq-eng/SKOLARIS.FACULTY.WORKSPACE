@@ -6126,7 +6126,7 @@
       <a href="#"><i class="fas fa-calendar-alt"></i> Weekly Schedule of Classes</a>
       </li>
       <li class="nav-item" data-section="grades">
-      <a href="#"><i class="fas fa-chart-bar"></i> ECR and eGrades</a>
+      <a href="#"><i class="fas fa-chart-bar"></i> eCR and e-Grades</a>
       </li>
       <li class="nav-item" data-section="prospectus">
       <a href="#"><i class="fas fa-book-open"></i> Curriculum Prospectus</a>
@@ -6260,11 +6260,12 @@
               <span style="font-weight: 700; color: var(--primary); text-align: right;">4<hr></span>
           </div>
       </div>
-      <div class="stat-label" style="color:var(--text-color)">Campus with Load</div>
+      <div class="stat-label" style="color:var(--text-color)">Campus(es) Load(s)</div>
       </div>
       <div class="stat-card" onclick="openStatCardModal('length-services')" style="cursor: pointer;">
-      <div class="stat-value">5 Years<hr></div>
-      <div class="stat-label" style="color:var(--text-color)">Length & services</div>
+      <div class="stat-value" style="font-size: 30px;">5 Years<hr></div>
+      <div class="stat-value">3 Months<hr></div>
+      <div class="stat-label" style="color:var(--text-color)">Length of Service <br>(Teaching)</div>
       </div>
       <div class="stat-card" onclick="openStatCardModal('ecr-upload')" style="cursor: pointer;">
       <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 10px; width: 100%;">
@@ -6991,25 +6992,25 @@
       <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 20px; box-shadow: var(--box-shadow);">
       <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
       <div style="width: 35px; height: 35px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;">1</div>
-      <h3 style="color: var(--text-color); font-size: 15px; font-weight: 600; margin: 0;">Personal Info</h3>
+      <h3 style="color: var(--text-color); font-size: 15px; font-weight: 600; margin: 0;">Step 1</h3>
       </div>
-      <p style="color: var(--gray); font-size: 12px; margin: 0; line-height: 1.4;">Complete your basic information</p>
+      <p style="color: var(--gray); font-size: 12px; margin: 0; line-height: 1.4;">Personal Details</p>
       </div>
       <!-- Step 2 -->
       <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 20px; box-shadow: var(--box-shadow);">
       <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
       <div style="width: 35px; height: 35px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;">2</div>
-      <h3 style="color: var(--text-color); font-size: 15px; font-weight: 600; margin: 0;">Employment</h3>
+      <h3 style="color: var(--text-color); font-size: 15px; font-weight: 600; margin: 0;">Step 2</h3>
       </div>
-      <p style="color: var(--gray); font-size: 12px; margin: 0; line-height: 1.4;">Add department and position</p>
+      <p style="color: var(--gray); font-size: 12px; margin: 0; line-height: 1.4;">FOR FACULTY PORTAL ONLY</p>
       </div>
       <!-- Step 3 -->
       <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 20px; box-shadow: var(--box-shadow);">
       <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
       <div style="width: 35px; height: 35px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;">3</div>
-      <h3 style="color: var(--text-color); font-size: 15px; font-weight: 600; margin: 0;">Review</h3>
+      <h3 style="color: var(--text-color); font-size: 15px; font-weight: 600; margin: 0;">Step 3</h3>
       </div>
-      <p style="color: var(--gray); font-size: 12px; margin: 0; line-height: 1.4;">Review and submit profile</p>
+      <p style="color: var(--gray); font-size: 12px; margin: 0; line-height: 1.4;">Documents Submitted</p>
       </div>
       </div>
       <!-- Right Side - Main Form -->
@@ -7592,12 +7593,17 @@
       <!-- Subjects Section -->
       <div id="subjects" class="content-section">
       <div class="breadcrumb">
-      <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Teaching Load</span>
+      <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Official Class Roster</span>
+      
       </div>
-      <h1 class="page-title">Teaching Load</h1>
+      <h1 class="page-title">Official Class Roster</h1>
+      
       <div class="card">
       <div class="card-header">
       <h2 class="card-title">Registered Subjects / Courses (2025-2026, 4th Year, First Trimester)</h2>
+      <button class="btn btn-primary" style="padding: 10px 15px; font-size: 12px;">
+    <i class="fas fa-download"></i> Download
+</button>
       </div>
       <div class="table-container">
       <table>
@@ -7671,9 +7677,8 @@
       </div>
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
         <h1 class="page-title">Weekly Schedule of Classes</h1>
-        <button class="shiny-download-btn shining official-loading-btn small" id="official-loading-btn" style="position: relative; overflow: hidden;">
-          <i class="fas fa-download"></i>
-          Official Loading
+        <button class="btn btn-primary" style="padding: 10px 15px; font-size: 14px;">
+          <i class="fas fa-download"></i> Download
         </button>
       </div>
       <div class="card">
@@ -7871,10 +7876,10 @@
   <!-- Grades Section -->
   <div id="grades" class="content-section">
   <div class="breadcrumb">
-  <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>eCR & Monitoring</span>
+  <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>eCR and e-Grades</span>
   </div>
-  <h1 class="page-title">eCR & Monitoring</h1>
-  <p style="color: var(--gray); margin-bottom: 30px;">e-Grades</p>
+  <h1 class="page-title">eCR & eGrades</h1>
+  <p style="color: var(--gray); margin-bottom: 30px;">eCR Uploading & e-Grades Monitoring</p>
   <!-- Academic Year Selector -->
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
   <select style="padding: 10px 15px; border: 1px solid var(--border-color); border-radius: var(--border-radius); background: var(--card-bg); color: var(--text-color); font-size: 16px; font-weight: 600;">
@@ -7897,7 +7902,7 @@
   <div style="border: 2px dashed var(--border-color); border-radius: var(--border-radius); padding: 60px 40px; text-align: center; background: rgba(0, 0, 0, 0.02); cursor: pointer;">
   <i class="fas fa-cloud-upload-alt" style="font-size: 48px; color: var(--primary); margin-bottom: 15px; display: block;"></i>
   <h3 style="font-size: 18px; margin-bottom: 10px; color: var(--text-color);">Drag & drop your eCR files here</h3>
-  <p style="color: var(--gray); font-size: 14px; margin-bottom: 15px;">Accepted: .xlsm, .xlsx, .csv, .pdf • You may upload multiple files</p>
+  <p style="color: var(--gray); font-size: 14px; margin-bottom: 15px;">Accepted: eCR Files only *You may upload multiple files</p>
   <button style="background: var(--primary); color: white; border: none; padding: 12px 24px; border-radius: var(--border-radius); cursor: pointer; font-size: 14px; font-weight: 600; margin-top: 15px;">Browse Files</button>
   </div>
   <div style="background: rgba(30, 58, 95, 0.05); border-left: 4px solid var(--primary); padding: 15px; border-radius: 4px; margin-top: 20px;">
