@@ -416,7 +416,7 @@
       border-radius: 2px;
       }
       /* Card Styles */
-      .card {
+      .card123 {
       background-color: var(--card-bg);
       border-radius: var(--border-radius);
       box-shadow: var(--box-shadow);
@@ -6983,8 +6983,37 @@
       <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Faculty Profile</span>
       </div>
       <h1 class="page-title">Faculty Profile</h1>
-      <!-- Faculty Profile Form (No Sidebar) -->
-      <div class="card">
+      <!-- Faculty Profile Layout with Sidebar -->
+      <div style="display: grid; grid-template-columns: 280px 1fr; gap: 25px;">
+      <!-- Left Sidebar - Steps -->
+      <div style="display: flex; flex-direction: column; gap: 15px;">
+      <!-- Step 1 -->
+      <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 20px; box-shadow: var(--box-shadow);">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+      <div style="width: 35px; height: 35px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;">1</div>
+      <h3 style="color: var(--text-color); font-size: 15px; font-weight: 600; margin: 0;">Personal Info</h3>
+      </div>
+      <p style="color: var(--gray); font-size: 12px; margin: 0; line-height: 1.4;">Complete your basic information</p>
+      </div>
+      <!-- Step 2 -->
+      <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 20px; box-shadow: var(--box-shadow);">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+      <div style="width: 35px; height: 35px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;">2</div>
+      <h3 style="color: var(--text-color); font-size: 15px; font-weight: 600; margin: 0;">Employment</h3>
+      </div>
+      <p style="color: var(--gray); font-size: 12px; margin: 0; line-height: 1.4;">Add department and position</p>
+      </div>
+      <!-- Step 3 -->
+      <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 20px; box-shadow: var(--box-shadow);">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+      <div style="width: 35px; height: 35px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;">3</div>
+      <h3 style="color: var(--text-color); font-size: 15px; font-weight: 600; margin: 0;">Review</h3>
+      </div>
+      <p style="color: var(--gray); font-size: 12px; margin: 0; line-height: 1.4;">Review and submit profile</p>
+      </div>
+      </div>
+      <!-- Right Side - Main Form -->
+      <div class="card123">
       <div class="card-header">
       <h2 class="card-title"><i class="fas fa-user"></i> Personal Information</h2>
       </div>
@@ -7145,6 +7174,7 @@
       <div style="display: flex; gap: 15px; justify-content: flex-end; margin-top: 20px;">
       <button class="btn-secondary" style="padding: 10px 25px; border-radius: 6px; border: 1px solid var(--border-color); background: transparent; color: var(--text-color); cursor: pointer;">Cancel</button>
       <button class="btn-primary" style="padding: 10px 25px; border-radius: 6px; border: none; background: var(--primary); color: white; cursor: pointer;">Save Changes</button>
+      </div>
       </div>
       </div>
       </div>
