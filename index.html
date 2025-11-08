@@ -8333,22 +8333,37 @@
       <h1 class="page-title">Official Class Roster</h1>
       
       <div class="card">
-      <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
-      <div style="display: flex; align-items: center; gap: 15px;">
+      <div class="card-header" style="display: flex; flex-direction: column; align-items: stretch;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
         <h2 class="card-title" style="font-style:800; margin: 0;">LOADS<hr></h2>
-        <div style="display: flex; align-items: center; gap: 8px;">
-          <label for="school-year-select" style="font-size: 14px; font-weight: 500;">School Year:</label>
-          <select id="school-year-select" style="padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; background-color: white;">
-            <option value="2025-2026">2025 - 2026</option>
-            <option value="2024-2025">2024 - 2025</option>
-            <option value="2023-2024">2023 - 2024</option>
-            <option value="2022-2023">2022 - 2023</option>
-          </select>
-        </div>
-      </div>
-      <button class="btn btn-primary" style="padding: 10px 15px; font-size: 12px">
+              <div style="display: flex; align-items: center; gap: 8px; margin-left: auto; margin-right: auto;">
+          <div style="width: 0px; right 500px;"></div> <!-- Spacer for COURSE CODE column -->
+          <div style="display: flex; align-items: center; gap: 8px;">
+              <label for="school-year-select" style="font-size: 14px; font-weight: 500;">School Year:</label>
+              <select id="school-year-select" style="padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; background-color: white;">
+                  <option value="2025-2026">2025 - 2026</option>
+                  <option value="2024-2025">2024 - 2025</option>
+                  <option value="2023-2024">2023 - 2024</option>
+                  <option value="2022-2023">2022 - 2023</option>
+              </select>
+          </div>
+          
+          <div style="display: flex; align-items: center; gap: 8px;">
+              <label for="academic-term-select" style="font-size: 14px; font-weight: 500;">Academic Term:</label>
+              <select id="academic-term-select" style="padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; background-color: white;">
+                  <option value="1st-term">1st Term</option>
+                  <option value="2nd-term">2nd Term</option>
+                  <option value="3rd-term">3rd Term</option>
+                  <option value="4th-term">4th Term</option>
+              </select>
+        
+        <button class="btn btn-primary" style="padding: 10px 15px; font-size: 12px">
     <i class="fas fa-download"></i> Download All
 </button>
+      </div>
+
+        </div>
+      </div>
       </div>
       <div class="table-container" style="font-size: 800" >
       <table>
@@ -8363,8 +8378,9 @@
       <th style="font-size:18px; color: black">RM NO.</th>
       <th style="font-size:18px; color: black">DAY</th>
       <th style="font-size:18px; color: black">TIME</th>
-      <th style="font-size:18px; color: black">ACADEMIC TERM</th>
-      <th style="color: black">ACTION</th>
+      <th style="font-size:18px; color: black">COUNTS</th>
+      <th style="font-size:18px; color: black">CAMPUS</th>
+      <th style="font-size:18px; color: black">ACTION</th>
 
       </tr>
       </thead>
@@ -8379,15 +8395,16 @@
       <th>B1.28</th>
       <td>Monday/<Br>Thursday</td>
       <th>6:00am-7:30am</th>
-      <td>1st Trime</td>
-      <th><div style="display: flex; flex-direction: column; gap: 5px;">
+      <td>100</td>
+      <th>taytay</th>
+      <td><div style="display: flex; gap: 5px;">
         <button style="padding: 10px 15px; font-size: 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer;">
           <i class="fas fa-eye"></i>
         </button>
         <button style="padding: 10px 15px; font-size: 12px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">
           <i class="fas fa-download"></i>
         </button>
-      </div></th>
+      </div></td>
       </tr>
       <tr>
       <th>OLITPRAC 1</th>
@@ -8399,15 +8416,16 @@
       <th>b1.27</th>
       <td>Thursday/<br>Friday</td>
       <th>7:30am-9:30am</th>
-      <td>3rd Trime</td>
-      <th><div style="display: flex; flex-direction: column; gap: 5px;">
+      <td>100</td>
+      <th>Antipolo</th>
+      <td><div style="display: flex; gap: 5px;">
         <button style="padding: 10px 15px; font-size: 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer;">
           <i class="fas fa-eye"></i>
         </button>
         <button style="padding: 10px 15px; font-size: 12px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">
           <i class="fas fa-download"></i>
         </button>
-      </div></th>
+      </div></td>
       </tr>
       <tr>
       <th>OLITPRAC 2</th>
@@ -8419,15 +8437,16 @@
       <th>B1.29</th>
       <td>Wednesday/<br>Satuday</td>
       <th>9:30am-11:30am</th>
-      <td>2nd trime</td>
-      <th><div style="display: flex; flex-direction: column; gap: 5px;">
+      <td>100</td>
+      <th>Binangonan</th>
+      <td><div style="display: flex; gap: 5px;">
         <button style="padding: 10px 15px; font-size: 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer;">
           <i class="fas fa-eye"></i>
         </button>
         <button style="padding: 10px 15px; font-size: 12px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">
           <i class="fas fa-download"></i>
         </button>
-      </div></th>
+      </div></td>
       </tr>
       <tr>
       <th>OLSA01</th>
@@ -8439,15 +8458,16 @@
       <th>B1.30</th>
       <td>Monday/<br>Thursday</td>
       <th>6:00am-7:30am</th>
-      <td>1st trime</td>
-      <th><div style="display: flex; flex-direction: column; gap: 5px;">
+      <td>100</td>
+      <th>Cainta</th>
+      <td><div style="display: flex; gap: 5px;">
         <button style="padding: 10px 15px; font-size: 12px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer;">
           <i class="fas fa-eye"></i>
         </button>
         <button style="padding: 10px 15px; font-size: 12px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">
           <i class="fas fa-download"></i>
         </button>
-      </div></th>
+      </div></td>
       </tr>
       </tbody>
       </table>
@@ -14417,4 +14437,6 @@
       </script>
       </body>
       </html>
+
+
 
