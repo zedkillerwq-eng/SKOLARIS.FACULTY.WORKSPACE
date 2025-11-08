@@ -6527,105 +6527,28 @@
       <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 10px; width: 100%;">
           <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
               <span style="font-weight: 600; color: var(--text-color); text-align: left;">Prelim</span>
-              <span style="font-weight: 700; color: var(--primary); text-align: right;">20/20<hr></span>
+              <span style="font-weight: 700; color: var(--primary); text-align: right;">20 out of 20 eCR(s)<hr></span>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
               <span style="font-weight: 600; color: var(--text-color); text-align: left;">Midterm</span>
-              <span style="font-weight: 700; color: var(--primary); text-align: right;">20/20<hr></span>
+              <span style="font-weight: 700; color: var(--primary); text-align: right;">20 out of 20 eCR(s)<hr></span>
           </div>
       <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
               <span style="font-weight: 600; color: var(--text-color); text-align: left;">Finals</span>
-              <span style="font-weight: 700; color: var(--primary); text-align: right;">20/20<hr></span>
+              <span style="font-weight: 700; color: var(--primary); text-align: right;">20 out of 20 eCR(s)<hr></span>
           </div>
         </div>
       <div class="stat-label" style="color:var(--text-color)">Ecr Upload</div>
       </div>
-      <div class="stat-card" onclick="openStatCardModal('section-counts')" style="cursor: pointer;">
-      <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; font-weight: 600">Submission Progress<hr></div>
+
+      <div class="stat-card" onclick="openStatCardModal('total-absentees')" style="cursor: pointer;">
+          
+      <div class="stat-label" style="color:var(--text-color)">TOTAL ABSENTEES</div>
       <br>
-      <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; font-weight: 500">
-          <span style="text-align: left">IT 201</span>
-          <span class="stat-label" style="text-align: right; font-size: small">28/42</span>
-      </div>
-      <div style="width: 100%; height: 12px; background-color: #e9ecef; border-radius: 6px; overflow: hidden; margin-top: 10px;">
-        <div style="width: 66.7%; height: 100%; background-color: yellow; border-radius: 6px; transition: width 0.5s ease;"></div>
-      </div>
-      
-      <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; font-weight: 500">
-    <span style="text-align: left">CS 105 LAB</span>
-    <span class="stat-label" style="text-align: right; font-size: small">45/48</span>
-</div>
-<div style="width: 100%; height: 12px; background-color: #e9ecef; border-radius: 6px; overflow: hidden; margin-top: 10px;">
-  <div style="width: 93.75%; height: 100%; background-color: green; border-radius: 6px; transition: width 0.5s ease;"></div>
-</div>
-
-<div style="display: flex; justify-content: space-between; align-items: center; width: 100%; font-weight: 500">
-    <span style="text-align: left">SIA 1</span>
-    <span class="stat-label" style="text-align: right; font-size: small">29/42</span>
-</div>
-<div style="width: 100%; height: 12px; background-color: #e9ecef; border-radius: 6px; overflow: hidden; margin-top: 10px;"><div style="width: 69%; height: 100%; background-color: blue; border-radius: 6px; transition: width 0.5s ease;"></div></div>
-      <div class="stat-label" style="color:var(--text-color)">Grades</div>
+      <div class="stat-value">200<hr></div>
+      <div class="stat-label" style="color:var(--text-color)">STUDENT RETENTION</div>
       </div>
 
-      <!-- At-Risk Students Card -->
-      <div class="stat-card" onclick="openStatCardModal('at-risk-students')" style="cursor: pointer;">
-      <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 15px;">
-        <div style="font-weight: 600; font-size: 14px; color: var(--text-color);">RETENTION</div>
-        <button style="padding: 4px 12px; background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 4px; font-size: 12px; cursor: pointer; color: var(--text-color);">Export</button>
-      </div>
-      <div style="font-weight: 700; font-size: 16px; margin-bottom: 15px; color: var(--text-color);">At-Risk Students</div>
-      
-      <!-- Student Header Row -->
-      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--border-color); margin-bottom: 10px; font-size: 11px; color: var(--gray); font-weight: 600;">
-        <div>STUDENT</div>
-        <div>CLASS</div>
-        <div>REASON</div>
-        <div>ACTION</div>
-      </div>
-      
-      <!-- Student 1 -->
-      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 8px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border-color); font-size: 12px;">
-        <div style="color: var(--text-color);">
-          <div style="font-weight: 600;">2021-001122 •</div>
-          <div style="font-size: 11px; color: var(--gray);">Santos, M.</div>
-        </div>
-        <div style="color: var(--text-color);">
-          <div style="font-weight: 600;">IT</div>
-          <div style="font-size: 11px; color: var(--gray);">201</div>
-        </div>
-        <div>
-          <span style="background-color: #FFE5E5; color: #C41E3A; padding: 4px 8px; border-radius: 12px; font-size: 10px; font-weight: 600;">Financial</span>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 4px;">
-          <button style="padding: 3px 8px; background-color: var(--primary); color: white; border: none; border-radius: 4px; font-size: 10px; cursor: pointer; font-weight: 600;">Message</button>
-          <button style="padding: 3px 8px; background-color: transparent; color: var(--text-color); border: 1px solid var(--border-color); border-radius: 4px; font-size: 10px; cursor: pointer; font-weight: 600;">Refer SA</button>
-        </div>
-      </div>
-      
-      <!-- Student 2 -->
-      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 8px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border-color); font-size: 12px;">
-        <div style="color: var(--text-color);">
-          <div style="font-weight: 600;">2022-000876 •</div>
-          <div style="font-size: 11px; color: var(--gray);">Reyes, J.</div>
-        </div>
-        <div style="color: var(--text-color);">
-          <div style="font-weight: 600;">SIA 1</div>
-        </div>
-        <div>
-          <span style="background-color: #E8F5E9; color: #2E7D32; padding: 4px 8px; border-radius: 12px; font-size: 10px; font-weight: 600;">Health</span>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 4px;">
-          <button style="padding: 3px 8px; background-color: var(--primary); color: white; border: none; border-radius: 4px; font-size: 10px; cursor: pointer; font-weight: 600;">Message</button>
-          <button style="padding: 3px 8px; background-color: transparent; color: var(--text-color); border: 1px solid var(--border-color); border-radius: 4px; font-size: 10px; cursor: pointer; font-weight: 600;">Clinic</button>
-        </div>
-      </div>
-      
-      <div style="font-size: 11px; color: var(--gray); margin-top: 10px; font-style: italic;">
-        Absence reasons sync with Student Affairs module.
-      </div>
-      
-      <div class="stat-label" style="color:var(--text-color); margin-top: 10px;">Student Retention</div>
-      </div>
       
       </div>
       
@@ -7694,26 +7617,34 @@
       <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 20px; box-shadow: var(--box-shadow);">
       <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
       <div style="width: 35px; height: 35px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;">1</div>
-      <h3 style="color: var(--text-color); font-size: 15px; font-weight: 600; margin: 0;">Step 1</h3>
+      <h3 style="color: var(--text-color); font-size: 15px; font-weight: 600; margin: 0;">Personal Details</h3>
       </div>
-      <p style="color: var(--gray); font-size: 12px; margin: 0; line-height: 1.4;">Personal Details</p>
+      <p style="color: var(--gray); font-size: 12px; margin: 0; line-height: 1.4;"></p>
       </div>
       <!-- Step 2 -->
       <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 20px; box-shadow: var(--box-shadow);">
       <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
       <div style="width: 35px; height: 35px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;">2</div>
-      <h3 style="color: var(--text-color); font-size: 15px; font-weight: 600; margin: 0;">Step 2</h3>
+      <h3 style="color: var(--text-color); font-size: 15px; font-weight: 600; margin: 0;">Scholastic Profile</h3>
       </div>
-      <p style="color: var(--gray); font-size: 12px; margin: 0; line-height: 1.4;">FOR FACULTY PORTAL ONLY</p>
+      <p style="color: var(--gray); font-size: 12px; margin: 0; line-height: 1.4;"></p>
       </div>
       <!-- Step 3 -->
       <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 20px; box-shadow: var(--box-shadow);">
       <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
       <div style="width: 35px; height: 35px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;">3</div>
-      <h3 style="color: var(--text-color); font-size: 15px; font-weight: 600; margin: 0;">Step 3</h3>
+      <h3 style="color: var(--text-color); font-size: 15px; font-weight: 600; margin: 0;">Credentials & Certificate</h3>
       </div>
-      <p style="color: var(--gray); font-size: 12px; margin: 0; line-height: 1.4;">Documents Submitted</p>
+      <p style="color: var(--gray); font-size: 12px; margin: 0; line-height: 1.4;"></p>
       </div>
+      
+       <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 20px; box-shadow: var(--box-shadow);">
+     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+         <div style="width: 35px; height: 35px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;">4</div>
+         <h3 style="color: var(--text-color); font-size: 15px; font-weight: 600; margin: 0;">Emergency & Contact Information</h3>
+     </div>
+     <p style="color: var(--gray); font-size: 12px; margin: 0; line-height: 1.4;"></p>
+ </div>
       </div>
       <!-- Right Side - Main Form -->
       <div class="card123">
@@ -8305,7 +8236,7 @@
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
         <h2 class="card-title" style="font-style:800; margin: 0;">LOADS<hr></h2>
               <div style="display: flex; align-items: center; gap: 8px; margin-left: auto; margin-right: auto;">
-          <div style="width: 0px; right 500px;"></div> <!-- Spacer for COURSE CODE column -->
+          <div style="width: 0px; right: 500px;"></div> <!-- Spacer for COURSE CODE column -->
           <div style="display: flex; align-items: center; gap: 8px;">
               <label for="school-year-select" style="font-size: 14px; font-weight: 500;">School Year:</label>
               <select id="school-year-select" style="padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; background-color: white;">
