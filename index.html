@@ -1268,20 +1268,12 @@
       .dashboard-messages-scroll {
         height: 100%;
         overflow-y: auto;
-        animation: scrollDashboardMessages 30s linear infinite;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
       }
 
-      .dashboard-messages-scroll:hover {
-        animation-play-state: paused;
-      }
-
-      @keyframes scrollDashboardMessages {
-        0% {
-          transform: translateY(0);
-        }
-        100% {
-          transform: translateY(-50%);
-        }
+      .dashboard-messages-scroll::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
       }
 
       .dashboard-message-item {
@@ -6715,7 +6707,39 @@
         
         <div class="dashboard-messages-content">
           <div class="dashboard-messages-scroll">
-            <!-- First set of messages -->
+            <!-- Starting with Academic Affairs for seamless loop -->
+            <div class="dashboard-message-item">
+              <div class="dashboard-message-header">
+                <div class="dashboard-message-title">Academic Affairs</div>
+                <div class="dashboard-message-time">Nov 3</div>
+              </div>
+              <p class="dashboard-message-text">Updated curriculum prospectus available for download. Review changes for next term.</p>
+            </div>
+
+            <div class="dashboard-message-item">
+              <div class="dashboard-message-header">
+                <div class="dashboard-message-title">Library Services</div>
+                <div class="dashboard-message-time">Nov 2</div>
+              </div>
+              <p class="dashboard-message-text">New research databases now available. Access credentials sent to your email.</p>
+            </div>
+
+            <div class="dashboard-message-item">
+              <div class="dashboard-message-header">
+                <div class="dashboard-message-title">Finance Office</div>
+                <div class="dashboard-message-time">Nov 1</div>
+              </div>
+              <p class="dashboard-message-text">Payroll processing completed. Check your bank account for salary deposit.</p>
+            </div>
+
+            <div class="dashboard-message-item">
+              <div class="dashboard-message-header">
+                <div class="dashboard-message-title">Research Department</div>
+                <div class="dashboard-message-time">Oct 30</div>
+              </div>
+              <p class="dashboard-message-text">Call for research proposals. Deadline extended to November 30.</p>
+            </div>
+
             <div class="dashboard-message-item">
               <div class="dashboard-message-header">
                 <div class="dashboard-message-title">Registrar</div>
@@ -6766,6 +6790,7 @@
               <p class="dashboard-message-text">Reminder: Submit your leave application form for December holidays.</p>
             </div>
 
+            <!-- Loop set 2 -->
             <div class="dashboard-message-item">
               <div class="dashboard-message-header">
                 <div class="dashboard-message-title">Academic Affairs</div>
@@ -6798,7 +6823,6 @@
               <p class="dashboard-message-text">Call for research proposals. Deadline extended to November 30.</p>
             </div>
 
-            <!-- Duplicate set for seamless infinite loop -->
             <div class="dashboard-message-item">
               <div class="dashboard-message-header">
                 <div class="dashboard-message-title">Registrar</div>
@@ -6849,6 +6873,7 @@
               <p class="dashboard-message-text">Reminder: Submit your leave application form for December holidays.</p>
             </div>
 
+            <!-- Loop set 3 -->
             <div class="dashboard-message-item">
               <div class="dashboard-message-header">
                 <div class="dashboard-message-title">Academic Affairs</div>
@@ -6881,7 +6906,6 @@
               <p class="dashboard-message-text">Call for research proposals. Deadline extended to November 30.</p>
             </div>
 
-            <!-- Third set for extra smooth looping -->
             <div class="dashboard-message-item">
               <div class="dashboard-message-header">
                 <div class="dashboard-message-title">Registrar</div>
@@ -6932,6 +6956,7 @@
               <p class="dashboard-message-text">Reminder: Submit your leave application form for December holidays.</p>
             </div>
 
+            <!-- Loop set 4 -->
             <div class="dashboard-message-item">
               <div class="dashboard-message-header">
                 <div class="dashboard-message-title">Academic Affairs</div>
@@ -6962,6 +6987,56 @@
                 <div class="dashboard-message-time">Oct 30</div>
               </div>
               <p class="dashboard-message-text">Call for research proposals. Deadline extended to November 30.</p>
+            </div>
+
+            <div class="dashboard-message-item">
+              <div class="dashboard-message-header">
+                <div class="dashboard-message-title">Registrar</div>
+                <div class="dashboard-message-time">8:40 AM</div>
+              </div>
+              <p class="dashboard-message-text">Reminder: Midterm grades due this Friday. Use the Gradebook tab.</p>
+            </div>
+
+            <div class="dashboard-message-item">
+              <div class="dashboard-message-header">
+                <div class="dashboard-message-title">Student Affairs</div>
+                <div class="dashboard-message-time">Yesterday</div>
+              </div>
+              <p class="dashboard-message-text">Two students flagged for financial aid interview. Kindly endorse.</p>
+            </div>
+
+            <div class="dashboard-broadcast-section">
+              <div class="dashboard-broadcast-title">Broadcast to Class</div>
+              <select class="dashboard-broadcast-dropdown">
+                <option>IT 201 (Section A)</option>
+                <option>CS 105 LAB</option>
+                <option>SIA 1</option>
+                <option>All Classes</option>
+              </select>
+            </div>
+
+            <div class="dashboard-message-item">
+              <div class="dashboard-message-header">
+                <div class="dashboard-message-title">Dean's Office</div>
+                <div class="dashboard-message-time">2 days ago</div>
+              </div>
+              <p class="dashboard-message-text">Faculty meeting scheduled for next Monday at 2:00 PM. Attendance is mandatory.</p>
+            </div>
+
+            <div class="dashboard-message-item">
+              <div class="dashboard-message-header">
+                <div class="dashboard-message-title">IT Department</div>
+                <div class="dashboard-message-time">3 days ago</div>
+              </div>
+              <p class="dashboard-message-text">New learning management system training available. Please complete by end of month.</p>
+            </div>
+
+            <div class="dashboard-message-item">
+              <div class="dashboard-message-header">
+                <div class="dashboard-message-title">HR Department</div>
+                <div class="dashboard-message-time">Nov 4</div>
+              </div>
+              <p class="dashboard-message-text">Reminder: Submit your leave application form for December holidays.</p>
             </div>
           </div>
         </div>
@@ -8259,7 +8334,7 @@
       
       <div class="card">
       <div class="card-header">
-      <h2 class="card-title">LOADS<hr></h2>
+      <h2 class="card-title" style="font-style:800">LOADS<hr></h2>
       <button class="btn btn-primary" style="padding: 10px 15px; font-size: 12px;">
     <i class="fas fa-download"></i> Download
 </button>
@@ -14125,6 +14200,49 @@
           }
       }
       }); // End DOMContentLoaded
+
+      // Infinite scroll for dashboard messages
+      function initInfiniteScroll() {
+        const scrollContainer = document.querySelector('.dashboard-messages-scroll');
+        if (!scrollContainer) return;
+        
+        let scrollSpeed = 0.5; // pixels per frame
+        let scrollPosition = 0;
+        let isPaused = false;
+        
+        scrollContainer.addEventListener('mouseenter', () => {
+          isPaused = true;
+        });
+        
+        scrollContainer.addEventListener('mouseleave', () => {
+          isPaused = false;
+        });
+        
+        function scroll() {
+          if (!isPaused) {
+            scrollPosition += scrollSpeed;
+            
+            // Reset when scrolled through one complete set (25% of total height with 4 sets)
+            if (scrollPosition >= scrollContainer.scrollHeight / 4) {
+              scrollPosition = 0;
+            }
+            
+            scrollContainer.scrollTop = scrollPosition;
+          }
+          
+          requestAnimationFrame(scroll);
+        }
+        
+        scroll();
+      }
+      
+      // Initialize on page load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initInfiniteScroll);
+      } else {
+        initInfiniteScroll();
+      }
+
       // SkoLink Functions (outside DOMContentLoaded for onclick access)
       function removeFile() {
           const fileUpload = document.getElementById('file-upload');
