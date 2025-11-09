@@ -2213,6 +2213,12 @@
           font-size: 10px;
           font-weight: bold;
           }
+          .notification-badge.red {
+          background-color: #dc3545;
+          }
+          .notification-badge.green {
+          background-color: #28a745;
+          }
           .nav-item {
           position: relative;
           }
@@ -5315,131 +5321,6 @@
           gap: 24px;
           }
           }
-          /* Old Academic Registration Cards - Keep for backwards compatibility */
-          .academic-reg-container {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 20px;
-          margin-bottom: 24px;
-          }
-          .academic-reg-row:first-of-type {
-          margin-top: 24px;
-          }
-          .academic-reg-card {
-          background: var(--card-bg);
-          border-radius: 12px;
-          padding: 20px;
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          min-height: 120px;
-          }
-          .academic-reg-card:not(.academic-reg-card-empty):hover {
-          transform: translateY(-4px);
-          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-          }
-          .academic-reg-card-empty {
-          background: transparent;
-          box-shadow: none;
-          padding: 0;
-          min-height: 0;
-          }
-          .reg-card-header {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          margin-bottom: 16px;
-          padding-bottom: 12px;
-          border-bottom: 2px solid var(--border-color);
-          }
-          .reg-card-header i {
-          font-size: 22px;
-          color: var(--primary);
-          }
-          .reg-card-header h4 {
-          margin: 0;
-          font-size: 13px;
-          font-weight: 600;
-          color: var(--text-secondary);
-          text-transform: uppercase;
-          letter-spacing: 0.5px;
-          }
-          .reg-card-content {
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
-          }
-          .reg-value {
-          font-size: 15px;
-          font-weight: 700;
-          color: var(--text-color);
-          margin: 0;
-          line-height: 1.4;
-          word-wrap: break-word;
-          }
-          .reg-value.status-regular {
-          color: #10b981;
-          font-size: 15px;
-          }
-          .reg-secondary {
-          font-size: 13px;
-          color: var(--text-secondary);
-          margin: 0;
-          }
-          /* Large Desktop/Monitor screens (1920px and above) - Keep 4 columns */
-          @media (min-width: 1920px) {
-          .academic-reg-container {
-          grid-template-columns: repeat(4, 1fr);
-          gap: 24px;
-          }
-          .academic-reg-card {
-          padding: 24px;
-          }
-          .reg-value {
-          font-size: 18px;
-          }
-          .reg-card-header h4 {
-          font-size: 14px;
-          }
-          }
-          /* Standard Desktop/Monitor screens (1400px - 1919px) - Keep 4 columns */
-          @media (min-width: 1400px) and (max-width: 1919px) {
-          .academic-reg-container {
-          grid-template-columns: repeat(4, 1fr);
-          }
-          .reg-value {
-          font-size: 15px;
-          }
-          }
-          /* Medium Desktop screens (1200px - 1399px) - Keep 4 columns */
-          @media (min-width: 1200px) and (max-width: 1399px) {
-          .academic-reg-container {
-          grid-template-columns: repeat(4, 1fr);
-          }
-          .reg-value {
-          font-size: 14px;
-          }
-          .reg-card-header h4 {
-          font-size: 12px;
-          }
-          }
-          /* Tablet Landscape (992px - 1199px) - Switch to 2 columns */
-          @media (max-width: 1199px) {
-          .academic-reg-container {
-          grid-template-columns: repeat(2, 1fr);
-          }
-          .academic-reg-card-empty {
-          display: none;
-          }
-          }
-          /* Mobile and Tablet Portrait (768px and below) - 1 column */
-          @media (max-width: 768px) {
-          .academic-reg-container {
-          grid-template-columns: 1fr;
-          }
-          .reg-value {
-          font-size: 16px;
-          }
-          }
           /* Modal styles */
           .modal {
           display: none;
@@ -6398,7 +6279,6 @@
           <div class="nav-category">ADMINISTRATIVE SERVICES</div>
           <li class="nav-item" data-section="requirements">
           <a href="#"><i class="fas fa-file-alt"></i> Credential Management</a>
-          <span class="notification-badge" id="requirements-badge">12</span>
           </li>
           <li class="nav-item" data-section="account">
           <a href="#"><i class="fas fa-money-bill-wave"></i> Availability & Subject Preferences</a>
@@ -6411,9 +6291,6 @@
           <span class="notification-badge" id="clearance-badge">2</span>
           </li>
           <div class="nav-category">OTHERS</div>
-          <li class="nav-item" data-section="enrollment">
-          <a href="#"><i class="fas fa-user-check"></i> Academic Registration</a>
-          </li>                                             
           <li class="nav-item" data-section="medical">
           <a href="#"><i class="fas fa-clinic-medical"></i> Wellness & Care</a>
           </li>
@@ -6468,9 +6345,7 @@
           <a href="#" class="quick-action-btn" data-section="account">
           <i class="fas fa-credit-card"></i> Availability & Subject Preferences
           </a>
-          <a href="#" class="quick-action-btn" data-section="enrollment">
-          <i class="fas fa-credit-card"></i> Academic registration
-      </a>
+          
           <a href="#" class="quick-action-btn" data-section="requirements">
           <i class="fas fa-file-upload"></i> Certificates & Credentials
           </a>
@@ -6949,7 +6824,7 @@
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
               <div style="position: relative; display: inline-block;">
               <i class="fas fa-search" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--gray); font-size: 16px;"></i>
-              <input type="text" placeholder="Find Course Prospectus" style="padding: 10px 10px 10px 40px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px; width: 250px;">
+              <input type="text" placeholder="Find Program Prospectus" style="padding: 10px 10px 10px 40px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px; width: 250px;">
               </div>
           </div>
           
@@ -7766,254 +7641,26 @@
           </div>
           </div>
           </div>
-          <!-- Enrollment Section -->
-          <div id="enrollment" class="content-section">
-          <div class="breadcrumb">
-          <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Academic Registration</span>
-          </div>
-          <h1 class="page-title">Academic Registration</h1>
-          <!-- Enrollment Form Container -->
-          <div class="enrollment-form-wrapper">
-          <div class="enrollment-header">
-          <i class="fas fa-clipboard-list"></i>
-          <h2>Student Enrollment Form</h2>
-          </div>
-          <!-- First Row -->
-          <div class="enrollment-info-row">
-          <div class="enrollment-field">
-          <label><i class="fas fa-calendar-alt"></i> Academic Year</label>
-          <span class="field-value">2025-2026</span>
-          </div>
-          <div class="enrollment-field">
-          <label><i class="fas fa-clock"></i> Academic Term</label>
-          <span class="field-value">2nd Trimester</span>
-          </div>
-          <div class="enrollment-field">
-          <label><i class="fas fa-user-graduate"></i> Scholastic Status</label>
-          <span class="field-value status-regular">Regular</span>
-          <span class="field-secondary">Irregular</span>
-          <span class="field-secondary">Etc...</span>
-          </div>
-          <div class="enrollment-field">
-          <label><i class="fas fa-door-open"></i> Entry Classification</label>
-          <span class="field-value">Continuing</span>
-          </div>
-          </div>
-          <hr class="enrollment-divider">
-          <!-- Second Row -->
-          <div class="enrollment-info-row">
-          <div class="enrollment-field">
-          <label><i class="fas fa-building"></i> Department</label>
-          <span class="field-value">COLLEGE OF COMPUTER STUDIES</span>
-          </div>
-          <div class="enrollment-field">
-          <label><i class="fas fa-graduation-cap"></i> Program</label>
-          <span class="field-value">BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY</span>
-          </div>
-          <div class="enrollment-field">
-          <label><i class="fas fa-layer-group"></i> Curriculum Year Level</label>
-          <span class="field-value">2nd</span>
-          </div>
-          <div class="enrollment-field enrollment-field-empty"></div>
-          </div>
-          <hr class="enrollment-divider">
-          <!-- Third Row -->
-          <div class="enrollment-info-row">
-          <div class="enrollment-field">
-          <label><i class="fas fa-award"></i> Major</label>
-          <span class="field-value">Cisco Networking</span>
-          </div>
-          <div class="enrollment-field enrollment-field-empty"></div>
-          <div class="enrollment-field enrollment-field-empty"></div>
-          <!-- Enrollment Date/Time Box - 4th column position -->
-          <div class="enrollment-datetime-box-grid">
-          <div class="datetime-content">
-          <i class="fas fa-calendar-check"></i>
-          <div class="datetime-info">
-          <p class="datetime-date">30 OCTOBER, 2025</p>
-          <p class="datetime-day">Thursday</p>
-          <p class="datetime-time">8:00am</p>
-          </div>
-          </div>
-          </div>
-          </div>
-          <!-- Double HR -->
-          <hr class="enrollment-divider enrollment-divider-double">
-          <hr class="enrollment-divider enrollment-divider-double">
-          <!-- Course Section -->
-          <div class="course-section">
-          <h3 class="course-section-header">Course</h3>
-          <!-- Single Row: All 8 fields -->
-          <div class="course-info-row">
-          <div class="course-field">
-          <label class="field-label"><i class="fas fa-barcode"></i> Code</label>
-          <span class="field-value">SDF04</span>
-          </div>
-          <div class="course-field">
-          <label class="field-label"><i class="fas fa-book"></i> Title</label>
-          <span class="field-value">Database Management System</span>
-          </div>
-          <div class="course-field">
-          <label class="field-label"><i class="fas fa-tag"></i> Type</label>
-          <span class="field-value">Major</span>
-          </div>
-          <div class="course-field">
-          <label class="field-label"><i class="fas fa-calculator"></i> Units</label>
-          <span class="field-value">3</span>
-          </div>
-          <div class="course-field">
-          <label class="field-label"><i class="fas fa-clock"></i> Time</label>
-          <span class="field-value">7:30 AM - 10:30 AM</span>
-          </div>
-          <div class="course-field">
-          <label class="field-label"><i class="fas fa-calendar-day"></i> Day</label>
-          <span class="field-value">M/TH</span>
-          </div>
-          <div class="course-field">
-          <label class="field-label"><i class="fas fa-graduation-cap"></i> Program</label>
-          <span class="field-value">BSIT</span>
-          </div>
-          <div class="course-field">
-          <label class="field-label"><i class="fas fa-users"></i> Available Slot(s)</label>
-          <span class="field-value">25/40</span>
-          </div>
-          </div>
-          </div>
-          <!-- Selection Sections Container (Side by Side) -->
-          <div class="selection-sections-wrapper">
-          <!-- Schedule Preference Section -->
-          <div class="schedule-preference-section">
-          <h3 class="schedule-preference-title">
-          <i class="fas fa-clock"></i>
-          Schedule Preference
-          </h3>
-          <div class="schedule-preference-grid">
-          <!-- Time Preferences Column -->
-          <div class="schedule-pref-column">
-          <h5 class="schedule-pref-column-title">Time Preference</h5>
-          <div class="schedule-pref-options-container">
-          <div class="schedule-pref-option" data-time="morning">
-          <div class="schedule-pref-radio"></div>
-          <div class="schedule-pref-text">Morning</div>
-          </div>
-          <div class="schedule-pref-option" data-time="noon">
-          <div class="schedule-pref-radio"></div>
-          <div class="schedule-pref-text">Noon</div>
-          </div>
-          <div class="schedule-pref-option" data-time="afternoon">
-          <div class="schedule-pref-radio"></div>
-          <div class="schedule-pref-text">Afternoon</div>
-          </div>
-          <div class="schedule-pref-option" data-time="evening">
-          <div class="schedule-pref-radio"></div>
-          <div class="schedule-pref-text">Evening</div>
-          </div>
-          </div>
-          </div>
-          <!-- Day Schedule Column -->
-          <div class="schedule-pref-column">
-          <h5 class="schedule-pref-column-title">Day Schedule</h5>
-          <div class="schedule-pref-options-container">
-          <div class="schedule-pref-option" data-day="mth">
-          <div class="schedule-pref-radio"></div>
-          <div class="schedule-pref-text">M/TH</div>
-          </div>
-          <div class="schedule-pref-option" data-day="tf">
-          <div class="schedule-pref-radio"></div>
-          <div class="schedule-pref-text">T/F</div>
-          </div>
-          <div class="schedule-pref-option" data-day="ws">
-          <div class="schedule-pref-radio"></div>
-          <div class="schedule-pref-text">W/S</div>
-          </div>
-          </div>
-          </div>
-          </div>
-          </div>
-          <!-- 2nd Trim Subject Selection -->
-          <div class="trim-selection-section">
-          <h4 class="trim-selection-header">
-          <i class="fas fa-calendar-alt"></i>
-          Select Subjects for 2nd Trim
-          </h4>
-          <div class="selection-grid">
-          <!-- Subject Options -->
-          <div class="selection-column">
-          <h5 class="selection-column-title">Subject</h5>
-          <div class="subject-options-container">
-          <div class="subject-option" data-subject="sdf04">
-          <div class="subject-radio"></div>
-          <div class="subject-info">
-          <span class="subject-code">SDF04</span>
-          <span class="subject-title">Database Management System</span>
-          </div>
-          </div>
-          <div class="subject-option" data-subject="sp1">
-          <div class="subject-radio"></div>
-          <div class="subject-info">
-          <span class="subject-code">SP1</span>
-          <span class="subject-title">Social and Professional Issues of IT</span>
-          </div>
-          </div>
-          </div>
-          </div>
-          <!-- Year Level Options -->
-          <div class="selection-column">
-          <h5 class="selection-column-title">Year Level</h5>
-          <div class="year-level-options-container">
-          <div class="year-level-option" data-year="1st">
-          <div class="subject-radio"></div>
-          <div class="year-level-text">1st Year</div>
-          </div>
-          <div class="year-level-option" data-year="2nd">
-          <div class="subject-radio"></div>
-          <div class="year-level-text">2nd Year</div>
-          </div>
-          <div class="year-level-option" data-year="3rd">
-          <div class="subject-radio"></div>
-          <div class="year-level-text">3rd Year</div>
-          </div>
-          <div class="year-level-option" data-year="4th">
-          <div class="subject-radio"></div>
-          <div class="year-level-text">4th Year</div>
-          </div>
-          </div>
-          </div>
-          </div>
-          <!-- Confirm Button -->
-          <div class="trim-confirm-container">
-          <button class="trim-confirm-btn" id="confirm-2nd-trim-btn">
-          <i class="fas fa-check-circle"></i>
-          Confirm Selection
-          </button>
-          </div>
-          </div>
-          </div>
-          </div>
-          </div>
           <!-- Requirements Section -->
           <div id="requirements" class="content-section">
           <div class="breadcrumb">
-          <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Document Requirements</span>
+          <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Documents</span>
           </div>
-          <h1 class="page-title">Document Requirements</h1>
+          <h1 class="page-title">Documents</h1>
           <div class="card">
           <div class="card-header">
-          <h2 class="card-title">Submission Progress</h2>
-          <div class="progress-bar">
-          <div class="progress-fill" id="requirements-progress" style="width: 0%"></div>
           </div>
-          </div>
-          <p id="requirements-progress-text">0 of 6 documents submitted</p>
+          <p id="requirements-progress-text" Style="font-weight: 800">0 DOCUMENTS SUBMITTED</p>
           </div>
           <div class="card">
           <div class="card-header">
-          <h2 class="card-title">College Requirements</h2>
           </div>
+          
+          <br><br>
           <div class="requirements-list">
           <div class="requirement-item" data-doc="birth-certificate">
           <div class="requirement-header">
-          <div class="requirement-title">Birth Certificate</div>
+          <div class="requirement-title">Birth <br>Certificate</div>
           <div class="requirement-status status-pending">Not Uploaded Yet</div>
           </div>
           <p>Official birth certificate issued by PSA</p>
@@ -8026,10 +7673,10 @@
           </div>
           <div class="requirement-item" data-doc="form-138">
           <div class="requirement-header">
-          <div class="requirement-title">Card Form (138)</div>
-          <div class="requirement-status status-pending">Not Uploaded Yet</div>
+          <div class="requirement-title">Certificate of Seminar</div>
+          <div class="requirement-status status-pending">Add your Certificates!</div>
           </div>
-          <p>Official card form credential (Form 138)</p>
+          <p>(Attended Seminars)</p>
           <div class="requirement-actions">
           <button class="upload-action" data-doc="form-138">
           <i class="fas fa-plus"></i> Choose File
@@ -8039,10 +7686,10 @@
           </div>
           <div class="requirement-item" data-doc="form-137">
           <div class="requirement-header">
-          <div class="requirement-title">Form 137</div>
-          <div class="requirement-status status-pending">Not Uploaded Yet</div>
+          <div class="requirement-title">Certificate of Seminar</div>
+          <div class="requirement-status status-pending">Add your Certificates!</div>
           </div>
-          <p>Senior High school permanent record</p>
+          <p>(Attended Seminars)</p>
           <div class="requirement-actions">
           <button class="upload-action" data-doc="form-137">
           <i class="fas fa-plus"></i> Choose File
@@ -8052,10 +7699,10 @@
           </div>
           <div class="requirement-item" data-doc="good-moral">
           <div class="requirement-header">
-          <div class="requirement-title">Good Moral</div>
-          <div class="requirement-status status-pending">Not Uploaded Yet</div>
+          <div class="requirement-title">Certificate of Seminar</div>
+          <div class="requirement-status status-pending">Add your Certificates!</div>
           </div>
-          <p>Certificate of good moral character</p>
+          <p>(Attended Seminars)</p>
           <div class="requirement-actions">
           <button class="upload-action" data-doc="good-moral">
           <i class="fas fa-plus"></i> Choose File
@@ -8065,10 +7712,10 @@
           </div>
           <div class="requirement-item" data-doc="grades">
           <div class="requirement-header">
-          <div class="requirement-title">TOR</div>
-          <div class="requirement-status status-pending">Not Uploaded Yet</div>
+          <div class="requirement-title">Certificate of Seminar</div>
+          <div class="requirement-status status-pending">Add your Certificates!</div>
           </div>
-          <p>Latest grade report or transcript</p>
+          <p>(Attended Seminars)</p>
           <div class="requirement-actions">
           <button class="upload-action" data-doc="grades">
           <i class="fas fa-plus"></i> Choose File
@@ -8078,10 +7725,10 @@
           </div>
           <div class="requirement-item" data-doc="2x2-picture">
           <div class="requirement-header">
-          <div class="requirement-title">2x2 Picture</div>
-          <div class="requirement-status status-pending">Not Uploaded Yet</div>
+          <div class="requirement-title">Certificate of Seminar</div>
+          <div class="requirement-status status-pending">Add your Certificates!</div>
           </div>
-          <p>Recent 2x2 ID picture with white background</p>
+          <p>(Attended Seminars)</p>
           <div class="requirement-actions">
           <button class="upload-action" data-doc="2x2-picture">
           <i class="fas fa-plus"></i> Choose File
@@ -8093,15 +7740,14 @@
           </div>
           <div class="card">
           <div class="card-header">
-          <h2 class="card-title">SHS Requirements</h2>
           </div>
           <div class="requirements-list">
           <div class="requirement-item" data-doc="birth-certificate">
           <div class="requirement-header">
-          <div class="requirement-title">Birth Certificate</div>
-          <div class="requirement-status status-pending">Not Uploaded Yet</div>
+          <div class="requirement-title">Certificate of Seminar</div>
+          <div class="requirement-status status-pending">Add your Certificates!</div>
           </div>
-          <p>Official birth certificate issued by PSA</p>
+          <p>(Attended Seminars)</p>
           <div class="requirement-actions">
           <button class="upload-action" data-doc="birth-certificate">
           <i class="fas fa-plus"></i> Choose File
@@ -8111,10 +7757,10 @@
           </div>
           <div class="requirement-item" data-doc="form-138">
           <div class="requirement-header">
-          <div class="requirement-title">Card Form (138)</div>
-          <div class="requirement-status status-pending">Not Uploaded Yet</div>
+          <div class="requirement-title">Certificate of Seminar</div>
+          <div class="requirement-status status-pending">Add your Certificate!</div>
           </div>
-          <p>Official card form credential (Form 138)</p>
+          <p>(Attended Seminars)</p>
           <div class="requirement-actions">
           <button class="upload-action" data-doc="form-138">
           <i class="fas fa-plus"></i> Choose File
@@ -8124,10 +7770,10 @@
           </div>
           <div class="requirement-item" data-doc="form-137">
           <div class="requirement-header">
-          <div class="requirement-title">Form 137</div>
-          <div class="requirement-status status-pending">Not Uploaded Yet</div>
+          <div class="requirement-title">Certificate of Seminar</div>
+          <div class="requirement-status status-pending">Add your Certificate!</div>
           </div>
-          <p>High school permanent record</p>
+          <p>(Attended Seminars)</p>
           <div class="requirement-actions">
           <button class="upload-action" data-doc="form-137">
           <i class="fas fa-plus"></i> Choose File
@@ -8137,10 +7783,10 @@
           </div>
           <div class="requirement-item" data-doc="good-moral">
           <div class="requirement-header">
-          <div class="requirement-title">Good Moral</div>
-          <div class="requirement-status status-pending">Not Uploaded Yet</div>
+          <div class="requirement-title">Certificate of Seminar</div>
+          <div class="requirement-status status-pending">Add your Certificate!</div>
           </div>
-          <p>Certificate of good moral character</p>
+          <p>(Attended Seminars)</p>
           <div class="requirement-actions">
           <button class="upload-action" data-doc="good-moral">
           <i class="fas fa-plus"></i> Choose File
@@ -8150,10 +7796,10 @@
           </div>
           <div class="requirement-item" data-doc="grades">
           <div class="requirement-header">
-          <div class="requirement-title">TOR</div>
-          <div class="requirement-status status-pending">Not Uploaded Yet</div>
+          <div class="requirement-title">Certificate of Seminar</div>
+          <div class="requirement-status status-pending">Add your Certificate!</div>
           </div>
-          <p>Latest grade report or transcript</p>
+          <p>(Attended Seminars)</p>
           <div class="requirement-actions">
           <button class="upload-action" data-doc="grades">
           <i class="fas fa-plus"></i> Choose File
@@ -8163,10 +7809,10 @@
           </div>
           <div class="requirement-item" data-doc="2x2-picture">
           <div class="requirement-header">
-          <div class="requirement-title">2x2 Picture</div>
-          <div class="requirement-status status-pending">Not Uploaded Yet</div>
+          <div class="requirement-title">Certificate of Seminar</div>
+          <div class="requirement-status status-pending">Add your Certificate!</div>
           </div>
-          <p>Recent 2x2 ID picture with white background</p>
+          <p>(Attended Seminars)</p>
           <div class="requirement-actions">
           <button class="upload-action" data-doc="2x2-picture">
           <i class="fas fa-plus"></i> Choose File
@@ -11658,7 +11304,7 @@
           }
           // Track uploaded requirements
           let uploadedRequirements = 0;
-          const totalRequirements = 12;
+          const totalRequirements = 0;
           // Wait for DOM to be fully loaded
           document.addEventListener('DOMContentLoaded', function() {
           // Sidebar Toggle Functionality
@@ -11927,18 +11573,21 @@
           const progressBar = document.getElementById('requirements-progress');
           const progressText = document.getElementById('requirements-progress-text');
           const pendingCount = document.getElementById('pending-requirements-count');
-          const requirementsBadge = document.getElementById('requirements-badge');
+          // const requirementsBadge = document.getElementById('requirements-badge');
           const progressPercentage = (uploadedRequirements / totalRequirements) * 100;
           progressBar.style.width = `${progressPercentage}%`;
-          progressText.textContent = `${uploadedRequirements} of ${totalRequirements} documents submitted`;
+          progressText.textContent = `${uploadedRequirements} documents submitted`;
           pendingCount.textContent = totalRequirements - uploadedRequirements;
-          // Update notification badge
-          if (uploadedRequirements < totalRequirements) {
-          requirementsBadge.textContent = totalRequirements - uploadedRequirements;
-          requirementsBadge.style.display = 'flex';
-          } else {
-          requirementsBadge.style.display = 'none';
-          }
+          // Update notification badge - REMOVED
+          // requirementsBadge.textContent = uploadedRequirements;
+          // requirementsBadge.style.display = 'flex';
+          // if (uploadedRequirements === 0) {
+          // requirementsBadge.classList.add('red');
+          // requirementsBadge.classList.remove('green');
+          // } else {
+          // requirementsBadge.classList.add('green');
+          // requirementsBadge.classList.remove('red');
+          // }
           }
           // Initialize requirements progress
           updateRequirementsProgress();
