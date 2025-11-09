@@ -8600,11 +8600,67 @@
       <div style="font-size: 12px; color: var(--gray);">Approved</div>
       </div>
       </div>
-      <div style="margin-bottom: 20px;">
-      <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 15px; flex-wrap: wrap;">
-      <label style="font-weight: 600; color: var(--text-color); font-size: 14px;">Filter: All statuses</label>
+      <hr>
+      
+      <!-- Progress Circles -->
+      <div style="display: flex; justify-content: center; gap: 80px; margin: 40px 0; padding: 30px; background: linear-gradient(135deg, rgba(229, 115, 115, 0.05) 0%, rgba(139, 155, 122, 0.05) 100%); border-radius: 20px;">
+        <!-- Uploaded Progress Circle -->
+        <div style="text-align: center; position: relative;">
+          <div style="position: relative; display: inline-block;">
+            <svg width="220" height="220" style="transform: rotate(-90deg); filter: drop-shadow(0 10px 25px rgba(229, 115, 115, 0.3));">
+              <circle cx="110" cy="110" r="90" fill="none" stroke="#f0f0f0" stroke-width="18"></circle>
+              <circle cx="110" cy="110" r="90" fill="none" stroke="url(#gradientUploaded)" stroke-width="18" 
+                      stroke-dasharray="565" stroke-dashoffset="120" stroke-linecap="round"
+                      style="transition: stroke-dashoffset 1s ease;">
+                <animate attributeName="stroke-dashoffset" from="565" to="120" dur="1.5s" fill="freeze" />
+              </circle>
+              <defs>
+                <linearGradient id="gradientUploaded" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#EF9A9A;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#E57373;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+              <div style="font-size: 30px; font-weight: 800; color: #C62828; line-height: 1;">78.6%</div>
+              <div style="font-size: 14px; color: #666; margin-top: 5px; font-weight: 500;">Progress</div>
+            </div>
+          </div>
+          <div style="margin-top: 20px;">
+            <div style="font-size: 18px; color: var(--text-color); font-weight: 700; margin-bottom: 5px;">Uploaded</div>
+            <div style="font-size: 13px; color: var(--gray);">3 of 4 files uploaded</div>
+          </div>
+        </div>
+        
+        <!-- Approved Progress Circle -->
+        <div style="text-align: center; position: relative;">
+          <div style="position: relative; display: inline-block;">
+            <svg width="220" height="220" style="transform: rotate(-90deg); filter: drop-shadow(0 10px 25px rgba(139, 155, 122, 0.3));">
+              <circle cx="110" cy="110" r="90" fill="none" stroke="#f0f0f0" stroke-width="18"></circle>
+              <circle cx="110" cy="110" r="90" fill="none" stroke="url(#gradientApproved)" stroke-width="18" 
+                      stroke-dasharray="565" stroke-dashoffset="51" stroke-linecap="round"
+                      style="transition: stroke-dashoffset 1s ease;">
+                <animate attributeName="stroke-dashoffset" from="565" to="51" dur="1.5s" fill="freeze" />
+              </circle>
+              <defs>
+                <linearGradient id="gradientApproved" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#AED581;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#8B9B7A;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+              <div style="font-size: 30px; font-weight: 800; color: #558B2F; line-height: 1;">91%</div>
+              <div style="font-size: 14px; color: #666; margin-top: 5px; font-weight: 500;">Progress</div>
+            </div>
+          </div>
+          <div style="margin-top: 20px;">
+            <div style="font-size: 18px; color: var(--text-color); font-weight: 700; margin-bottom: 5px;">Approved</div>
+            <div style="font-size: 13px; color: var(--gray);">3 of 3 reviewed</div>
+          </div>
+        </div>
       </div>
-      </div>
+      
       </div>
       </div>
       <!-- Uploads Table -->
