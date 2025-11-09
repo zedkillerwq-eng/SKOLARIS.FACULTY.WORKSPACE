@@ -6425,7 +6425,7 @@
           <a href="#"><i class="fas fa-question-circle"></i> Help & Support</a>
           </li>
           <li class="nav-item" data-section="feedback">
-          <a href="#"><i class="fas fa-comments"></i> Feedback & Faculty Evaluation</a>
+          <a href="#"><i class="fas fa-comments"></i> Feedback</a>
           </li>
           <li class="nav-item" data-section="skolink">
           <a href="#"><i class="fas fa-paper-plane"></i> SkoLink</a>
@@ -10281,15 +10281,15 @@
           <!-- Feedback Section -->
           <div id="feedback" class="content-section">
           <div class="breadcrumb">
-          <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Feedback/Faculty Evaluation</span>
+          <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Feedback</span>
           </div>
-          <h1 class="page-title">Feedback & Faculty Evaluation</h1>
+          <h1 class="page-title">Feedback</h1>
           <!-- Professional Header -->
           <div class="feedback-header">
           <div class="feedback-intro">
           <div class="intro-content">
           <h2>Your Opinion Matters</h2>
-          <p>Help us improve by sharing your feedback and evaluating your professors</p>
+          <p>Help us improve by sharing your feedback</p>
           </div>
           </div>
           <div class="feedback-stats">
@@ -10383,10 +10383,6 @@
           <button id="feedback-tab-btn" class="tab-btn active">
           <i class="fas fa-comments"></i>
           <span>General Feedback</span>
-          </button>
-          <button id="evaluation-tab-btn" class="tab-btn">
-          <i class="fas fa-chalkboard-teacher"></i>
-          <span>Faculty Evaluation</span>
           </button>
           </div>
           <!-- General Feedback Section -->
@@ -10503,200 +10499,7 @@
           </div>
           </div>
           </div>
-          <!-- Faculty Evaluation Section -->
-          <div id="evaluation-section" class="feedback-content" style="display: none;">
-          <div class="evaluation-wizard">
-          <!-- Step 1: Professor Selection -->
-          <div class="wizard-step active" id="step-1">
-          <div class="step-header">
-          <div class="step-number">1</div>
-          <h3>Select Professor & Subject</h3>
-          </div>
-          <div class="step-content">
-          <div class="form-row">
-          <div class="form-group-professional">
-          <label for="select-professor">
-          <i class="fas fa-user-graduate"></i> Professor
-          </label>
-          <select id="select-professor" class="form-select-professional" required>
-          <option value="">Choose a professor...</option>
-          <option value="1">Joriz, Chiong</option>
-          <option value="2">Vilog, Jericho Manlangit</option>
-          <option value="3">Prof. Maria Santos</option>
-          <option value="4">Dr. Juan dela Cruz</option>
-          <option value="5">Prof. Ana Reyes</option>
-          </select>
-          </div>
-          <div class="form-group-professional">
-          <label for="select-subject">
-          <i class="fas fa-book"></i> Subject
-          </label>
-          <select id="select-subject" class="form-select-professional" required>
-          <option value="">Choose a subject...</option>
-          <option value="OLIPT2">Integrative Programming and Technologies 2</option>
-          <option value="OLSA01">System Administration and Maintenance</option>
-          <option value="CS101">Computer Programming 1</option>
-          <option value="IT201">Data Structures and Algorithms</option>
-          <option value="IT202">Database Management Systems</option>
-          </select>
-          </div>
-          </div>
-          <div class="step-actions">
-          <button class="btn btn-primary" id="next-to-step2">
-          <span>Continue to Evaluation</span>
-          <i class="fas fa-arrow-right"></i>
-          </button>
-          </div>
-          </div>
-          </div>
-          <!-- Step 2: Evaluation Form -->
-          <div class="wizard-step" id="step-2">
-          <div class="step-header">
-          <div class="step-number">2</div>
-          <h3>Rate Your Professor</h3>
-          </div>
-          <div class="step-content">
-          <div class="evaluation-criteria-modern">
-          <!-- Teaching Effectiveness -->
-          <div class="criteria-group">
-          <div class="criteria-header">
-          <i class="fas fa-chalkboard"></i>
-          <h4>Teaching Effectiveness</h4>
-          </div>
-          <div class="criteria-items">
-          <div class="criteria-item-modern">
-          <label>Explains concepts clearly and thoroughly</label>
-          <div class="rating-stars" data-name="teaching-clarity">
-          <i class="far fa-star" data-rating="1"></i>
-          <i class="far fa-star" data-rating="2"></i>
-          <i class="far fa-star" data-rating="3"></i>
-          <i class="far fa-star" data-rating="4"></i>
-          <i class="far fa-star" data-rating="5"></i>
-          </div>
-          </div>
-          <div class="criteria-item-modern">
-          <label>Uses effective teaching methods</label>
-          <div class="rating-stars" data-name="teaching-methods">
-          <i class="far fa-star" data-rating="1"></i>
-          <i class="far fa-star" data-rating="2"></i>
-          <i class="far fa-star" data-rating="3"></i>
-          <i class="far fa-star" data-rating="4"></i>
-          <i class="far fa-star" data-rating="5"></i>
-          </div>
-          </div>
-          <div class="criteria-item-modern">
-          <label>Provides helpful feedback on assignments</label>
-          <div class="rating-stars" data-name="feedback-quality">
-          <i class="far fa-star" data-rating="1"></i>
-          <i class="far fa-star" data-rating="2"></i>
-          <i class="far fa-star" data-rating="3"></i>
-          <i class="far fa-star" data-rating="4"></i>
-          <i class="far fa-star" data-rating="5"></i>
-          </div>
-          </div>
-          </div>
-          </div>
-          <!-- Class Management -->
-          <div class="criteria-group">
-          <div class="criteria-header">
-          <i class="fas fa-users-cog"></i>
-          <h4>Class Management</h4>
-          </div>
-          <div class="criteria-items">
-          <div class="criteria-item-modern">
-          <label>Maintains classroom discipline</label>
-          <div class="rating-stars" data-name="class-discipline">
-          <i class="far fa-star" data-rating="1"></i>
-          <i class="far fa-star" data-rating="2"></i>
-          <i class="far fa-star" data-rating="3"></i>
-          <i class="far fa-star" data-rating="4"></i>
-          <i class="far fa-star" data-rating="5"></i>
-          </div>
-          </div>
-          <div class="criteria-item-modern">
-          <label>Makes effective use of class time</label>
-          <div class="rating-stars" data-name="time-management">
-          <i class="far fa-star" data-rating="1"></i>
-          <i class="far fa-star" data-rating="2"></i>
-          <i class="far fa-star" data-rating="3"></i>
-          <i class="far fa-star" data-rating="4"></i>
-          <i class="far fa-star" data-rating="5"></i>
-          </div>
-          </div>
-          <div class="criteria-item-modern">
-          <label>Encourages student participation</label>
-          <div class="rating-stars" data-name="student-engagement">
-          <i class="far fa-star" data-rating="1"></i>
-          <i class="far fa-star" data-rating="2"></i>
-          <i class="far fa-star" data-rating="3"></i>
-          <i class="far fa-star" data-rating="4"></i>
-          <i class="far fa-star" data-rating="5"></i>
-          </div>
-          </div>
-          </div>
-          </div>
-          <!-- Professionalism -->
-          <div class="criteria-group">
-          <div class="criteria-header">
-          <i class="fas fa-user-tie"></i>
-          <h4>Professionalism</h4>
-          </div>
-          <div class="criteria-items">
-          <div class="criteria-item-modern">
-          <label>Shows professionalism and good character</label>
-          <div class="rating-stars" data-name="professionalism">
-          <i class="far fa-star" data-rating="1"></i>
-          <i class="far fa-star" data-rating="2"></i>
-          <i class="far fa-star" data-rating="3"></i>
-          <i class="far fa-star" data-rating="4"></i>
-          <i class="far fa-star" data-rating="5"></i>
-          </div>
-          </div>
-          <div class="criteria-item-modern">
-          <label>Is punctual and regular in attendance</label>
-          <div class="rating-stars" data-name="attendance">
-          <i class="far fa-star" data-rating="1"></i>
-          <i class="far fa-star" data-rating="2"></i>
-          <i class="far fa-star" data-rating="3"></i>
-          <i class="far fa-star" data-rating="4"></i>
-          <i class="far fa-star" data-rating="5"></i>
-          </div>
-          </div>
-          <div class="criteria-item-modern">
-          <label>Is approachable and helpful</label>
-          <div class="rating-stars" data-name="approachability">
-          <i class="far fa-star" data-rating="1"></i>
-          <i class="far fa-star" data-rating="2"></i>
-          <i class="far fa-star" data-rating="3"></i>
-          <i class="far fa-star" data-rating="4"></i>
-          <i class="far fa-star" data-rating="5"></i>
-          </div>
-          </div>
-          </div>
-          </div>
-          </div>
-          <div class="form-group-professional">
-          <label for="evaluation-comments">
-          <i class="fas fa-comment"></i> Additional Comments (Optional)
-          </label>
-          <textarea id="evaluation-comments" class="form-textarea-professional" placeholder="Share any additional feedback about this professor's teaching, suggestions for improvement, or specific experiences you'd like to highlight." rows="4"></textarea>
-          </div>
-          <div class="step-actions">
-          <button class="btn btn-secondary" id="back-to-step1">
-          <i class="fas fa-arrow-left"></i>
-          <span>Back</span>
-          </button>
-          <button class="btn btn-primary" id="submit-evaluation">
-          <i class="fas fa-paper-plane"></i>
-          <span>Submit Evaluation</span>
-          </button>
-          </div>
-          </div>
-          </div>
-          </div>
-          </div>
-          </div>
-          <!-- SkoLink Section -->
+          
           <div id="skolink" class="content-section">
           <div class="breadcrumb">
           <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>SkoLink</span>
