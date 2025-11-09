@@ -5909,8 +5909,8 @@
           }
           }
           .photo-circle {
-          width: 120px;
-          height: 120px;
+          width: 180px;
+          height: 180px;
           border-radius: 50%;
           background: var(--light);
           border: 2px dashed var(--gray);
@@ -5918,9 +5918,9 @@
           align-items: center;
           justify-content: center;
           text-align: center;
-          font-size: 11px;
+          font-size: 12px;
           color: #000000;
-          margin: 10px auto;
+          margin: 15px auto;
           cursor: pointer;
           transition: all 0.3s ease;
           user-select: none;
@@ -6368,7 +6368,7 @@
           <div class="sidebar" id="sidebar">
           <div class="logo" style="display: flex; flex-direction: column; align-items: center;">
           <h1 style="font-weight: 1000; font-size: 23px">Faculty Workspace</h1>
-          <div class="photo-circle">Long Press to Upload Photo</div>
+          <div class="photo-circle">Click to Upload Photo</div>
           <input type="file" id="upload" style="display: none;">
           </div>
           <hr class="sidebar-divider">
@@ -8457,7 +8457,7 @@
               </div>
       <div class="schedule-time">
           <span class="left-text">LFAU211M001</span>
-          <span class="right-text" style="color: red">(120)</span>
+          <span class="right-text" style="color: white">(120)</span>
           </div>
       <div class="schedule-room">
           <span class="left-text"></span>
@@ -8477,7 +8477,7 @@
           </div>
       <div class="schedule-time">
           <span class="left-text">LFAU211M001</span>
-          <span class="right-text" style="color: red;">(120)</span>
+          <span class="right-text" style="color: white;">(120)</span>
           </div>
       <div class="schedule-room">
       </div>
@@ -8494,7 +8494,7 @@
       <div class="schedule-time"></div>
       <div class="schedule-time">
           <span class="left-text">LFAU211M001</span>
-          <span class="right-text" style="color: red;">(120)</span>
+          <span class="right-text" style="color: white;">(120)</span>
       </div>
           </div>
           </div>
@@ -9362,7 +9362,7 @@
           <i class="fas fa-file-medical"> &nbsp;  </i>Submit New Drug Test Application
           </button>
           <button class="shiny-download-btn shining" id="drug-test-download-btn" onclick="downloadDrugTest()" style="margin-top: 10px;">
-          <i class="fas fa-download"></i> <span id="drug-test-btn-text">Download Report (Free)</span>
+          <i class="fas fa-download"></i> <span id="drug-test-btn-text">Download</span>
           </button>
           </div>
           </div>
@@ -9478,7 +9478,7 @@
           <i class="fas fa-calendar-alt"></i> Schedule New X-ray
           </button>
           <button class="shiny-download-btn shining" id="xray-download-btn" onclick="downloadXRay()" style="margin-top: 10px;">
-          <i class="fas fa-download"></i> <span id="xray-btn-text">Download Report (Free)</span>
+          <i class="fas fa-download"></i> <span id="xray-btn-text">Download</span>
           </button>
           </div>
           </div>
@@ -9647,7 +9647,7 @@
           <i class="fas fa-deaf"></i> Schedule Hearing Test
           </button>
           <button class="shiny-download-btn shining" id="physical-exam-download-btn" onclick="downloadPhysicalExam()" style="margin-top: 10px;">
-          <i class="fas fa-download"></i> <span id="physical-exam-btn-text">Download Report (Free)</span>
+          <i class="fas fa-download"></i> <span id="physical-exam-btn-text">Download</span>
           </button>
           </div>
           </div>
@@ -9745,7 +9745,7 @@
           <!-- Download Button -->
           <div style="text-align: center; margin-top: 30px;">
           <button class="shiny-download-btn shining" id="vaccination-download-btn" onclick="downloadVaccination()" style="margin-top: 10px;">
-          <i class="fas fa-download"></i> <span id="vaccination-btn-text">Download Report (Free)</span>
+          <i class="fas fa-download"></i> <span id="vaccination-btn-text">Download</span>
           </button>
           </div>
           </div>
@@ -9862,7 +9862,7 @@
           <i class="fas fa-calendar-plus"></i> View Upcoming Seminars
           </button>
           <button class="shiny-download-btn shining" id="mindcare-download-btn" onclick="downloadMindcare()" style="margin-top: 10px;">
-          <i class="fas fa-download"></i> <span id="mindcare-btn-text">Download Report (Free)</span>
+          <i class="fas fa-download"></i> <span id="mindcare-btn-text">Download</span>
           </button>
           </div>
           </div>
@@ -11333,7 +11333,7 @@
                   downloadedReports.physicalExam = true;
                   btn.classList.remove('shining');
                   btn.classList.add('downloaded');
-                  btnText.textContent = 'Download With Fee (₱)';
+                  btnText.textContent = 'Download';
               } else {
                   if (confirm('This download costs ₱ Do you want to proceed?')) {
                       alert('Download started! ₱ will be charged to your account.');
@@ -11349,7 +11349,7 @@
                   downloadedReports.drugTest = true;
                   btn.classList.remove('shining');
                   btn.classList.add('downloaded');
-                  btnText.textContent = 'Download With Fee (₱)';
+                  btnText.textContent = 'Download';
               } else {
                   if (confirm('This download costs ₱ Do you want to proceed?')) {
                       alert('Download started! ₱ will be charged to your account.');
@@ -11365,7 +11365,7 @@
                   downloadedReports.xray = true;
                   btn.classList.remove('shining');
                   btn.classList.add('downloaded');
-                  btnText.textContent = 'Download With Fee (₱)';
+                  btnText.textContent = 'Download';
               } else {
                   if (confirm('This download costs (₱) Do you want to proceed?')) {
                       alert('Download started! (₱) will be charged to your account.');
@@ -11381,7 +11381,7 @@
                   downloadedReports.vaccination = true;
                   btn.classList.remove('shining');
                   btn.classList.add('downloaded');
-                  btnText.textContent = 'Download With Fee (₱)';
+                  btnText.textContent = 'Download';
               } else {
                   if (confirm('This download costs (₱) Do you want to proceed?')) {
                       alert('Download started! (₱) will be charged to your account.');
@@ -11397,7 +11397,7 @@
                   downloadedReports.mindcare = true;
                   btn.classList.remove('shining');
                   btn.classList.add('downloaded');
-                  btnText.textContent = 'Download With Fee (₱)';
+                  btnText.textContent = 'Download';
               } else {
                   if (confirm('This download costs ₱ Do you want to proceed?')) {
                       alert('Download started! ₱ will be charged to your account.');
@@ -11413,7 +11413,7 @@
                   downloadedReports.healthHistory = true;
                   btn.classList.remove('shining');
                   btn.classList.add('downloaded');
-                  btnText.textContent = 'Download With Fee (₱)';
+                  btnText.textContent = 'Download';
               } else {
                   if (confirm('This download costs ₱ Do you want to proceed?')) {
                       alert('Download started! ₱ will be charged to your account.');
@@ -13369,36 +13369,16 @@
           }
           });
           }
-          // Photo upload functionality with long press
+          // Photo upload functionality - click to upload
           const photoCircle = document.querySelector('.photo-circle');
           const fileInput = document.getElementById('upload');
-          let longPressTimer;
-          let isLongPress = false;
-          // Long press detection for both touch and mouse
-          function startLongPress() {
-          isLongPress = false;
-          photoCircle.classList.add('long-pressing');
-          longPressTimer = setTimeout(() => {
-          isLongPress = true;
-          photoCircle.classList.remove('long-pressing');
-          fileInput.click(); // Trigger file input on long press
-          }, 1000); // 1 second long press
-          }
-          function cancelLongPress() {
-          clearTimeout(longPressTimer);
-          photoCircle.classList.remove('long-pressing');
-          }
-          // Mouse events
-          photoCircle.addEventListener('mousedown', startLongPress);
-          photoCircle.addEventListener('mouseup', cancelLongPress);
-          photoCircle.addEventListener('mouseleave', cancelLongPress);
-          // Touch events
-          photoCircle.addEventListener('touchstart', startLongPress);
-          photoCircle.addEventListener('touchend', cancelLongPress);
-          // Prevent context menu on long press
-          photoCircle.addEventListener('contextmenu', (e) => {
-          e.preventDefault();
+
+          // Click to upload photo
+          photoCircle.addEventListener('click', function() {
+          fileInput.click();
           });
+
+          // Handle file selection
           document.getElementById('upload').addEventListener('change', function(event) {
           const file = event.target.files[0];
           if (file) {
@@ -13408,6 +13388,7 @@
           photoCircle.style.backgroundSize = 'cover';
           photoCircle.style.backgroundPosition = 'center';
           photoCircle.innerHTML = ''; // Remove text
+          photoCircle.style.border = '3px solid var(--primary)'; // Add border to show image is uploaded
           };
           reader.readAsDataURL(file);
           }
