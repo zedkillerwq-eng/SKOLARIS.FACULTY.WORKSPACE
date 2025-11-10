@@ -6397,7 +6397,7 @@
             <a href="#"><i class="fas fa-money-bill-wave"></i> Availability & Subject Preferences</a>
             </li>
             <li class="nav-item" data-section="NEW">
-            <a href="#"><i class="fas fa-plus-circle"></i>Events/Training/Services</a>
+            <a href="#"><i class="fas fa-plus-circle"></i>School Calendar</a>
             </li>
             <li class="nav-item" data-section="clearance">
             <a href="#"><i class="fas fa-file-invoice"></i> Clearance Tracker</a>
@@ -6447,8 +6447,8 @@
             <!-- Dashboard Section -->
             <div id="dashboard" class="content-section active">
             <h1 class="page-title">Faculty Dashboard</h1>
-            <br><br>
             <span style="font-size:18px; font-weight: 100; color:lightgreen; margin-top:20px ">STUDENTS</span>
+            <br><br>
             <div class="quick-actions">
             <a href="#" class="quick-action-btn" data-section="schedule">
             <i class="fas fa-calendar-check"></i> Check Weekly Schedule
@@ -6549,8 +6549,9 @@
             <br>
             <br>
             <hr>
-            <br><br>
+            <br>
             <span style="font-size:18px; font-weight: 100; color:lightblue ">FACULTY</span>
+            <br><br>
             <div class="stats-grid">
             
             <a href="#" class="quick-action-btn" onclick="openAssessmentClearanceModal(); return false;">
@@ -6567,7 +6568,7 @@
             
             
             <a href="#" class="quick-action-btn" data-section="NEW">
-            <i class="fas fa-plus-circle"></i> Events/Training/Seminars
+            <i class="fas fa-plus-circle"></i> School Calendar
             </a>
             
             
@@ -6611,25 +6612,11 @@
             <div class="stat-label" style="color:var(--text-color)">Credential Management</div>
             </div>
 
-            <div class="stat-card">
-            <div class="stat-value">100%<div class="progress-bar"><div style="width: 100%; height: 100%; background-color: green; border-radius: 4px;"></div></div></div>
-            <div class="stat-label">2nd Year</div>
-            </div>
-            <div class="stat-card">
-            <div class="stat-value">80%<div class="progress-bar"><div style="width: 80%;height: 100%; background-color: yellow; border-radius: 4px;"></div></div></div>
             
             
-            
-            
-            <div class="stat-label">3rd Year</div>
-            </div>
             <div class="stat-card">
-            <div class="stat-value">&#8734;<br>in progress<div class="progress-bar"><div style="width: 90%; height: 100%; background-color: yellow; border-radius: 4px;"></div></div></div>
-            <div class="stat-label">4th Year</div>
-            </div>
-            <div class="stat-card">
-            <div class="stat-value">&#8734;<br>in progress<div class="progress-bar"><div style="width: 95%; height: 100%; background-color: green; border-radius: 4px;"></div></div></div>
-            <div class="stat-label">Overall Progress</div>
+            <div class="stat-value">&#8734;<br>Clearance Progress<div class="progress-bar"><div style="width: 95%; height: 100%; background-color: green; border-radius: 4px;"></div></div></div>
+            <div class="stat-label">Clearance</div>
             </div>
             </div>
             <!-- Academic status moved into the small dashboard stat-card next to Balance Due -->
@@ -7525,18 +7512,10 @@
             </div>
             <p style="color: var(--gray); font-size: 12px; margin: 0; line-height: 1.4;"></p>
             </div>
-            <!-- Step 3 -->
-            <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 20px; box-shadow: var(--box-shadow); cursor: pointer;" onclick="showProfileStep(3)">
-            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
-            <div style="width: 35px; height: 35px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;">3</div>
-            <h3 style="color: var(--text-color); font-size: 15px; font-weight: 600; margin: 0;">Credentials & Certificate</h3>
-            </div>
-            <p style="color: var(--gray); font-size: 12px; margin: 0; line-height: 1.4;"></p>
-            </div>
             
             <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 20px; box-shadow: var(--box-shadow); cursor: pointer;" onclick="showProfileStep(4)">
           <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
-              <div style="width: 35px; height: 35px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;">4</div>
+              <div style="width: 35px; height: 35px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;">3</div>
               <h3 style="color: var(--text-color); font-size: 15px; font-weight: 600; margin: 0;">Emergency & Contact Information</h3>
           </div>
           <p style="color: var(--gray); font-size: 12px; margin: 0; line-height: 1.4;"></p>
@@ -7820,7 +7799,216 @@
             <div class="card-header">
             <h2 class="card-title"><i class="fas fa-phone-alt"></i> Emergency & Contact Information</h2>
             </div>
-            <p style="color: var(--gray); padding: 20px;">Content for Emergency & Contact Information will be added here.</p>
+            <div style="padding: 20px;">
+              <p style="color: var(--gray); margin-bottom: 12px;">Fill in your emergency and contact details. These will be shown to authorized staff during emergencies.</p>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 12px;">
+                <div>
+                  <label style="display:block; font-weight:600; margin-bottom:6px;">Primary Contact Name</label>
+                  <input type="text" id="primary-contact-name" placeholder="Full name" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-color);">
+                </div>
+                <div>
+                  <label style="display:block; font-weight:600; margin-bottom:6px;">Relation</label>
+                  <input type="text" id="primary-contact-relation" placeholder="e.g. Spouse, Parent" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-color);">
+                </div>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 12px;">
+                <div>
+                  <label style="display:block; font-weight:600; margin-bottom:6px;">Mobile No.</label>
+                  <input type="tel" id="primary-contact-mobile" placeholder="+63" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-color);">
+                </div>
+                <div>
+                  <label style="display:block; font-weight:600; margin-bottom:6px;">Tel No.</label>
+                  <input type="tel" id="primary-contact-tel" placeholder="(optional)" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-color);">
+                </div>
+                <div>
+                  <label style="display:block; font-weight:600; margin-bottom:6px;">Email</label>
+                  <input type="email" id="primary-contact-email" placeholder="optional@email.com" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-color);">
+                </div>
+              </div>
+
+              <div style="margin-bottom:12px;">
+                <label style="display:block; font-weight:600; margin-bottom:6px;">Primary Contact Address</label>
+                <input type="text" id="primary-contact-address" placeholder="#, Street, Barangay, City" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-color);">
+              </div>
+
+              <hr style="border:none; height:1px; background:var(--border-color); margin:12px 0;">
+
+              <h4 style="margin:8px 0;">Secondary / Alternate Contact</h4>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 12px;">
+                <div>
+                  <label style="display:block; font-weight:600; margin-bottom:6px;">Secondary Contact Name</label>
+                  <input type="text" id="secondary-contact-name" placeholder="Full name" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-color);">
+                </div>
+                <div>
+                  <label style="display:block; font-weight:600; margin-bottom:6px;">Relation</label>
+                  <input type="text" id="secondary-contact-relation" placeholder="Relation" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-color);">
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 12px;">
+                <div>
+                  <label style="display:block; font-weight:600; margin-bottom:6px;">Mobile No.</label>
+                  <input type="tel" id="secondary-contact-mobile" placeholder="+63" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-color);">
+                </div>
+                <div>
+                  <label style="display:block; font-weight:600; margin-bottom:6px;">Tel No.</label>
+                  <input type="tel" id="secondary-contact-tel" placeholder="(optional)" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-color);">
+                </div>
+                <div>
+                  <label style="display:block; font-weight:600; margin-bottom:6px;">Email</label>
+                  <input type="email" id="secondary-contact-email" placeholder="optional@email.com" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-color);">
+                </div>
+              </div>
+
+              <hr style="border:none; height:1px; background:var(--border-color); margin:12px 0;">
+
+              <h4 style="margin:8px 0;">Medical Information</h4>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 12px;">
+                <div>
+                  <label style="display:block; font-weight:600; margin-bottom:6px;">Primary Physician</label>
+                  <input type="text" id="physician-name" placeholder="Doctor / Clinic" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-color);">
+                </div>
+                <div>
+                  <label style="display:block; font-weight:600; margin-bottom:6px;">Physician Contact</label>
+                  <input type="text" id="physician-contact" placeholder="Tel / Mobile" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-color);">
+                </div>
+              </div>
+              <div style="margin-bottom:12px;">
+                <label style="display:block; font-weight:600; margin-bottom:6px;">Allergies / Medical Conditions</label>
+                <textarea id="medical-notes" placeholder="List allergies, medications, chronic conditions (if any)" rows="3" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-color);"></textarea>
+              </div>
+
+              <hr style="border:none; height:1px; background:var(--border-color); margin:20px 0;">
+
+              <h4 style="margin:12px 0; color: var(--text-color); font-size: 16px;">MEDICAL & HEALTH INFORMATION</h4>
+              <p style="color: var(--gray); font-size: 13px; margin-bottom: 15px; font-style: italic;">Optional (for emergency use only)</p>
+
+              <!-- Blood Type -->
+              <div style="margin-bottom:15px;">
+                <label style="display:block; font-weight:600; margin-bottom:6px; color: var(--text-color);">Blood Type</label>
+                <select id="blood-type" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-color);">
+                  <option value="">Select Blood Type</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                </select>
+              </div>
+
+              <!-- Allergies -->
+              <div style="margin-bottom:15px;">
+                <label style="display:block; font-weight:600; margin-bottom:6px; color: var(--text-color);">Allergies</label>
+                <input type="text" id="allergies" placeholder="e.g., Penicillin, Peanuts" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-color);">
+              </div>
+
+              <!-- Existing Conditions -->
+              <div style="margin-bottom:15px;">
+                <label style="display:block; font-weight:600; margin-bottom:6px; color: var(--text-color);">Existing Conditions</label>
+                <input type="text" id="existing-conditions" placeholder="e.g., Hypertension, Asthma" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-color);">
+              </div>
+
+              <!-- Current Medications -->
+              <div style="display: grid; grid-template-columns: 3fr 2fr; gap: 15px; margin-bottom: 15px;">
+                <div>
+                  <label style="display:block; font-weight:600; margin-bottom:6px; color: var(--text-color);">Current Medications</label>
+                  <input type="text" id="current-medications" placeholder="e.g., Amlodipine 5mg daily" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-color);">
+                </div>
+                <div>
+                  <label style="display:block; font-weight:600; margin-bottom:6px; color: var(--text-color);">Physician / Clinic</label>
+                  <input type="text" id="medication-physician" placeholder="e.g., Dr. Cruz - Antipolo Clinic (0917 111 2222)" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-color);">
+                </div>
+              </div>
+
+              <!-- Other Notes -->
+              <div style="margin-bottom:15px;">
+                <label style="display:block; font-weight:600; margin-bottom:6px; color: var(--text-color);">Other Notes</label>
+                <textarea id="other-medical-notes" placeholder="Important Information first, in concise terms." rows="3" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-color);"></textarea>
+              </div>
+
+              <hr style="border:none; height:1px; background:var(--border-color); margin:20px 0;">
+
+              <h4 style="margin:12px 0; color: var(--text-color); font-size: 16px;">AUTHORIZATION & DATA PRIVACY</h4>
+              
+              <div style="margin-bottom:15px;">
+                <label style="display:flex; align-items:start; gap:10px; cursor:pointer;">
+                  <input type="checkbox" id="auth-emergency-use" style="margin-top:4px;">
+                  <span style="color: var(--text-color); font-size: 14px; line-height: 1.5;">
+                    I authorize SKOLARIS and the institution to use the information above <strong>solely for emergency response and safety purposes</strong>, consistent with the Data Privacy Act of 2012 (RA 10173) and school policy.
+                  </span>
+                </label>
+              </div>
+
+              <div style="margin-bottom:15px;">
+                <label style="display:flex; align-items:start; gap:10px; cursor:pointer;">
+                  <input type="checkbox" id="consent-emergency-contacts" style="margin-top:4px;">
+                  <span style="color: var(--text-color); font-size: 14px; line-height: 1.5;">
+                    I consent to the school contacting my listed emergency contacts during emergencies and related safety incidents.
+                  </span>
+                </label>
+              </div>
+
+              <p style="color: var(--gray); font-size: 12px; font-style: italic; margin-top: 10px;">
+                Tip: uncheck to flag record as Needs Update.
+              </p>
+
+              <hr style="border:none; height:1px; background:var(--border-color); margin:20px 0;">
+
+              <h4 style="margin:12px 0; color: var(--text-color); font-size: 16px;">PRINTABLE ICE CARD (PREVIEW)</h4>
+              <p style="color: var(--gray); font-size: 13px; margin-bottom: 15px;">
+                Fits on wallet-sized print when using browser Print
+              </p>
+
+              <div style="background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 8px; padding: 20px; max-width: 400px; margin-bottom: 20px;">
+                <div style="text-align: center; border-bottom: 2px solid var(--border-color); padding-bottom: 12px; margin-bottom: 12px;">
+                  <h3 style="margin: 0; font-size: 16px; font-weight: 700; color: var(--text-color);">IN CASE OF EMERGENCY — FACULTY</h3>
+                </div>
+                
+                <div style="margin-bottom: 10px;">
+                  <p style="margin: 0; font-size: 11px; color: var(--gray); font-weight: 600;">Name</p>
+                  <p id="ice-card-name" style="margin: 0; font-size: 14px; color: var(--text-color); font-weight: 600;">DIZON, LARA M.</p>
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                  <p style="margin: 0; font-size: 11px; color: var(--gray); font-weight: 600;">Primary Contact</p>
+                  <p id="ice-card-primary-contact" style="margin: 0; font-size: 13px; color: var(--text-color);">Maria D. Santos (Spouse)</p>
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                  <p style="margin: 0; font-size: 11px; color: var(--gray); font-weight: 600;">Mobile</p>
+                  <p id="ice-card-mobile" style="margin: 0; font-size: 13px; color: var(--text-color);">0917 555 1234</p>
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                  <p style="margin: 0; font-size: 11px; color: var(--gray); font-weight: 600;">Allergies / Conditions</p>
+                  <p id="ice-card-allergies" style="margin: 0; font-size: 13px; color: var(--text-color);">Penicillin • Hypertension</p>
+                </div>
+
+                <div style="margin-bottom: 0;">
+                  <p style="margin: 0; font-size: 11px; color: var(--gray); font-weight: 600;">Blood Type</p>
+                  <p id="ice-card-blood-type" style="margin: 0; font-size: 13px; color: var(--text-color);">O+</p>
+                </div>
+              </div>
+
+              <!-- Attachments: ID / Medical Documents -->
+              <div style="margin-bottom:12px;">
+                <label style="display:block; font-weight:600; margin-bottom:6px;">Attachments (ID / Medical)</label>
+                <div style="display:flex; gap:8px; align-items:center;">
+                  <button class="btn-secondary" type="button" onclick="document.getElementById('profileImageInput').click()" style="padding:8px 12px;">Upload Images</button>
+                  <small style="color:var(--gray);">You can upload up to 3 images (e.g. ID, medical certificate)</small>
+                </div>
+                <input type="file" id="profileImageInput" accept="image/*" multiple style="display:none;" onchange="previewProfileImages(this.files)">
+                <div id="profileImagePreview" style="display:flex; gap:10px; margin-top:10px; flex-wrap:wrap;"></div>
+              </div>
+
+              <div style="display:flex; gap:12px; justify-content:flex-end; margin-top:10px;">
+                <button class="btn-secondary" onclick="cancelProfileStep(4)" style="padding:10px 20px; border-radius:6px;">Cancel</button>
+                <button class="btn-primary" onclick="saveEmergencyContact()" style="padding:10px 20px; border-radius:6px;">Save Emergency Info</button>
+              </div>
+            </div>
             </div>
             
             </div>
@@ -8238,7 +8426,7 @@
             <div class="schedule-subject" style="display: flex; width:100%">
                 <span style="text-align:left">OLSA01</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <span style="text-align: right; color:lightgreen;">B1.28</span></div>
-            <div class="schedule-time" style="display: flex; flex-direction: width: 100px;">
+            <div class="schedule-time" style="display: flex; width: 100px;">
                     <span class="left-text">LFAU211M001</span>&nbsp;&nbsp;&nbsp;
                     <span class="right-text" style="color: palevioletred">120</span>
                     </div>
@@ -10579,71 +10767,71 @@
             <!-- Payment Compliance Section -->
             <div id="payment" class="content-section">
             <h1 class="page-title">Payment Compliance</h1>
-            <p style="color: #6c757d; margin-bottom: 20px;">For faculty viewing — real-time snapshot of who has paid on/before exam period.</p>
+            <p style="color: var(--gray); margin-bottom: 20px;">For faculty viewing — real-time snapshot of who has paid on/before exam period.</p>
             
             <div style="margin-bottom: 20px;">
-            <label style="margin-right: 10px; font-weight: 600;">Exam Period:</label>
-            <select style="padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; margin-right: 15px;">
+            <label style="margin-right: 10px; font-weight: 600; color: var(--text-color);">Exam Period:</label>
+            <select style="padding: 8px 12px; border: 1px solid var(--border-color); border-radius: 4px; margin-right: 15px; background: var(--card-bg); color: var(--text-color);">
             <option>Prelim</option>
             <option>Midterm</option>
             <option>Finals</option>
             </select>
             <button style="padding: 8px 16px; background: var(--primary); color: white; border: none; border-radius: 4px; cursor: pointer;">Refresh</button>
-            <span style="margin-left: 15px; color: #6c757d; font-size: 14px;">As of Nov 10, 2025, 10:28 AM</span>
+            <span style="margin-left: 15px; color: var(--gray); font-size: 14px;">As of Nov 10, 2025, 10:28 AM</span>
             </div>
 
             <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 30px; margin-bottom: 30px;">
             <!-- Left Column: Payment Compliance Rate -->
-            <div style="background: white; border: 1px solid #e9ecef; border-radius: 8px; padding: 25px;">
-            <div style="background: #fff3cd; padding: 8px 12px; border-radius: 4px; display: inline-block; margin-bottom: 15px;">
-            <strong>Payment Compliance Rate</strong> <span style="margin-left: 10px;">Target ≥ 90%</span>
+            <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 25px; box-shadow: var(--box-shadow);">
+            <div style="background: rgba(255, 243, 205, 0.3); border: 1px solid rgba(255, 193, 7, 0.4); padding: 8px 12px; border-radius: 4px; display: inline-block; margin-bottom: 15px;">
+            <strong style="color: var(--text-color);">Payment Compliance Rate</strong> <span style="margin-left: 10px; color: var(--text-color);">Target ≥ 90%</span>
             </div>
             <div style="font-size: 48px; font-weight: 700; color: var(--primary); margin: 20px 0;">72.0%</div>
-            <p style="color: #6c757d; margin: 0;">= Paid / Enrolled</p>
+            <p style="color: var(--gray); margin: 0;">= Paid / Enrolled</p>
             
             <div style="margin-top: 30px;">
             <div style="margin-bottom: 15px;">
-            <strong>Totals</strong>
+            <strong style="color: var(--text-color);">Totals</strong>
             </div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-            <span>Enrolled</span>
-            <strong>1200</strong>
+            <span style="color: var(--text-color);">Enrolled</span>
+            <strong style="color: var(--text-color);">1200</strong>
             </div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-            <span>Paid (on/before cut-off)</span>
+            <span style="color: var(--text-color);">Paid (on/before cut-off)</span>
             <strong style="color: var(--success);">864</strong>
             </div>
             <div style="display: flex; justify-content: space-between;">
-            <span>Not Yet Paid</span>
+            <span style="color: var(--text-color);">Not Yet Paid</span>
             <strong style="color: var(--danger);">336</strong>
             </div>
             </div>
 
-            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e9ecef;">
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border-color);">
             <div style="margin-bottom: 15px;">
-            <strong>Paid vs Not Yet Paid</strong>
+            <strong style="color: var(--text-color);">Paid vs Not Yet Paid</strong>
             </div>
             <div style="margin-bottom: 10px;">
             <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-            <span>Paid %</span>
-            <strong>72.0%</strong>
+            <span style="color: var(--text-color);">Paid %</span>
+            <strong style="color: var(--text-color);">72.0%</strong>
             </div>
-            <div style="background: #e9ecef; height: 24px; border-radius: 12px; overflow: hidden;">
+            <div style="background: var(--border-color); height: 24px; border-radius: 12px; overflow: hidden;">
             <div style="background: linear-gradient(90deg, var(--success) 0%, #28a745 100%); width: 72%; height: 100%;"></div>
             </div>
-            <p style="color: #6c757d; font-size: 12px; margin-top: 5px;">This is a simple progress bar in lieu of a chart.</p>
+            <p style="color: var(--gray); font-size: 12px; margin-top: 5px;">This is a simple progress bar in lieu of a chart.</p>
             </div>
 
             <div style="margin-top: 20px;">
             <div style="margin-bottom: 15px;">
-            <strong>Today & Late</strong>
+            <strong style="color: var(--text-color);">Today & Late</strong>
             </div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-            <span>Paid Today</span>
-            <strong>35</strong>
+            <span style="color: var(--text-color);">Paid Today</span>
+            <strong style="color: var(--text-color);">35</strong>
             </div>
             <div style="display: flex; justify-content: space-between;">
-            <span>Late Payers</span>
+            <span style="color: var(--text-color);">Late Payers</span>
             <strong style="color: var(--warning);">52</strong>
             </div>
             </div>
@@ -10651,72 +10839,72 @@
             </div>
 
             <!-- Right Column: Campus & College View -->
-            <div style="background: white; border: 1px solid #e9ecef; border-radius: 8px; padding: 25px;">
-            <h3 style="margin: 0 0 20px 0; font-size: 18px;">Quick Campus & College View (Compliance %)</h3>
+            <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 25px; box-shadow: var(--box-shadow);">
+            <h3 style="margin: 0 0 20px 0; font-size: 18px; color: var(--text-color);">Quick Campus & College View (Compliance %)</h3>
             
             <div style="margin-bottom: 30px;">
-            <h4 style="font-size: 14px; margin-bottom: 15px; color: #6c757d;">By Campus</h4>
+            <h4 style="font-size: 14px; margin-bottom: 15px; color: var(--gray);">By Campus</h4>
             <div style="display: flex; flex-direction: column; gap: 10px;">
             <div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-            <strong style="color: var(--primary);">Cainta</strong>
-            <strong>73.3%</strong>
+            <strong style="color: var(--text-color);">Cainta</strong>
+            <strong style="color: var(--text-color);">73.3%</strong>
             </div>
-            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--border-color); height: 8px; border-radius: 4px; overflow: hidden;">
             <div style="background: var(--primary); width: 73.3%; height: 100%;"></div>
             </div>
             </div>
             <div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-            <strong style="color: var(--primary);">Antipolo</strong>
-            <strong>70.6%</strong>
+            <strong style="color: var(--text-color);">Antipolo</strong>
+            <strong style="color: var(--text-color);">70.6%</strong>
             </div>
-            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--border-color); height: 8px; border-radius: 4px; overflow: hidden;">
             <div style="background: var(--primary); width: 70.6%; height: 100%;"></div>
             </div>
             </div>
             <div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-            <strong style="color: var(--primary);">Binangonan</strong>
-            <strong>74.7%</strong>
+            <strong style="color: var(--text-color);">Binangonan</strong>
+            <strong style="color: var(--text-color);">74.7%</strong>
             </div>
-            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--border-color); height: 8px; border-radius: 4px; overflow: hidden;">
             <div style="background: var(--primary); width: 74.7%; height: 100%;"></div>
             </div>
             </div>
             <div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-            <strong style="color: var(--primary);">Cogeo</strong>
-            <strong>70.1%</strong>
+            <strong style="color: var(--text-color);">Cogeo</strong>
+            <strong style="color: var(--text-color);">70.1%</strong>
             </div>
-            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--border-color); height: 8px; border-radius: 4px; overflow: hidden;">
             <div style="background: var(--primary); width: 70.1%; height: 100%;"></div>
             </div>
             </div>
             <div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-            <strong style="color: var(--primary);">San Mateo</strong>
-            <strong>73.7%</strong>
+            <strong style="color: var(--text-color);">San Mateo</strong>
+            <strong style="color: var(--text-color);">73.7%</strong>
             </div>
-            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--border-color); height: 8px; border-radius: 4px; overflow: hidden;">
             <div style="background: var(--primary); width: 73.7%; height: 100%;"></div>
             </div>
             </div>
             <div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-            <strong style="color: var(--primary);">Sumulong</strong>
-            <strong>73.2%</strong>
+            <strong style="color: var(--text-color);">Sumulong</strong>
+            <strong style="color: var(--text-color);">73.2%</strong>
             </div>
-            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--border-color); height: 8px; border-radius: 4px; overflow: hidden;">
             <div style="background: var(--primary); width: 73.2%; height: 100%;"></div>
             </div>
             </div>
             <div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-            <strong style="color: var(--primary);">Taytay</strong>
-            <strong>72.6%</strong>
+            <strong style="color: var(--text-color);">Taytay</strong>
+            <strong style="color: var(--text-color);">72.6%</strong>
             </div>
-            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--border-color); height: 8px; border-radius: 4px; overflow: hidden;">
             <div style="background: var(--primary); width: 72.6%; height: 100%;"></div>
             </div>
             </div>
@@ -10724,68 +10912,68 @@
             </div>
 
             <div>
-            <h4 style="font-size: 14px; margin-bottom: 15px; color: #6c757d;">By College</h4>
+            <h4 style="font-size: 14px; margin-bottom: 15px; color: var(--gray);">By College</h4>
             <div style="display: flex; flex-direction: column; gap: 10px;">
             <div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-            <strong style="color: var(--primary);">CCS</strong>
-            <strong>75.3%</strong>
+            <strong style="color: var(--text-color);">CCS</strong>
+            <strong style="color: var(--text-color);">75.3%</strong>
             </div>
-            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--border-color); height: 8px; border-radius: 4px; overflow: hidden;">
             <div style="background: var(--primary); width: 75.3%; height: 100%;"></div>
             </div>
             </div>
             <div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-            <strong style="color: var(--primary);">COE</strong>
-            <strong>70.3%</strong>
+            <strong style="color: var(--text-color);">COE</strong>
+            <strong style="color: var(--text-color);">70.3%</strong>
             </div>
-            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--border-color); height: 8px; border-radius: 4px; overflow: hidden;">
             <div style="background: var(--primary); width: 70.3%; height: 100%;"></div>
             </div>
             </div>
             <div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-            <strong style="color: var(--primary);">CBA</strong>
-            <strong>75.0%</strong>
+            <strong style="color: var(--text-color);">CBA</strong>
+            <strong style="color: var(--text-color);">75.0%</strong>
             </div>
-            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--border-color); height: 8px; border-radius: 4px; overflow: hidden;">
             <div style="background: var(--primary); width: 75%; height: 100%;"></div>
             </div>
             </div>
             <div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-            <strong style="color: var(--primary);">CAS</strong>
-            <strong>72.3%</strong>
+            <strong style="color: var(--text-color);">CAS</strong>
+            <strong style="color: var(--text-color);">72.3%</strong>
             </div>
-            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--border-color); height: 8px; border-radius: 4px; overflow: hidden;">
             <div style="background: var(--primary); width: 72.3%; height: 100%;"></div>
             </div>
             </div>
             <div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-            <strong style="color: var(--primary);">CHTM</strong>
-            <strong>70.3%</strong>
+            <strong style="color: var(--text-color);">CHTM</strong>
+            <strong style="color: var(--text-color);">70.3%</strong>
             </div>
-            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--border-color); height: 8px; border-radius: 4px; overflow: hidden;">
             <div style="background: var(--primary); width: 70.3%; height: 100%;"></div>
             </div>
             </div>
             <div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-            <strong style="color: var(--primary);">Education</strong>
-            <strong>75.7%</strong>
+            <strong style="color: var(--text-color);">Education</strong>
+            <strong style="color: var(--text-color);">75.7%</strong>
             </div>
-            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--border-color); height: 8px; border-radius: 4px; overflow: hidden;">
             <div style="background: var(--primary); width: 75.7%; height: 100%;"></div>
             </div>
             </div>
             <div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-            <strong style="color: var(--primary);">Criminology</strong>
-            <strong>70.5%</strong>
+            <strong style="color: var(--text-color);">Criminology</strong>
+            <strong style="color: var(--text-color);">70.5%</strong>
             </div>
-            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--border-color); height: 8px; border-radius: 4px; overflow: hidden;">
             <div style="background: var(--primary); width: 70.5%; height: 100%;"></div>
             </div>
             </div>
@@ -10795,59 +10983,59 @@
             </div>
 
             <!-- Section Payment Compliance Table -->
-            <div style="background: white; border: 1px solid #e9ecef; border-radius: 8px; padding: 25px; margin-top: 30px;">
-            <h3 style="margin: 0 0 10px 0; font-size: 18px;">Section Payment Compliance</h3>
-            <p style="color: #6c757d; margin-bottom: 20px; font-size: 14px;">22 sections shown</p>
+            <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 25px; margin-top: 30px; box-shadow: var(--box-shadow);">
+            <h3 style="margin: 0 0 10px 0; font-size: 18px; color: var(--text-color);">Section Payment Compliance</h3>
+            <p style="color: var(--gray); margin-bottom: 20px; font-size: 14px;">22 sections shown</p>
             
             <div style="overflow-x: auto;">
             <table style="width: 100%; border-collapse: collapse;">
             <thead>
-            <tr style="background: #f8f9fa; border-bottom: 2px solid #dee2e6;">
-            <th style="padding: 12px; text-align: left; font-weight: 600;">Section</th>
-            <th style="padding: 12px; text-align: left; font-weight: 600;">Course Code</th>
-            <th style="padding: 12px; text-align: left; font-weight: 600;">Campus</th>
-            <th style="padding: 12px; text-align: left; font-weight: 600;">College</th>
-            <th style="padding: 12px; text-align: center; font-weight: 600;">Enrolled</th>
-            <th style="padding: 12px; text-align: center; font-weight: 600;">Paid</th>
-            <th style="padding: 12px; text-align: center; font-weight: 600;">Compliance</th>
+            <tr style="background: var(--table-header-bg); border-bottom: 2px solid var(--border-color);">
+            <th style="padding: 12px; text-align: left; font-weight: 600; color: var(--text-color);">Section</th>
+            <th style="padding: 12px; text-align: left; font-weight: 600; color: var(--text-color);">Course Code</th>
+            <th style="padding: 12px; text-align: left; font-weight: 600; color: var(--text-color);">Campus</th>
+            <th style="padding: 12px; text-align: left; font-weight: 600; color: var(--text-color);">College</th>
+            <th style="padding: 12px; text-align: center; font-weight: 600; color: var(--text-color);">Enrolled</th>
+            <th style="padding: 12px; text-align: center; font-weight: 600; color: var(--text-color);">Paid</th>
+            <th style="padding: 12px; text-align: center; font-weight: 600; color: var(--text-color);">Compliance</th>
             </tr>
             </thead>
             <tbody>
-            <tr style="border-bottom: 1px solid #f1f3f4;">
-            <td style="padding: 12px;">LFUA111100</td>
-            <td style="padding: 12px;">CC03</td>
-            <td style="padding: 12px;">Cainta</td>
-            <td style="padding: 12px;">CCS</td>
-            <td style="padding: 12px; text-align: center;">36</td>
-            <td style="padding: 12px; text-align: center;">24</td>
-            <td style="padding: 12px; text-align: center;"><span style="background: #f8d7da; color: #721c24; padding: 4px 8px; border-radius: 4px; font-size: 12px;">66.7%</span></td>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+            <td style="padding: 12px; color: var(--text-color);">LFUA111100</td>
+            <td style="padding: 12px; color: var(--text-color);">CC03</td>
+            <td style="padding: 12px; color: var(--text-color);">Cainta</td>
+            <td style="padding: 12px; color: var(--text-color);">CCS</td>
+            <td style="padding: 12px; text-align: center; color: var(--text-color);">36</td>
+            <td style="padding: 12px; text-align: center; color: var(--text-color);">24</td>
+            <td style="padding: 12px; text-align: center;"><span style="background: rgba(248, 215, 218, 0.5); color: #721c24; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600;">66.7%</span></td>
             </tr>
-            <tr style="border-bottom: 1px solid #f1f3f4;">
-            <td style="padding: 12px;">LFUA111101</td>
-            <td style="padding: 12px;">SOFAPP</td>
-            <td style="padding: 12px;">Antipolo</td>
-            <td style="padding: 12px;">COE</td>
-            <td style="padding: 12px; text-align: center;">35</td>
-            <td style="padding: 12px; text-align: center;">26</td>
-            <td style="padding: 12px; text-align: center;"><span style="background: #d4edda; color: #155724; padding: 4px 8px; border-radius: 4px; font-size: 12px;">74.3%</span></td>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+            <td style="padding: 12px; color: var(--text-color);">LFUA111101</td>
+            <td style="padding: 12px; color: var(--text-color);">SOFAPP</td>
+            <td style="padding: 12px; color: var(--text-color);">Antipolo</td>
+            <td style="padding: 12px; color: var(--text-color);">COE</td>
+            <td style="padding: 12px; text-align: center; color: var(--text-color);">35</td>
+            <td style="padding: 12px; text-align: center; color: var(--text-color);">26</td>
+            <td style="padding: 12px; text-align: center;"><span style="background: rgba(212, 237, 218, 0.5); color: #155724; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600;">74.3%</span></td>
             </tr>
-            <tr style="border-bottom: 1px solid #f1f3f4;">
-            <td style="padding: 12px;">LFUA111102</td>
-            <td style="padding: 12px;">CPPROG2</td>
-            <td style="padding: 12px;">Binangonan</td>
-            <td style="padding: 12px;">CBA</td>
-            <td style="padding: 12px; text-align: center;">33</td>
-            <td style="padding: 12px; text-align: center;">22</td>
-            <td style="padding: 12px; text-align: center;"><span style="background: #f8d7da; color: #721c24; padding: 4px 8px; border-radius: 4px; font-size: 12px;">66.7%</span></td>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+            <td style="padding: 12px; color: var(--text-color);">LFUA111102</td>
+            <td style="padding: 12px; color: var(--text-color);">CPPROG2</td>
+            <td style="padding: 12px; color: var(--text-color);">Binangonan</td>
+            <td style="padding: 12px; color: var(--text-color);">CBA</td>
+            <td style="padding: 12px; text-align: center; color: var(--text-color);">33</td>
+            <td style="padding: 12px; text-align: center; color: var(--text-color);">22</td>
+            <td style="padding: 12px; text-align: center;"><span style="background: rgba(248, 215, 218, 0.5); color: #721c24; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600;">66.7%</span></td>
             </tr>
-            <tr style="border-bottom: 1px solid #f1f3f4;">
-            <td style="padding: 12px;">LFUA111103</td>
-            <td style="padding: 12px;">WS1</td>
-            <td style="padding: 12px;">Cogeo</td>
-            <td style="padding: 12px;">CAS</td>
-            <td style="padding: 12px; text-align: center;">33</td>
-            <td style="padding: 12px; text-align: center;">23</td>
-            <td style="padding: 12px; text-align: center;"><span style="background: #f8d7da; color: #721c24; padding: 4px 8px; border-radius: 4px; font-size: 12px;">69.7%</span></td>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+            <td style="padding: 12px; color: var(--text-color);">LFUA111103</td>
+            <td style="padding: 12px; color: var(--text-color);">WS1</td>
+            <td style="padding: 12px; color: var(--text-color);">Cogeo</td>
+            <td style="padding: 12px; color: var(--text-color);">CAS</td>
+            <td style="padding: 12px; text-align: center; color: var(--text-color);">33</td>
+            <td style="padding: 12px; text-align: center; color: var(--text-color);">23</td>
+            <td style="padding: 12px; text-align: center;"><span style="background: rgba(248, 215, 218, 0.5); color: #721c24; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600;">69.7%</span></td>
             </tr>
             </tbody>
             </table>
@@ -14331,6 +14519,118 @@
                     alert('Settings have been reset to default values.');
                 }
             }
+
+      // Profile Step: attachments preview and save/cancel handlers
+      function previewProfileImages(files) {
+        const preview = document.getElementById('profileImagePreview');
+        if (!preview) return;
+        // Load existing attachments from localStorage
+        let attachments = JSON.parse(localStorage.getItem('profileAttachments') || '[]');
+        // Convert FileList to array and limit to 3 total
+        const incoming = Array.from(files || []);
+        const allowed = incoming.slice(0, Math.max(0, 3 - attachments.length));
+        if (attachments.length + allowed.length > 3) {
+          alert('You can upload up to 3 images total.');
+        }
+        allowed.forEach(file => {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            attachments.push({ name: file.name, data: e.target.result });
+            localStorage.setItem('profileAttachments', JSON.stringify(attachments));
+            renderProfileAttachments();
+          };
+          reader.readAsDataURL(file);
+        });
+      }
+
+      function renderProfileAttachments() {
+        const preview = document.getElementById('profileImagePreview');
+        if (!preview) return;
+        preview.innerHTML = '';
+        const attachments = JSON.parse(localStorage.getItem('profileAttachments') || '[]');
+        attachments.forEach((att, idx) => {
+          const wrap = document.createElement('div');
+          wrap.style.cssText = 'width:96px; height:96px; border:1px solid var(--border-color); border-radius:8px; overflow:hidden; display:flex; flex-direction:column; align-items:center; justify-content:center; background:var(--card-bg); position:relative;';
+          const img = document.createElement('img');
+          img.src = att.data;
+          img.alt = att.name;
+          img.style.cssText = 'max-width:100%; max-height:100%; object-fit:cover; display:block;';
+          const removeBtn = document.createElement('button');
+          removeBtn.innerHTML = '&times;';
+          removeBtn.title = 'Remove';
+          removeBtn.style.cssText = 'position:absolute; top:4px; right:4px; background:rgba(0,0,0,0.6); color:white; border:none; width:22px; height:22px; border-radius:50%; cursor:pointer;';
+          removeBtn.addEventListener('click', function() {
+            removeProfileAttachment(idx);
+          });
+          wrap.appendChild(img);
+          wrap.appendChild(removeBtn);
+          preview.appendChild(wrap);
+        });
+      }
+
+      function removeProfileAttachment(index) {
+        let attachments = JSON.parse(localStorage.getItem('profileAttachments') || '[]');
+        if (index >= 0 && index < attachments.length) {
+          attachments.splice(index, 1);
+          localStorage.setItem('profileAttachments', JSON.stringify(attachments));
+          renderProfileAttachments();
+        }
+      }
+
+      function saveEmergencyContact() {
+        const data = {
+          primaryName: document.getElementById('primary-contact-name')?.value || '',
+          primaryRelation: document.getElementById('primary-contact-relation')?.value || '',
+          primaryMobile: document.getElementById('primary-contact-mobile')?.value || '',
+          primaryTel: document.getElementById('primary-contact-tel')?.value || '',
+          primaryEmail: document.getElementById('primary-contact-email')?.value || '',
+          primaryAddress: document.getElementById('primary-contact-address')?.value || '',
+          secondaryName: document.getElementById('secondary-contact-name')?.value || '',
+          secondaryRelation: document.getElementById('secondary-contact-relation')?.value || '',
+          secondaryMobile: document.getElementById('secondary-contact-mobile')?.value || '',
+          secondaryTel: document.getElementById('secondary-contact-tel')?.value || '',
+          secondaryEmail: document.getElementById('secondary-contact-email')?.value || '',
+          physicianName: document.getElementById('physician-name')?.value || '',
+          physicianContact: document.getElementById('physician-contact')?.value || '',
+          medicalNotes: document.getElementById('medical-notes')?.value || ''
+        };
+        localStorage.setItem('emergencyContact', JSON.stringify(data));
+        alert('Emergency & contact information saved locally.');
+        // Optionally navigate back to first profile step
+        showProfileStep(1);
+      }
+
+      function cancelProfileStep(step) {
+        // For cancel, just return to step 1
+        showProfileStep(1);
+      }
+
+      // Load saved attachments and emergency contact on init
+      document.addEventListener('DOMContentLoaded', function() {
+        renderProfileAttachments();
+        // Populate form values if saved
+        try {
+          const saved = JSON.parse(localStorage.getItem('emergencyContact') || '{}');
+          if (saved && Object.keys(saved).length) {
+            document.getElementById('primary-contact-name').value = saved.primaryName || '';
+            document.getElementById('primary-contact-relation').value = saved.primaryRelation || '';
+            document.getElementById('primary-contact-mobile').value = saved.primaryMobile || '';
+            document.getElementById('primary-contact-tel').value = saved.primaryTel || '';
+            document.getElementById('primary-contact-email').value = saved.primaryEmail || '';
+            document.getElementById('primary-contact-address').value = saved.primaryAddress || '';
+            document.getElementById('secondary-contact-name').value = saved.secondaryName || '';
+            document.getElementById('secondary-contact-relation').value = saved.secondaryRelation || '';
+            document.getElementById('secondary-contact-mobile').value = saved.secondaryMobile || '';
+            document.getElementById('secondary-contact-tel').value = saved.secondaryTel || '';
+            document.getElementById('secondary-contact-email').value = saved.secondaryEmail || '';
+            document.getElementById('physician-name').value = saved.physicianName || '';
+            document.getElementById('physician-contact').value = saved.physicianContact || '';
+            document.getElementById('medical-notes').value = saved.medicalNotes || '';
+          }
+        } catch (e) {
+          console.warn('Failed to load saved emergency contact', e);
+        }
+      });
             </script>
             </body>
             </html>
