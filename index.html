@@ -6436,9 +6436,9 @@
             <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
             <i class="fas fa-moon"></i>
             </button>
-            </div>
-            </div>
-            <div class="header">
+        </div>
+        </div>
+      <div class="header">
             <div class="user-info">
             <div class="user-details">
             </div>
@@ -6583,49 +6583,7 @@
             <div class="stat-value">3 Months<hr></div>
             <div class="stat-label" style="color:var(--text-color)">Length of Service <br>(Teaching)</div>
             </div>
-            
-      <div class="stat-card">
-        <div style="display:flex; flex-direction:column; gap:8px; width:100%;">
-          <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
-            <span style="font-weight:700; color:var(--text-color);">Credential Management</span>
-          </div>
-
-          <!-- Rows styled like the Antipolo snippet: left (600), right (700 + primary) -->
-          <div style="display:flex; flex-direction:column; gap:6px; width:100%;">
-            <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
-              <span style="font-weight:600; color:var(--text-color); text-align:left;">Certificate of Training</span>
-              <span style="font-weight:700; color:var(--primary); text-align:right;">&nbsp;<hr></span>
-            </div>
-
-            <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
-              <span style="font-weight:600; color:var(--text-color); text-align:left;">Certificate of Seminar/Workshop</span>
-              <span style="font-weight:700; color:var(--primary); text-align:right;">&nbsp;<hr></span>
-            </div>
-
-            <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
-              <span style="font-weight:600; color:var(--text-color); text-align:left;">Certificate of awards</span>
-              <span style="font-weight:700; color:var(--primary); text-align:right;">&nbsp;<hr></span>
-            </div>
-
-            <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
-              <span style="font-weight:600; color:var(--text-color); text-align:left;">Resource Person</span>
-              <span style="font-weight:700; color:var(--primary); text-align:right;">&nbsp;<hr></span>
-            </div>
-
-            <div style="border-top:1px solid var(--border-color); margin:6px 0;"></div>
-
-            <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
-              <span style="font-weight:600; color:var(--text-color); text-align:left;">Plague</span>
-              <span style="font-weight:700; color:var(--primary); text-align:right;">&nbsp;<hr></span>
-            </div>
-
-            <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
-              <span style="font-weight:600; color:var(--text-color); text-align:left;">Badges</span>
-              <span style="font-weight:700; color:var(--primary); text-align:right;">&nbsp;<hr></span>
-            </div>
-          </div>
-        </div>
-      </div>
+      
             
             <div class="stat-card">
             <div class="stat-value">100%<div class="progress-bar"><div style="width: 100%; height: 100%; background-color: green; border-radius: 4px;"></div></div></div>
@@ -7642,14 +7600,27 @@
             <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 15px; margin-bottom: 20px;">
             <div>
             <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-color); font-size: 14px;">Gender</label>
-            <select style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
-            <option>Male</option>
-            <option>Female</option>
+            <select id="gender" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Transgender Man</option>
+            <option value="other">Transgender Woman</option>
+            <option value="other">Agender</option>
+            <option value="other">Genderfluid</option>
+            <option value="other">Non-Binary</option>
+            </select>
+            </div>
+            <div>
+            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-color); font-size: 14px;">Sex</label>
+            <select id="sex" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="intersex">Intersex</option>
             </select>
             </div>
             <div>
             <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-color); font-size: 14px;">Civil Status</label>
-            <select style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
+            <select id="civil-status" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
             <option>Single</option>
             <option>Married</option>
             <option>Widowed</option>
@@ -7658,12 +7629,13 @@
             </div>
             <div>
             <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-color); font-size: 14px;">Date of Birth</label>
-            <input type="date" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
+            <input type="date" id="date-of-birth" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
             </div>
-            <div>
+            </div>
+            <!-- Place of Birth (separate row to preserve alignment) -->
+            <div style="margin-bottom: 20px;">
             <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-color); font-size: 14px;">Place of Birth</label>
-            <input type="text" placeholder="Place of Birth" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
-            </div>
+            <input type="text" id="place-of-birth" placeholder="Place of Birth" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
             </div>
             <!-- Citizenship & Religion -->
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
@@ -7835,27 +7807,28 @@
             <div class="card">
             <div class="card-header">
             </div>
-            <p id="requirements-progress-text" Style="font-weight: 800">0 of DOCUMENTS SUBMITTED</p>
-            </div>
-            <div class="card">
-            <div class="card-header">
+            <div class="requirements-list">
+            <!-- Inserted: Birth Certificate upload + Certifications -->
+            <div style="width:100%; display:flex; flex-direction:column; gap:8px; margin-bottom:12px;">
+              <div style="font-weight:700; color:var(--text-color);">Birth Certificate</div>
+              <div>
+                <label style="display:inline-block; background:var(--primary); color:#fff; padding:6px 10px; border-radius:6px; cursor:pointer;">
+                  Upload
+                  <input type="file" name="birthCertificate" style="display:none;" />
+                </label>
+              </div>
+              <hr>
+              <div style="font-weight:700; color:var(--text-color);">Certifications</div>
+              <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <div style="flex:0 0 30%; padding:8px; border:1px dashed var(--border-color); border-radius:6px;">Certificate 1</div>
+                <div style="flex:0 0 30%; padding:8px; border:1px dashed var(--border-color); border-radius:6px;">Certificate 2</div>
+                <div style="flex:0 0 30%; padding:8px; border:1px dashed var(--border-color); border-radius:6px;">Certificate 3</div>
+                <div style="flex:0 0 30%; padding:8px; border:1px dashed var(--border-color); border-radius:6px;">Certificate 4</div>
+                <div style="flex:0 0 30%; padding:8px; border:1px dashed var(--border-color); border-radius:6px;">Certificate 5</div>
+              </div>
+              <hr>
             </div>
             
-            <br><br>
-            <div class="requirements-list">
-            <div class="requirement-item" data-doc="birth-certificate">
-            <div class="requirement-header">
-            <div class="requirement-title">Birth <br>Certificate</div>
-            <div class="requirement-status status-pending">Not Uploaded Yet</div>
-            </div>
-            <p>Official birth certificate issued by PSA</p>
-            <div class="requirement-actions">
-            <button class="upload-action" data-doc="birth-certificate">
-            <i class="fas fa-plus"></i> Choose File
-            </button>
-            <button class="view-action" disabled>View Document</button>
-            </div>
-            </div>
             <div class="requirement-item" data-doc="form-138">
             <div class="requirement-header">
             <div class="requirement-title">Certificate of Seminar</div>
@@ -7927,19 +7900,7 @@
             <div class="card-header">
             </div>
             <div class="requirements-list">
-            <div class="requirement-item" data-doc="birth-certificate">
-            <div class="requirement-header">
-            <div class="requirement-title">Certificate of Seminar</div>
-            <div class="requirement-status status-pending">Add your Certificates!</div>
-            </div>
-            <p>(Attended Seminars)</p>
-            <div class="requirement-actions">
-            <button class="upload-action" data-doc="birth-certificate">
-            <i class="fas fa-plus"></i> Choose File
-            </button>
-            <button class="view-action" disabled>View Document</button>
-            </div>
-            </div>
+            
             <div class="requirement-item" data-doc="form-138">
             <div class="requirement-header">
             <div class="requirement-title">Certificate of Seminar</div>
@@ -8266,12 +8227,12 @@
             <div class="schedule-cell"></div>
             <div class="schedule-cell">
             <div class="schedule-item">
-            <div class="schedule-subject">
+            <div class="schedule-subject" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                 <span class="left-text">OLSA01</span>
                 <span class="right-text;" style="color:lightgreen;">B1.28</span></div>
-            <div class="schedule-time">
+            <div class="schedule-time" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                     <span class="left-text">LFAU211M001</span>
-                    <span class="right-text" style="color: white">(120)</span>
+                    <span class="right-text" style="color: palevioletred;">120</span>
                     </div>
             <div class="schedule-room">
               </span>
@@ -8282,13 +8243,14 @@
             <div class="schedule-cell"></div>
             <div class="schedule-cell">
             <div class="schedule-item">
-            <div class="schedule-subject">
+            <div class="schedule-subject" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                
                 <span class="left-text">OLSA01</span>
                 <span class="right-text" style="color:lightgreen;">B1.28</span>
                 </div>
-        <div class="schedule-time">
+        <div class="schedule-time" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
             <span class="left-text">LFAU211M001</span>
-            <span class="right-text" style="color: white">(120)</span>
+            <span class="right-text" style="color: palevioletred;">120</span>
             </div>
         <div class="schedule-room">
             <span class="left-text"></span>
@@ -8302,13 +8264,14 @@
             <div class="schedule-cell"></div>
             <div class="schedule-cell">
             <div class="schedule-item">
-            <div class="schedule-subject1">
+            <div class="schedule-subject1" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                 <span class="left-text">WS1</span>
                 <span class="right-text" style="color:lightgreen">B1.28</span>
             </div>
-        <div class="schedule-time">
+        <div class="schedule-time" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            
             <span class="left-text">LFAU211M001</span>
-            <span class="right-text" style="color: white;">(120)</span>
+            <span class="right-text" style="color: palevioletred;">120</span>
             </div>
         <div class="schedule-room">
         </div>
@@ -8323,9 +8286,9 @@
                 <span class="right-text" style="color:lightgreen;">B1.28</span>
                 </div>
         <div class="schedule-time"></div>
-        <div class="schedule-time">
+        <div class="schedule-time" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
             <span class="left-text">LFAU211M001</span>
-            <span class="right-text" style="color: white;">(120)</span>
+            <span class="right-text" style="color: palevioletred;">120</span>
         </div>
             </div>
             </div>
