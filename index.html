@@ -6403,10 +6403,6 @@
             <a href="#"><i class="fas fa-file-invoice"></i> Clearance Tracker</a>
             <span class="notification-badge" id="clearance-badge">2</span>
             </li>
-            <div class="nav-category">OTHERS</div>
-            <li class="nav-item" data-section="payment">
-            <a href="#"><i class="fas fa-credit-card"></i> Payment Compliance</a>
-            </li>
             <li class="nav-item" data-section="medical">
             <a href="#"><i class="fas fa-clinic-medical"></i> Wellness & Care</a>
             </li>
@@ -6452,8 +6448,7 @@
             <div id="dashboard" class="content-section active">
             <h1 class="page-title">Faculty Dashboard</h1>
             <br><br>
-            <span style="font-size:18px; font-weight: 700; color:lightgreen ">STUDENTS</span>
-            <br>
+            <span style="font-size:18px; font-weight: 100; color:lightgreen; margin-top:20px ">STUDENTS</span>
             <div class="quick-actions">
             <a href="#" class="quick-action-btn" data-section="schedule">
             <i class="fas fa-calendar-check"></i> Check Weekly Schedule
@@ -6521,21 +6516,21 @@
                     <span style="font-weight: 700; color: var(--primary); text-align: right;">4<hr></span>
                 </div>
             </div>
-            <div class="stat-label" style="color:var(--text-color)">Campus(es) Load(s)</div>
+            <div class="stat-label" style="color:var(--text-color)">Campus Loads</div>
             </div>
             <div class="stat-card" onclick="openStatCardModal('ecr-upload')" style="cursor: pointer;">
             <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 10px; width: 100%;">
                 <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                     <span style="font-weight: 600; color: var(--text-color); text-align: left;">Prelim</span>
-                    <span style="font-weight: 700; color: var(--primary); text-align: right;">20 out of 20 eCR(s)<hr></span>
+                    <span style="font-weight: 700; color: var(--primary); text-align: right;">20 out of 20 <hr></span>
                 </div>
                 <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                     <span style="font-weight: 600; color: var(--text-color); text-align: left;">Midterm</span>
-                    <span style="font-weight: 700; color: var(--primary); text-align: right;">20 out of 20 eCR(s)<hr></span>
+                    <span style="font-weight: 700; color: var(--primary); text-align: right;">20 out of 20 <hr></span>
                 </div>
             <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                     <span style="font-weight: 600; color: var(--text-color); text-align: left;">Finals</span>
-                    <span style="font-weight: 700; color: var(--primary); text-align: right;">20 out of 20 eCR(s)<hr></span>
+                    <span style="font-weight: 700; color: var(--primary); text-align: right;">20 out of 20<hr></span>
                 </div>
               </div>
             <div class="stat-label" style="color:var(--text-color)">Ecr Upload</div>
@@ -6555,7 +6550,7 @@
             <br>
             <hr>
             <br><br>
-            <span style="font-size:18px; font-weight: 700; color:lightblue ">FACULTY</span>
+            <span style="font-size:18px; font-weight: 100; color:lightblue ">FACULTY</span>
             <div class="stats-grid">
             
             <a href="#" class="quick-action-btn" onclick="openAssessmentClearanceModal(); return false;">
@@ -6569,6 +6564,17 @@
             <a href="#" class="quick-action-btn" data-section="account">
             <i class="fas fa-credit-card"></i> Availability & Subject Preferences
             </a>
+            
+            
+            <a href="#" class="quick-action-btn" data-section="NEW">
+            <i class="fas fa-plus-circle"></i> Events/Training/Seminars
+            </a>
+            
+            
+            <a href="#" class="quick-action-btn" data-section="medical">
+            <i class="fas fa-clinic-medical"></i> Wellness & Care
+            </a>
+            
             </div>
             
             <div class="stats-grid years-grid">
@@ -7532,7 +7538,7 @@
             <!-- Faculty Code & Campus -->
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
             <div>
-            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-color); font-size: 14px;">Faculty Code</label>
+            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-color); font-size: 14px;">ID NO.</label>
             <input type="text" placeholder="Enter Faculty Code" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
             </div>
             <div>
@@ -10642,71 +10648,278 @@
             <!-- Payment Compliance Section -->
             <div id="payment" class="content-section">
             <h1 class="page-title">Payment Compliance</h1>
-            <div class="card123" style="max-width: 1000px; margin: 30px auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border: none;">
-            <div class="card-header" style="background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); color: white; border-radius: 8px 8px 0 0;">
-            <h3 style="margin: 0; display: flex; align-items: center; gap: 10px;">
-            <i class="fas fa-credit-card"></i> Payment Compliance Dashboard
-            </h3>
-            </div>
-            <div style="padding: 30px;">
-            <div style="text-align: center; margin-bottom: 30px;">
-            <i class="fas fa-credit-card" style="font-size: 64px; color: var(--primary); margin-bottom: 20px;"></i>
-            <h2 style="color: var(--primary); margin-bottom: 10px;">Payment Compliance System</h2>
-            <p style="color: #6c757d; font-size: 16px;">Monitor and manage payment compliance across all faculty and staff</p>
-            </div>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px;">
-            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary);">
-            <h4 style="margin: 0 0 10px 0; color: var(--primary);"><i class="fas fa-check-circle"></i> Compliance Status</h4>
-            <p style="margin: 0; color: #6c757d;">Track payment compliance status</p>
-            <div style="margin-top: 15px;">
-            <span style="background: #28a745; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">98% Compliant</span>
-            </div>
+            <p style="color: #6c757d; margin-bottom: 20px;">For faculty viewing — real-time snapshot of who has paid on/before exam period.</p>
+            
+            <div style="margin-bottom: 20px;">
+            <label style="margin-right: 10px; font-weight: 600;">Exam Period:</label>
+            <select style="padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; margin-right: 15px;">
+            <option>Prelim</option>
+            <option>Midterm</option>
+            <option>Finals</option>
+            </select>
+            <button style="padding: 8px 16px; background: var(--primary); color: white; border: none; border-radius: 4px; cursor: pointer;">Refresh</button>
+            <span style="margin-left: 15px; color: #6c757d; font-size: 14px;">As of Nov 10, 2025, 10:28 AM</span>
             </div>
 
-            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #ffc107;">
-            <h4 style="margin: 0 0 10px 0; color: #856404;"><i class="fas fa-exclamation-triangle"></i> Pending Payments</h4>
-            <p style="margin: 0; color: #6c757d;">Outstanding payment obligations</p>
-            <div style="margin-top: 15px;">
-            <span style="background: #ffc107; color: #212529; padding: 4px 8px; border-radius: 4px; font-size: 12px;">12 Pending</span>
+            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 30px; margin-bottom: 30px;">
+            <!-- Left Column: Payment Compliance Rate -->
+            <div style="background: white; border: 1px solid #e9ecef; border-radius: 8px; padding: 25px;">
+            <div style="background: #fff3cd; padding: 8px 12px; border-radius: 4px; display: inline-block; margin-bottom: 15px;">
+            <strong>Payment Compliance Rate</strong> <span style="margin-left: 10px;">Target ≥ 90%</span>
+            </div>
+            <div style="font-size: 48px; font-weight: 700; color: var(--primary); margin: 20px 0;">72.0%</div>
+            <p style="color: #6c757d; margin: 0;">= Paid + Enrolled</p>
+            
+            <div style="margin-top: 30px;">
+            <div style="margin-bottom: 15px;">
+            <strong>Totals</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <span>Enrolled</span>
+            <strong>1200</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <span>Paid (on/before cut-off)</span>
+            <strong style="color: var(--success);">864</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+            <span>Not Yet Paid</span>
+            <strong style="color: var(--danger);">336</strong>
             </div>
             </div>
 
-            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #dc3545;">
-            <h4 style="margin: 0 0 10px 0; color: #721c24;"><i class="fas fa-times-circle"></i> Overdue Payments</h4>
-            <p style="margin: 0; color: #6c757d;">Payments past due date</p>
-            <div style="margin-top: 15px;">
-            <span style="background: #dc3545; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">3 Overdue</span>
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e9ecef;">
+            <div style="margin-bottom: 15px;">
+            <strong>Paid vs Not Yet Paid</strong>
+            </div>
+            <div style="margin-bottom: 10px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+            <span>Paid %</span>
+            <strong>72.0%</strong>
+            </div>
+            <div style="background: #e9ecef; height: 24px; border-radius: 12px; overflow: hidden;">
+            <div style="background: linear-gradient(90deg, var(--success) 0%, #28a745 100%); width: 72%; height: 100%;"></div>
+            </div>
+            <p style="color: #6c757d; font-size: 12px; margin-top: 5px;">This is a simple progress bar in lieu of a chart.</p>
+            </div>
+
+            <div style="margin-top: 20px;">
+            <div style="margin-bottom: 15px;">
+            <strong>Today & Late</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <span>Paid Today</span>
+            <strong>35</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+            <span>Late Payers</span>
+            <strong style="color: var(--warning);">52</strong>
+            </div>
             </div>
             </div>
             </div>
 
-            <div style="background: white; border: 1px solid #e9ecef; border-radius: 8px; padding: 20px;">
-            <h4 style="margin: 0 0 20px 0; color: var(--primary);"><i class="fas fa-list"></i> Recent Payment Activities</h4>
-            <div style="max-height: 300px; overflow-y: auto;">
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #f8f9fa;">
+            <!-- Right Column: Campus & College View -->
+            <div style="background: white; border: 1px solid #e9ecef; border-radius: 8px; padding: 25px;">
+            <h3 style="margin: 0 0 20px 0; font-size: 18px;">Quick Campus & College View (Compliance %)</h3>
+            
+            <div style="margin-bottom: 30px;">
+            <h4 style="font-size: 14px; margin-bottom: 15px; color: #6c757d;">By Campus</h4>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
             <div>
-            <strong>Monthly Salary - October 2025</strong>
-            <br><small style="color: #6c757d;">Prof. Juan Dela Cruz</small>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+            <strong style="color: var(--primary);">Cainta</strong>
+            <strong>73.3%</strong>
             </div>
-            <span style="background: #28a745; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">Paid</span>
+            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--primary); width: 73.3%; height: 100%;"></div>
             </div>
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #f8f9fa;">
+            </div>
             <div>
-            <strong>Teaching Allowance - Q4</strong>
-            <br><small style="color: #6c757d;">Prof. Maria Santos</small>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+            <strong style="color: var(--primary);">Antipolo</strong>
+            <strong>70.6%</strong>
             </div>
-            <span style="background: #ffc107; color: #212529; padding: 4px 8px; border-radius: 4px; font-size: 12px;">Pending</span>
+            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--primary); width: 70.6%; height: 100%;"></div>
             </div>
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #f8f9fa;">
+            </div>
             <div>
-            <strong>Research Grant</strong>
-            <br><small style="color: #6c757d;">Dr. Pedro Reyes</small>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+            <strong style="color: var(--primary);">Binangonan</strong>
+            <strong>74.7%</strong>
             </div>
-            <span style="background: #28a745; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">Paid</span>
+            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--primary); width: 74.7%; height: 100%;"></div>
+            </div>
+            </div>
+            <div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+            <strong style="color: var(--primary);">Cogeo</strong>
+            <strong>70.1%</strong>
+            </div>
+            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--primary); width: 70.1%; height: 100%;"></div>
+            </div>
+            </div>
+            <div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+            <strong style="color: var(--primary);">San Mateo</strong>
+            <strong>73.7%</strong>
+            </div>
+            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--primary); width: 73.7%; height: 100%;"></div>
+            </div>
+            </div>
+            <div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+            <strong style="color: var(--primary);">Sumulong</strong>
+            <strong>73.2%</strong>
+            </div>
+            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--primary); width: 73.2%; height: 100%;"></div>
+            </div>
+            </div>
+            <div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+            <strong style="color: var(--primary);">Taytay</strong>
+            <strong>72.6%</strong>
+            </div>
+            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--primary); width: 72.6%; height: 100%;"></div>
             </div>
             </div>
             </div>
+            </div>
+
+            <div>
+            <h4 style="font-size: 14px; margin-bottom: 15px; color: #6c757d;">By College</h4>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+            <strong style="color: var(--primary);">CCS</strong>
+            <strong>75.3%</strong>
+            </div>
+            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--primary); width: 75.3%; height: 100%;"></div>
+            </div>
+            </div>
+            <div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+            <strong style="color: var(--primary);">COE</strong>
+            <strong>70.3%</strong>
+            </div>
+            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--primary); width: 70.3%; height: 100%;"></div>
+            </div>
+            </div>
+            <div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+            <strong style="color: var(--primary);">CBA</strong>
+            <strong>75.0%</strong>
+            </div>
+            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--primary); width: 75%; height: 100%;"></div>
+            </div>
+            </div>
+            <div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+            <strong style="color: var(--primary);">CAS</strong>
+            <strong>72.3%</strong>
+            </div>
+            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--primary); width: 72.3%; height: 100%;"></div>
+            </div>
+            </div>
+            <div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+            <strong style="color: var(--primary);">CHTM</strong>
+            <strong>70.3%</strong>
+            </div>
+            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--primary); width: 70.3%; height: 100%;"></div>
+            </div>
+            </div>
+            <div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+            <strong style="color: var(--primary);">Education</strong>
+            <strong>75.7%</strong>
+            </div>
+            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--primary); width: 75.7%; height: 100%;"></div>
+            </div>
+            </div>
+            <div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+            <strong style="color: var(--primary);">Criminology</strong>
+            <strong>70.5%</strong>
+            </div>
+            <div style="background: #e9ecef; height: 8px; border-radius: 4px; overflow: hidden;">
+            <div style="background: var(--primary); width: 70.5%; height: 100%;"></div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+            <!-- Section Payment Compliance Table -->
+            <div style="background: white; border: 1px solid #e9ecef; border-radius: 8px; padding: 25px; margin-top: 30px;">
+            <h3 style="margin: 0 0 10px 0; font-size: 18px;">Section Payment Compliance</h3>
+            <p style="color: #6c757d; margin-bottom: 20px; font-size: 14px;">22 sections shown</p>
+            
+            <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+            <tr style="background: #f8f9fa; border-bottom: 2px solid #dee2e6;">
+            <th style="padding: 12px; text-align: left; font-weight: 600;">Section</th>
+            <th style="padding: 12px; text-align: left; font-weight: 600;">Course Code</th>
+            <th style="padding: 12px; text-align: left; font-weight: 600;">Campus</th>
+            <th style="padding: 12px; text-align: left; font-weight: 600;">College</th>
+            <th style="padding: 12px; text-align: center; font-weight: 600;">Enrolled</th>
+            <th style="padding: 12px; text-align: center; font-weight: 600;">Paid</th>
+            <th style="padding: 12px; text-align: center; font-weight: 600;">Compliance</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr style="border-bottom: 1px solid #f1f3f4;">
+            <td style="padding: 12px;">LFUA111100</td>
+            <td style="padding: 12px;">CC03</td>
+            <td style="padding: 12px;">Cainta</td>
+            <td style="padding: 12px;">CCS</td>
+            <td style="padding: 12px; text-align: center;">36</td>
+            <td style="padding: 12px; text-align: center;">24</td>
+            <td style="padding: 12px; text-align: center;"><span style="background: #f8d7da; color: #721c24; padding: 4px 8px; border-radius: 4px; font-size: 12px;">66.7%</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #f1f3f4;">
+            <td style="padding: 12px;">LFUA111101</td>
+            <td style="padding: 12px;">SOFAPP</td>
+            <td style="padding: 12px;">Antipolo</td>
+            <td style="padding: 12px;">COE</td>
+            <td style="padding: 12px; text-align: center;">35</td>
+            <td style="padding: 12px; text-align: center;">26</td>
+            <td style="padding: 12px; text-align: center;"><span style="background: #d4edda; color: #155724; padding: 4px 8px; border-radius: 4px; font-size: 12px;">74.3%</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #f1f3f4;">
+            <td style="padding: 12px;">LFUA111102</td>
+            <td style="padding: 12px;">CPPROG2</td>
+            <td style="padding: 12px;">Binangonan</td>
+            <td style="padding: 12px;">CBA</td>
+            <td style="padding: 12px; text-align: center;">33</td>
+            <td style="padding: 12px; text-align: center;">22</td>
+            <td style="padding: 12px; text-align: center;"><span style="background: #f8d7da; color: #721c24; padding: 4px 8px; border-radius: 4px; font-size: 12px;">66.7%</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #f1f3f4;">
+            <td style="padding: 12px;">LFUA111103</td>
+            <td style="padding: 12px;">WS1</td>
+            <td style="padding: 12px;">Cogeo</td>
+            <td style="padding: 12px;">CAS</td>
+            <td style="padding: 12px; text-align: center;">33</td>
+            <td style="padding: 12px; text-align: center;">23</td>
+            <td style="padding: 12px; text-align: center;"><span style="background: #f8d7da; color: #721c24; padding: 4px 8px; border-radius: 4px; font-size: 12px;">69.7%</span></td>
+            </tr>
+            </tbody>
+            </table>
             </div>
             </div>
             </div>
