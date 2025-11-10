@@ -938,7 +938,7 @@
             grid-template-columns: 120px repeat(7, 1fr);
             gap: 1px;
             background-color: var(--border-color);
-            border: 1px solid var(--border-color);
+            border: 3px solid var(--border-color);
             border-radius: var(--border-radius);
             overflow: hidden;
             margin-top: 20px;
@@ -949,7 +949,7 @@
             text-align: center;
             font-weight: 600;
             color: var(--text-color);
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 3px solid var(--border-color);
             }
             .time-slot {
             background-color: var(--card-bg);
@@ -958,13 +958,13 @@
             font-size: 12px;
             font-weight: 500;
             color: var(--gray);
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 3px solid var(--border-color);
             }
             .schedule-cell {
             background-color: var(--card-bg);
             padding: 8px;
             min-height: 60px;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 3px solid var(--border-color);
             position: relative;
             }
             .schedule-item {
@@ -8597,7 +8597,10 @@
             <div class="card uniform-category-card">
             <div class="card-header">
             <div>
-            
+            <h2 class="card-title">
+            <i class="fas fa-school"></i> Senior High School Uniform
+            </h2>
+            <p class="card-subtitle">SHS Uniforms</p>
             </div>
             </div>
             <div class="uniform-grid-professional">
@@ -8657,212 +8660,185 @@
             <!-- Account Section -->
             <div id="account" class="content-section">
             <div class="breadcrumb">
-            <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Account & Settlements</span>
+            <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Availability & Subject Preferences</span>
             </div>
-            <h1 class="page-title">Account & Settlements</h1>
-            <div class="account-summary">
-              <div class="account-card">
-            <h3>Tuition</h3>
-            <div class="amount" style="color: #667eea;">₱ 5,000.00</div>
-            <br><br><p>2nd Trime</p>
+            <h1 class="page-title">Faculty Availability & Subject Preferences Form</h1>
+            
+            <!-- Form Container -->
+            <div class="card" style="max-width: 900px; margin: 0 auto;">
+            <div style="padding: 30px;">
+            
+            <!-- Form Header -->
+            <div style="text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid var(--border-color);">
+            <h2 style="font-size: 18px; font-weight: 700; margin: 0 0 10px 0; color: var(--text-color);">FACULTY AVAILABILITY & SUBJECT PREFERENCES FORM</h2>
+            <div style="display: flex; justify-content: center; gap: 20px; font-size: 14px; color: var(--text-muted);">
+            <label style="display: flex; align-items: center; gap: 5px;">
+            <input type="radio" name="employment-type" value="full-time" checked>
+            <span>FULL-TIME</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 5px;">
+            <input type="radio" name="employment-type" value="part-time">
+            <span>PART-TIME</span>
+            </label>
             </div>
-            <div class="account-card">
-            <h3>Lab</h3>
-            <div class="amount" style="color: #667eea; font-size: 1em;"><p>Lab 1: ₱1,000.00<br>Lab 2: ₱1,000.00<br>Lab 3: ₱1,000.00<br>Lab 4: ₱1,000.00</p><hr>
+            <p style="font-size: 13px; margin: 10px 0 0 0; color: var(--text-muted);">Trimestre, Academic Year 20___ - 20___</p>
             </div>
-            <p>Laboratory Fees</p>
+
+            <!-- Personal Information Section -->
+            <div style="margin-bottom: 30px;">
+            <h3 style="font-size: 14px; font-weight: 600; color: var(--text-muted); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;">Personal Information</h3>
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 15px; margin-bottom: 15px;">
+            <div>
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: var(--text-color);">NAME:</label>
+            <input type="text" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
             </div>
-            <div class="account-card">
-            <h3>Miscellaneous (Others)</h3>
-            <div class="amount" style="color:#667eea; font-size: 1em;">Books: ₱1,500.00<br>ID: ₱500.00<br>Insurance: ₱1,500.00</div>
-            </div>
-            <div class="account-card">
-            <h3>Penalties & Surcharges</h3>
-            <div class="amount" style="color:#DE0000;">₱ 500.00</div>
-            <p>Late Payment Fees</p>
-            </div>
-            <div class="account-card">
-            <h3>Amount Due</h3>
-            <div class="amount amount-due" style="color:#DE0000;">₱ 13,000</div>
-            <p>Total Outstanding Due</p>
-            </div>
-            <div class="account-card">
-            <h3>Total Payment</h3>
-            <div class="amount amount-paid">₱ 7,079.70</div>
-            <p>As of 10/06/25</p>
-            </div>
-            <div class="account-card">
-            <h3>Account Balance</h3>
-            <div class="amount amount-balance" style=color:#DE0000;>₱ 5,920.3</div>
-            <p>Total Outstanding Balance</p>
+            <div>
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: var(--text-color);">DATE:</label>
+            <input type="date" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
             </div>
             </div>
-            <div class="account-content-grid">
-            <div class="payment-methods-section">
-            <div class="card">
-            <div class="card-header">
-            <h2 class="card-title">Payment Methods</h2>
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 15px; margin-bottom: 15px;">
+            <div>
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: var(--text-color);">ADDRESS:</label>
+            <input type="text" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
             </div>
-            <div class="payment-options">
-            <div class="payment-card gcash">
-            <div class="payment-icon">
-            <img src="https://cdn.manilastandard.net/wp-content/uploads/2025/08/gcash-logo-300x300.png" alt="GCash" style="width: 150x; height: 150px; object-fit: contain; border-radius: 15px 15px 15px 15px">
-            </div>
-            <h3>GCash</h3>
-            <p>Pay instantly using your GCash account</p>
-            <button class="pay-btn" id="pay-with-gcash">
-            <i class="fas fa-wallet"></i> Pay with GCash
-            </button>
-            </div>
-            <div class="payment-card">
-            <div class="payment-icon">
-            <img src="https://clipground.com/images/7eleven-logo-5.png" alt="7/11" style="width: 160px; height: 160px; object-fit: contain; border-radius: 15px 15px 15px 15px;">
-            </div>
-            <h3>7/11</h3>
-            <p>Pay at any 7/11 store location</p>
-            <button class="pay-btn" style="background-color: var(--primary);">
-            <i class="fas fa-map-marker-alt"></i> Pay at 7/11
-            </button>
-            </div>
-            <div class="payment-card">
-            <div class="payment-icon">
-            <img src="https://play-lh.googleusercontent.com/8ohEjlb3dzWnIjs7nMqEFiSEzadagMDe2SdnuRH9lI11AbmfsqdQb8bLN9_RvS8EUbE" alt="Palawan Pay" style="width: 170px; height: 170px; object-fit: contain; border-radius: 15px 15px 15px 15px">
-            </div>
-            <h3>Palawan Pay</h3>
-            <p>Pay using your Palawan Pay account</p>
-            <button class="pay-btn" style="background-color: #00AEEF;">
-            <i class="fas fa-wallet"></i> Pay with Palawan
-            </button>
-            </div>
-            <div class="payment-card">
-            <div class="payment-icon">
-            <img src="https://th.bing.com/th/id/R.a139b4b3b23e4421cbfca911fad00827?rik=ytNoTxpH1LFlLw&riu=http%3a%2f%2f2.bp.blogspot.com%2f-3qsjVBELep8%2fUfAeqa7iW0I%2fAAAAAAAABis%2fTUHbd3nC4ys%2fs640%2fcebuana_lhuillier-ph-logo.jpg&ehk=UGzmHBVLbVzndoRXA1dBEfGNZoUw5qLLX8nM57XjLEc%3d&risl=&pid=ImgRaw&r=0" alt="Cebuana Lhuillier" style="width: 200px; height: 170px; object-fit: contain; border-radius: 100px 100px 100px 100px">
-            </div>
-            <h3>Cebuana</h3>
-            <p>Pay at Cebuana Lhuillier branches</p>
-            <button class="pay-btn" style="background-color: #FF6B35;">
-            <i class="fas fa-map-marker-alt"></i> Pay at Cebuana
-            </button>
-            </div>
-            <div class="payment-card">
-            <div class="payment-icon">
-            <img src="https://promo.loadcentral.com.ph/wp-content/uploads/2017/03/mlhuillier.png" alt="M. Lhuillier" style="width: 200px; height: 200px; object-fit: contain; border-radius: 100px 100px 100px 100px">
-            </div>
-            <h3>M. Lhuillier</h3>
-            <p>Pay at M. Lhuillier branches</p>
-            <button class="pay-btn" style="background-color: #28a745;">
-            <i class="fas fa-map-marker-alt"></i> Pay at M. Lhuillier
-            </button>
-            </div>
-            <div class="payment-card">
-            <div class="payment-icon">
-            <img src="https://cdn4.iconfinder.com/data/icons/simple-peyment-methods/512/bank_transfer-512.png" alt="Bank Transfer" style="width: 200px; height:200px; object-fit: contain; border-radius: 10px 10px 10px 10px;">
-            </div>
-            <h3>Bank Transfer</h3>
-            <p>Bank to bank transfer</p>
-            <button class="pay-btn" style="background-color: var(--success);">
-            <i class="fas fa-exchange-alt"></i> Bank Transfer
-            </button>
-            </div>
-            <div class="payment-card">
-            <div class="payment-icon">
-            <img src="https://static.vecteezy.com/system/resources/previews/015/805/745/original/credit-card-icon-isolated-credit-debit-card-bank-card-symbol-sign-free-vector.jpg" alt="Credit/Debit Card" style="width: 200px; height:200px; object-fit: containg; border-radius: 100px 100px 100px 100px">
-            </div>
-            <h3>Credit/Debit Card</h3>
-            <p>Visa/Master cards</p>
-            <button class="pay-btn" style="background-color: var(--primary);">
-            <i class="fas fa-credit-card"></i> Pay with Card
-            </button>
+            <div>
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: var(--text-color);">CONTACT #:</label>
+            <input type="text" style="width: 100%; padding: 10px; border: 1px solid #2196F3; border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
             </div>
             </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+            <div>
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: var(--text-color);">DEGREE:</label>
+            <input type="text" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
+            </div>
+            <div>
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: var(--text-color);">MAJOR:</label>
+            <input type="text" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
             </div>
             </div>
-            <div class="account-documents-section">
-            <div class="card">
-            <div class="card-header">
-            <h2 class="card-title">Account Documents</h2>
+            <div style="margin-top: 15px;">
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: var(--text-color);">MINOR:</label>
+            <input type="text" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
             </div>
-            <div class="account-docs-vertical">
-            <div class="doc-card" id="tentative-assessment">
-            <div class="doc-icon">
-            <i class="fas fa-calculator"></i>
             </div>
-            <h3>Tentative Assessment</h3>
-            <p>View your tentative tuition and fees</p>
-            <button class="doc-btn">
-            <i class="fas fa-eye"></i> View Assessment
-            </button>
+
+            <!-- I. Subject that can be taught Section -->
+            <div style="margin-bottom: 30px;">
+            <h3 style="font-size: 14px; font-weight: 600; color: var(--text-muted); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;">I. Subject that can be taught in decreasing order of priority</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+            <div>
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: var(--text-color);">1.</label>
+            <input type="text" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
             </div>
-            <div class="doc-card" id="ledger">
-            <div class="doc-icon">
-            <i class="fas fa-file-invoice-dollar"></i>
+            <div>
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: var(--text-color);">2.</label>
+            <input type="text" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
             </div>
-            <h3>Student Ledger</h3>
-            <p>View your complete payment history</p>
-            <button class="doc-btn">
-            <i class="fas fa-eye"></i> View Ledger
-            </button>
+            <div>
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: var(--text-color);">3.</label>
+            <input type="text" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
             </div>
-            <div class="doc-card" id="orf-doc">
-            <div class="doc-icon">
-            <i class="fas fa-file-contract"></i>
+            <div>
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: var(--text-color);">4.</label>
+            <input type="text" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
             </div>
-            <h3>Official Registration Form (ORF)</h3>
-            <p>View and download your official registration form</p>
-            <button class="doc-btn" id="orf-download-btn">
-            <i class="fas fa-download"></i> Download for Free
-            </button>
+            <div>
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: var(--text-color);">5.</label>
+            <input type="text" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
             </div>
+            <div>
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: var(--text-color);">6.</label>
+            <input type="text" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
+            </div>
+            <div>
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: var(--text-color);">7.</label>
+            <input type="text" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
+            </div>
+            <div>
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: var(--text-color);">8.</label>
+            <input type="text" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
             </div>
             </div>
             </div>
 
+            <!-- II. Subject previously taught Section -->
+            <div style="margin-bottom: 30px;">
+            <h3 style="font-size: 14px; font-weight: 600; color: var(--text-muted); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;">II. Subject previously taught</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+            <div>
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: var(--text-color);">IN ICCT</label>
+            <textarea style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px; min-height: 100px; resize: vertical;"></textarea>
             </div>
-            <div class="card">
-            <div class="card-header">
-            <h2 class="card-title">Payment History / Student Ledger</h2>
+            <div>
+            <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: var(--text-color);">IN OTHER SCHOOL</label>
+            <textarea style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px; min-height: 100px; resize: vertical;"></textarea>
             </div>
-            <div class="table-container">
-            <table>
+            </div>
+            </div>
+
+            <!-- III. Full time employment Section -->
+            <div style="margin-bottom: 30px;">
+            <h3 style="font-size: 14px; font-weight: 600; color: var(--text-muted); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;">III. Full time employment (Other activities / business other than ICCT)</h3>
+            <div class="table-container" style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse;">
             <thead>
-            <tr>
-              <b>
-            <th>DATE</th>
-            <th>DESCRIPTION</th>
-            <th>REFERENCE NO.</th>
-            <th>DEBIT</th>
-            <th>CREDIT</th>
-            <th>BALANCE</th>
-            </b>
+            <tr style="background: var(--card-bg); border-bottom: 2px solid var(--border-color);">
+            <th style="padding: 12px; text-align: left; font-size: 13px; font-weight: 600; color: var(--text-color); border: 1px solid var(--border-color);">NAME OF ACTIVITIES / BUSINESS</th>
+            <th style="padding: 12px; text-align: left; font-size: 13px; font-weight: 600; color: var(--text-color); border: 1px solid var(--border-color);">TYPE OF WORK</th>
+            <th style="padding: 12px; text-align: left; font-size: 13px; font-weight: 600; color: var(--text-color); border: 1px solid var(--border-color);">STATUS</th>
+            <th style="padding: 12px; text-align: left; font-size: 13px; font-weight: 600; color: var(--text-color); border: 1px solid var(--border-color);">SCHEDULE</th>
+            <th style="padding: 12px; text-align: left; font-size: 13px; font-weight: 600; color: var(--text-color); border: 1px solid var(--border-color);">TIME</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-            <td>Aug 12, 2025</td>
-            <td>(Pending) Cash - Full payment with discount</td>
-            <td>UA292889</td>
-            <td>₱ 6,953.00</td>
-            <td></td>
-            <td></td>
+            <td style="padding: 10px; border: 1px solid var(--border-color);"><input type="text" style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; background: var(--card-bg); color: var(--text-color); font-size: 13px;"></td>
+            <td style="padding: 10px; border: 1px solid var(--border-color);"><input type="text" style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; background: var(--card-bg); color: var(--text-color); font-size: 13px;"></td>
+            <td style="padding: 10px; border: 1px solid var(--border-color);"><input type="text" style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; background: var(--card-bg); color: var(--text-color); font-size: 13px;"></td>
+            <td style="padding: 10px; border: 1px solid var(--border-color);"><input type="text" style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; background: var(--card-bg); color: var(--text-color); font-size: 13px;"></td>
+            <td style="padding: 10px; border: 1px solid var(--border-color);"><input type="text" style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; background: var(--card-bg); color: var(--text-color); font-size: 13px;"></td>
             </tr>
             <tr>
-            <td>Aug 13, 2025</td>
-            <td>(Payed) Cash - Full payment with discount</td>
-            <td>UA292889</td>
-            <td> </td>
-            <td>₱ 7,079.70</td>
-            <td>₱ 126.70</td>   
+            <td style="padding: 10px; border: 1px solid var(--border-color);"><input type="text" style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; background: var(--card-bg); color: var(--text-color); font-size: 13px;"></td>
+            <td style="padding: 10px; border: 1px solid var(--border-color);"><input type="text" style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; background: var(--card-bg); color: var(--text-color); font-size: 13px;"></td>
+            <td style="padding: 10px; border: 1px solid var(--border-color);"><input type="text" style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; background: var(--card-bg); color: var(--text-color); font-size: 13px;"></td>
+            <td style="padding: 10px; border: 1px solid var(--border-color);"><input type="text" style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; background: var(--card-bg); color: var(--text-color); font-size: 13px;"></td>
+            <td style="padding: 10px; border: 1px solid var(--border-color);"><input type="text" style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; background: var(--card-bg); color: var(--text-color); font-size: 13px;"></td>
             </tr>
             <tr>
-            <td>Sep 23, 2025</td>
-            <td>(Pending) Graduation Fee - Early Bird</td>
-            <td>UA303974</td>
-            <td>₱ 1,800.00</td>
-            <td></td>
-            <td>₱ 126.70</td>
+            <td style="padding: 10px; border: 1px solid var(--border-color);"><input type="text" style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; background: var(--card-bg); color: var(--text-color); font-size: 13px;"></td>
+            <td style="padding: 10px; border: 1px solid var(--border-color);"><input type="text" style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; background: var(--card-bg); color: var(--text-color); font-size: 13px;"></td>
+            <td style="padding: 10px; border: 1px solid var(--border-color);"><input type="text" style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; background: var(--card-bg); color: var(--text-color); font-size: 13px;"></td>
+            <td style="padding: 10px; border: 1px solid var(--border-color);"><input type="text" style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; background: var(--card-bg); color: var(--text-color); font-size: 13px;"></td>
+            <td style="padding: 10px; border: 1px solid var(--border-color);"><input type="text" style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px; background: var(--card-bg); color: var(--text-color); font-size: 13px;"></td>
             </tr>
             </tbody>
             </table>
+            </div>
+            </div>
+
+            <!-- Agreement Statement -->
+            <div style="margin-bottom: 25px; padding: 15px; background: var(--hover-bg); border-left: 3px solid var(--primary); border-radius: 6px;">
+            <p style="font-size: 13px; line-height: 1.6; color: var(--text-color); margin: 0;">
+            I understand that this form will serve as a guide or reference in the preparation of my load. This also serves to confirm my intent to teach this <span style="text-decoration: underline;">Trimestre, A.Y. 20___ - 20___</span>. By affixing my signature to this date, I hereby declare that I will not be connected with any educational institution, person or with government, and give ICCT Colleges the permission to assign to me a teaching load for the coming trimester following all information stated above as full time ICCT Faculty member. Should the need arise for change of employment status, the undersigned agrees to write to the President of ICCT a formal letter of request, applied for approval.
+            </p>
+            </div>
+
+            <!-- Signature Section -->
+            <div style="margin-top: 40px; text-align: center;">
+            <div style="display: inline-block; min-width: 300px; border-bottom: 2px solid var(--text-color); padding-bottom: 5px; margin-bottom: 10px;">
+            </div>
+            <p style="font-size: 13px; font-weight: 600; color: var(--text-color); margin: 0;">Signature over Printed Name</p>
+            </div>
+
+            <!-- Submit Button -->
+            <div style="margin-top: 30px; text-align: center;">
+            <button class="btn btn-primary" style="padding: 12px 40px; font-size: 15px; font-weight: 600; border-radius: 6px;">
+            <i class="fas fa-paper-plane"></i> Submit Form
+            </button>
+            </div>
+
             </div>
             </div>
             </div>
