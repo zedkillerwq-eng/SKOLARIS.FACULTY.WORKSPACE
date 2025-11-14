@@ -6388,6 +6388,13 @@
             .calendar-step-content.active {
             display: block;
             }
+            .calendar-table tbody td {
+            min-height: 50px;
+            }
+            .calendar-table th:first-child,
+            .calendar-table td:first-child {
+            width: 200px;
+            }
             </style>
             </head>
             <body>
@@ -8971,118 +8978,59 @@
         </div>    <!-- Uniforms Section -->
             <div id="uniforms" class="content-section">
             <div class="breadcrumb">
-            <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Uniforms Compliance</span>
+            <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Faculty Uniform</span>
             </div>
-            <h1 class="page-title">Uniform Compliance</h1>
-            <!-- Program Type Toggle -->
-        
-            <!-- College Uniforms -->
-            <div id="college-uniform-options" class="uniform-section-container" style="display:none;">
-            <!-- Academic Programs -->
+            <h1 class="page-title">Faculty Uniform</h1>
+            
+            <!-- Faculty Uniform Section -->
             <div class="card uniform-category-card">
             <div class="card-header">
             <div>
-            <h2 class="card-title">
-            <i class="fas fa-user-graduate"></i> College of Computer Studies
-            </h2>
-            <p class="card-subtitle">Enrolled Program (BSIT)</p>
-            </div>
-            </div>
-            <div class="uniform-grid-professional">
-            <div class="uniform-card uniform-option selected-program" data-program="BSIT" data-category="college">
-            <div class="uniform-image-container" style="width: 100%; height: 250px; overflow: hidden; border-radius: 8px 8px 0 0; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; background: #f5f5f5;">
-            <img src="https://raw.githubusercontent.com/Colinn2/ICCT-STORE/main/images/boy%20unif.png" alt="BSIT Uniform Male" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-            </div>
-            <h3 class="uniform-card-title">BSIT</h3>
-            <p class="uniform-card-description">BS Information Technology</p>
-            <div class="uniform-card-badge">
-            <i class="fas fa-check-circle"></i> Completed
-            </div>
-            </div>
-            <div class="uniform-card uniform-option selected-program" data-program="NSTP" data-category="college">
-            <div class="uniform-image-container" style="width: 100%; height: 250px; overflow: hidden; border-radius: 8px 8px 0 0; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; background: #f5f5f5;">
-            <img src="https://raw.githubusercontent.com/Colinn2/ICCT-STORE/main/images/boy%20unif.png" alt="NSTP Uniform" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-            </div>
-            <h3 class="uniform-card-title">NSTP</h3>
-            <p class="uniform-card-description">National Service Training Program</p>
-            <div class="uniform-card-badge">
-            <i class="fas fa-check-circle"></i> Completed
-            </div>
-            </div>
-            <div class="uniform-card uniform-option selected-program" data-program="COLLEGE P.E" data-category="college">
-            <div class="uniform-image-container" style="width: 100%; height: 250px; overflow: hidden; border-radius: 8px 8px 0 0; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; background: #f5f5f5;">
-            <img src="https://raw.githubusercontent.com/Colinn2/ICCT-STORE/main/images/pe%20icct.png" alt="College P.E. Uniform" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-            </div>
-            <h3 class="uniform-card-title">College P.E.</h3>
-            <p class="uniform-card-description">Physical Education</p>
-            <div class="uniform-card-badge">
-            <i class="fas fa-check-circle"></i> Completed
-            </div>
-            </div>
-            </div>
-            </div>
-            </div>
-            <!-- SHS Uniforms -->
-            <div id="shs-uniform-options" class="uniform-section-container" style="display:none;">
-            <!-- SHS Uniform -->
-            <div class="card uniform-category-card">
-            <div class="card-header">
-            <div>
-            <h2 class="card-title">
-            <i class="fas fa-school"></i> Senior High School Uniform
-            </h2>
-            <p class="card-subtitle">SHS Uniforms</p>
-            </div>
+           <div style="display:flex; justify-content:center; width:100%">
+
+    <h2 class="card-title">
+        <i class="fas fa-user-tie"></i> BSIT Faculty Uniform
+        <div 
+            style="
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+                margin: 20px 0;
+            "
+        >
+            <div style="flex: 1; height: 1.5px; background: #ccc;"></div>
+
+            <span 
+                style="
+                    text-align: center;
+                    font-size: 18px; 
+                    font-weight: 600; 
+                    color: #333;
+                    white-space: nowrap;
+                "
+            >
+                Faculty Uniform
+            </span>
+
+            <div style="flex: 1; height: 1.5px; background: #ccc;"></div>
+        </div>
+    </h2>
+
+</div>
+    <div style="flex: 1; height: 1.5px; background: #ccc;"></div>
+</div></div>
             </div>
             <div class="uniform-grid-professional">
-            <div class="uniform-card uniform-option" data-program="SHS Uniform" data-category="shs">
+            <div class="uniform-card uniform-option selected-program" data-program="BSIT Faculty" data-category="faculty">
             <div class="uniform-image-container" style="width: 100%; height: 250px; overflow: hidden; border-radius: 8px 8px 0 0; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; background: #f5f5f5;">
-            <img src="https://raw.githubusercontent.com/Colinn2/ICCT-STORE/main/images/boy%20unif.png" alt="SHS Uniform" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+            <img src="https://raw.githubusercontent.com/Colinn2/ICCT-STORE/main/images/boy%20unif.png" alt="BSIT Faculty Uniform" style="max-width: 100%; max-height: 100%; object-fit: contain;">
             </div>
-            <h3 class="uniform-card-title">SHS Uniform</h3>
-            <p class="uniform-card-description">Senior High School Standard Uniform</p>
+            <h3 class="uniform-card-title">BSIT Faculty Uniform</h3>
+            <p class="uniform-card-description">BS Information Technology Faculty</p>
             <div class="uniform-card-badge">
-            <i class="fas fa-check-circle"></i> Selected
-            </div>
-            </div>
-            <div class="uniform-card uniform-option" data-program="SHS P.E" data-category="shs">
-            <div class="uniform-image-container" style="width: 100%; height: 250px; overflow: hidden; border-radius: 8px 8px 0 0; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; background: #f5f5f5;">
-            <img src="https://raw.githubusercontent.com/Colinn2/ICCT-STORE/main/images/pe%20icct.png" alt="SHS P.E. Uniform" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-            </div>
-            <h3 class="uniform-card-title">SHS P.E.</h3>
-            <p class="uniform-card-description">Physical Education</p>
-            <div class="uniform-card-badge">
-            <i class="fas fa-check-circle"></i> Selected
-            </div>
-            </div>
-            </div>
-            </div>
-            </div>
-            <!-- Summary Card -->
-            <div class="card uniform-summary-card">
-            <div class="card-header">
-            <h2 class="card-title">
-            <i class="fas fa-clipboard-check"></i> Uniforms Summary
-            </h2>
-            </div>
-            <div class="uniform-summary-content">
-            <div class="summary-stat">
-            <div class="summary-stat-number" id="uniform-count">3</div>
-            <div class="summary-stat-label">Uniforms ACQUIRED</div>
-            </div>
-            <div class="summary-divider"></div>
-            <div class="summary-list" id="uniform-summary-list">
-            <div class="summary-item">
-            <i class="fas fa-check-circle"></i>
-            <span>BSIT Uniform</span>
-            </div>
-            <div class="summary-item">
-            <i class="fas fa-check-circle"></i>
-            <span>NSTP Uniform</span>
-            </div>
-            <div class="summary-item">
-            <i class="fas fa-check-circle"></i>
-            <span>College P.E.</span>
+            <i class="fas fa-check-circle"></i> Assigned
             </div>
             </div>
             </div>
@@ -9124,7 +9072,7 @@
             </div>
             <div>
             <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: var(--text-color);">DATE:</label>
-            <input type="date" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
+            <input type="text" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-color); font-size: 14px;">
             </div>
             </div>
             <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 15px; margin-bottom: 15px;">
@@ -9340,7 +9288,7 @@
                 <div style="background: var(--card-bg); border-radius: var(--border-radius); padding: 25px; box-shadow: var(--box-shadow); border: 1px solid var(--border-color);">
                     <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: var(--text-color);">1st Trimester Academic Period</h2>
                     <div style="overflow-x: auto;">
-                        <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 14px;" class="calendar-table">
                             <thead>
                                 <tr style="background: var(--table-header-bg);">
                                     <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">Date</th>
@@ -9554,12 +9502,12 @@
             <div id="calendar-step-2" class="calendar-step-content">
                 <div style="background: var(--card-bg); border-radius: var(--border-radius); padding: 25px; box-shadow: var(--box-shadow); border: 1px solid var(--border-color);">
                     <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: var(--text-color);">2nd Trimester Academic Period</h2>
-                    <div style="overflow-x: auto;">
-                        <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                    <div style="overflow-x: auto;"><table style="border-collapse: collapse; font-size" class="calendar-table">
+        
                             <thead>
                                 <tr style="background: var(--table-header-bg);">
-                                    <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">Date</th>
-                                    <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">Event</th>
+                                    <th style="padding: 10px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">Date</th>
+                                    <th style="padding: 10px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">Event</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -9614,7 +9562,7 @@
                 <div style="background: var(--card-bg); border-radius: var(--border-radius); padding: 25px; box-shadow: var(--box-shadow); border: 1px solid var(--border-color);">
                     <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: var(--text-color);">3rd Trimester Academic Period</h2>
                     <div style="overflow-x: auto;">
-                        <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 14px;" class="calendar-table">
                             <thead>
                                 <tr style="background: var(--table-header-bg);">
                                     <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">Date</th>
@@ -9681,7 +9629,7 @@
                 <div style="background: var(--card-bg); border-radius: var(--border-radius); padding: 25px; box-shadow: var(--box-shadow); border: 1px solid var(--border-color);">
                     <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: var(--text-color);">1st Semester Academic Period</h2>
                     <div style="overflow-x: auto;">
-                        <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 14px;" class="calendar-table">
                             <thead>
                                 <tr style="background: var(--table-header-bg);">
                                     <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">Date</th>
@@ -9764,7 +9712,7 @@
                 <div style="background: var(--card-bg); border-radius: var(--border-radius); padding: 25px; box-shadow: var(--box-shadow); border: 1px solid var(--border-color);">
                     <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: var(--text-color);">2nd Semester Academic Period</h2>
                     <div style="overflow-x: auto;">
-                        <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 14px;" class="calendar-table">
                             <thead>
                                 <tr style="background: var(--table-header-bg);">
                                     <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">Date</th>
@@ -9866,8 +9814,16 @@
             <h1 class="page-title">Clearance Status</h1>
             <div class="card">
             <div class="card-header">
-            <h2 class="card-title">Clearance Progress</h2>
+            <h2 class="card-title">Clearance Progress:</h2>
+&nbsp;
+<div class="clearance-progress">
+<div class="clearance-progress-fill" style="width: 85%"></div>
+</div> &nbsp; <span>85%</span>
+
+            <div class="progress-bar"><div style="width: 85%; height: 100%; background-color: green; border-radius: 4px;"></div>
             </div>
+            </div>
+            
             <div class="clearance-note"> <h2 class="card-title">
                         <span>Academic Year:</span>
                         <span style="font-weight: 100; font-size:15px;">2025-2026</span>
