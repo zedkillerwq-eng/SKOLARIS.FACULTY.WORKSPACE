@@ -6347,6 +6347,47 @@
                 width: 100%;
             }
             }
+            /* Calendar Sidebar Styles */
+            .calendar-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            }
+            .calendar-step {
+            padding: 15px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            background: rgba(0, 0, 0, 0.02);
+            border: 1px solid transparent;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            color: var(--text-color);
+            }
+            .calendar-step:hover {
+            background: rgba(0, 0, 0, 0.05);
+            border-color: var(--border-color);
+            }
+            .calendar-step i {
+            margin-right: 12px;
+            width: 16px;
+            text-align: center;
+            }
+            .calendar-step.calendar-active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            }
+            .calendar-step:nth-child(4) {
+            margin-top: 20px;
+            }
+            .calendar-step-content {
+            display: none;
+            }
+            .calendar-step-content.active {
+            display: block;
+            }
             </style>
             </head>
             <body>
@@ -6593,23 +6634,23 @@
             <div class="stat-card">
             <div style="display:grid; gap:8px; padding:8px 12px;">
             <div style="display:flex; justify-content:space-between; align-items:center;">
-            <span style="font-weight:600;">Certificate of Training</span>
+            <span style="font-weight:600;">Certificate of Seminar</span>
             <span style="font-weight:700; color:var(--primary);"><hr style="border:0; height:6px; width:60px; background:var(--primary); margin:0;"></span>
             </div>
             <div style="display:flex; justify-content:space-between; align-items:center;">
-            <span style="font-weight:600;">Certification of Eligibility</span>
+            <span style="font-weight:600;">Certification of Credential</span>
             <span style="font-weight:700; color:var(--primary);"><hr style="border:0; height:6px; width:60px; background:var(--primary); margin:0;"></span>
             </div>
             <div style="display:flex; justify-content:space-between; align-items:center;">
-            <span style="font-weight:600;">CEM</span>
+            <span style="font-weight:600;">Plaques</span>
             <span style="font-weight:700; color:var(--primary);"><hr style="border:0; height:6px; width:60px; background:var(--primary); margin:0;"></span>
             </div>
             <div style="display:flex; justify-content:space-between; align-items:center;">
-            <span style="font-weight:600;">PLM</span>
+            <span style="font-weight:600;">Awards</span>
             <span style="font-weight:700; color:var(--primary);"><hr style="border:0; height:6px; width:60px; background:var(--primary); margin:0;"></span>
             </div>
             <div style="display:flex; justify-content:space-between; align-items:center;">
-            <span style="font-weight:600;">Affidavit of Non-Membership</span>
+            <span style="font-weight:600;">Badges</span>
             <span style="font-weight:700; color:var(--primary);"><hr style="border:0; height:6px; width:60px; background:var(--primary); margin:0;"></span>
             </div>
             </div>
@@ -8024,7 +8065,7 @@
             <!-- Requirements Section -->
             <div id="requirements" class="content-section">
             <div class="breadcrumb">
-            <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Documents</span>
+            <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Credential Management</span>
             </div>
             <h1 class="page-title">Documents</h1>
             <div class="card">
@@ -8867,7 +8908,7 @@
             <h1 class="page-title">Faculty Availability & Subject Preferences Form</h1>
             
             <!-- Form Container -->
-            <div class="card" style="max-width: 900px; margin: 0 auto;">
+            <div class="card" style="max-width: 1100px; margin: 0 auto;">
             <div style="padding: 30px;">
             
             <!-- Form Header -->
@@ -9043,6 +9084,592 @@
             </div>
             </div>
             </div>
+            
+            
+<!--School Calendar Section-->
+
+<div id="NEW" class="content-section">
+    <div class="breadcrumb">
+        <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>School Calendar</span>
+    </div>
+    <h1 class="page-title">School Calendar</h1>
+    
+    <!-- Calendar Container -->
+    <div style="display: grid; grid-template-columns: 250px 1fr; gap: 30px; margin-top: 30px;">
+        <!-- Sidebar -->
+        <div style="background: var(--card-bg); border-radius: var(--border-radius); padding: 20px; box-shadow: var(--box-shadow); border: 1px solid var(--border-color);">
+            <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 20px; color: var(--text-color);">Trimester</h3>
+            <div class="calendar-sidebar">
+                <div id="calendar-1" class="calendar-step calendar-active" onclick="showMonthlyView()">
+                    <i class="fas fa-calendar"></i> 1st Trimester
+                </div>
+                <div id="calendar-2" class="calendar-step" onclick="showWeeklyView()">
+                    <i class="fas fa-calendar"></i> 2nd Trimester
+                </div>
+                <div id="calendar-3" class="calendar-step" onclick="showDailyView()">
+                    <i class="fas fa-calendar"></i> 3rd Trimester
+                </div>
+                <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 10px; margin-top: 20px; color: var(--text-color);">Semester</h3>
+                <div id="calendar-4" class="calendar-step" onclick="showEvents()">
+                    <i class="fas fa-calendar-check"></i> 1st Semester
+                </div>
+                <div id="calendar-5" class="calendar-step" onclick="showSettings()">
+                    <i class="fas fa-calendar"></i> 2nd Semester
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Calendar Content Area -->
+        <div>
+            <!-- 1st Trimester Content -->
+            <table>
+            <thead>
+    <tr style="background: var(--table-header-bg);">
+        <th style="padding: 8px; text-align: left; border: 1px solid var(--border-color); font-weight: 100;background-color:
+#F7C7AC; color: var(--text-color)">November 13, 2025</th>
+        <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 100;background-color:
+#F7C7AC; color: var(--text-color)">ACAD Meeting</th>
+    </tr>
+    
+    
+<tr style="background: var(--table-header-bg); height:80px;">
+    <th style="padding: 8px; text-align: left; border: 1px solid var(--border-color); font-weight:800px; background-color:
+#92D050; font-size:16px;color: var(--text-color); ">November 15, 2025</th>
+    <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 800px;background-color:
+#92D050; font-size:16px;color: var(--text-color);" >ODEL Meeting</th>
+</tr>
+    
+    <tr style="background: var(--table-header-bg);">
+        <th style="padding: 8px; text-align: left; border: 1px solid var(--border-color); font-weight: 100; background-color:
+#F7C7AC; color: var(--text-color);">November 15, 2025</th>
+        <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 100;background-color:
+#F7C7AC; color: var(--text-color)">ODEL Meeting</th>
+    </tr>
+    </table>
+    <br>
+</thead>
+            <div id="calendar-step-1" class="calendar-step-content active">
+                <div style="background: var(--card-bg); border-radius: var(--border-radius); padding: 25px; box-shadow: var(--box-shadow); border: 1px solid var(--border-color);">
+                    <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: var(--text-color);">1st Trimester Academic Period</h2>
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                            <thead>
+                                <tr style="background: var(--table-header-bg);">
+                                    <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">Date</th>
+                                    <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">Event</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); color: #28a745;">August 10, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); color: #28a745;">COED: Cascade Training and Planning Ceremony</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); color: #28a745;">Aug 12, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); color: #28a745;"></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600;">August 13, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600;">Start of Classes</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">August 13, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">COED: OJT Deployment and start of Review Tutorial</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">August 15, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">COED: General Orientation (1st year and 2nd year level) and Pre-Service Teacher Deployment (3rd Year level)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">August 15 to 16, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">COED: Integration Week 1</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">August 20 to 23, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Student Social Week Campus-Wide</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">August 20, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Dropping of Subjects with Refund (10% Surcharge)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">August 21, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">Ninoy Aquino Day</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">August 25, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">National Heroes Day</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">August 26 to 30, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">NSTP General Orientation per College and per Campus</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">August 26 to September 6, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">General Assembly</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">August 26, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">CCS : General Assembly – All levels (Morning and Afternoon Session)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">August 27, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">COEDT: General Assembly</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">August 27, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Dropping of Subjects with Refund (20% Surcharge)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">August 28, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">ISHTM: General Assembly (1st year and 2nd year level)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">August 29, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">CCS: CES Free Workshop for CCS Students</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">August 29, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Araw ng Wika 2025</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">August 30, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">COCA: The 2nd BSC 3rd Year Rank Pinning Ceremony – Class of <span style="font-weight: 600;">Maharilka</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">September 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">COEDT: IFCEP Interscholastic Quiz Show and Student Summit</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">September 1, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">ISHTM: General Assembly (3rd year and 4th year level)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">September 2, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">CAS: General Assembly (1st year to 4th year level)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">September 3 to 4, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">COCA: General Assembly (1st year to 4th year level)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">September 5, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">CCS: ICSO Free Workshop for CCS Students</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">September 5 to 6, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">COED: Final Coaching</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">September 7, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">NSTP: 1st Batch of CWTS Community Clean-Up Drive</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">September 8 to 9, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">CBA: General Assembly (1st year to 4th year level)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">September 9, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">San Mateo Day Celebration (Special Holiday for San Mateo Campus)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">September 14, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">NSTP: 2nd Batch of CWTS Community Clean-Up Drive</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">September 17, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">CCS Seminar Series</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">September 24 to 30, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Special Topics Prelim Seminar: College of Business and Accountancy</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #ffc107;">September 20 to 23, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #ffc107;">Prelim Examination</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">September 16 & 17, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">CHS College Day 2025</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">September 24 to October 3, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Special Prelim Examination</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">September 24 to 27, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">SIP Orientation for Policies and Guidelines (for 2nd Trimester Academic Period process)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">September 28, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">NSTP: 3rd Batch of CWTS Community Clean-Up Drive</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">September 29, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Submission of Prelim EGrades</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">September 30 to October 2, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Finalized of SMS Prelim Grade</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">October 1 to 18, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">SIP Evaluation Period</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">October 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">COEDT: Philippine Statistics Quiz (PSQ)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">October 3, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">World Teachers' Day 2025</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">October 3 to 4, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">CoEd College Day 2025: Edu-ACTION</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">October 6 to 11, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">SIP Application Period (Google Form)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">October 6, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">NSTP: 4th Batch of CWTS Community Clean-Up Drive</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">October 10, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">CAS: BS Psychology Day 2025</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">October 12, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">NSTP: 5th Batch of CWTS Community Clean-Up Drive</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">October 13, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">The President's Day</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">October 13 to 25, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Special Topics Midterm Seminar: College of Business and Accountancy</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #ffc107;">October 19 to 22, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #ffc107;">Midterm Examination</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 2nd Trimester Content -->
+            <div id="calendar-step-2" class="calendar-step-content">
+                <div style="background: var(--card-bg); border-radius: var(--border-radius); padding: 25px; box-shadow: var(--box-shadow); border: 1px solid var(--border-color);">
+                    <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: var(--text-color);">2nd Trimester Academic Period</h2>
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                            <thead>
+                                <tr style="background: var(--table-header-bg);">
+                                    <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">Date</th>
+                                    <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">Event</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600;">November 4, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600;">Start of Classes (2nd Trimester)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">November 5-7, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">NSTP: Community Service Activities</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">November 10, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Dropping of Subjects with Refund (10% Surcharge)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">November 30, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">Bonifacio Day (Special Holiday)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">December 1-5, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Midterm Examinations</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">December 6, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Submission of Midterm Grades</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">December 8-12, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Christmas Break Begins</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">December 25, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">Christmas Day</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">December 30, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">Rizal Day</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">December 31, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">New Year's Eve</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 3rd Trimester Content -->
+            <div id="calendar-step-3" class="calendar-step-content">
+                <div style="background: var(--card-bg); border-radius: var(--border-radius); padding: 25px; box-shadow: var(--box-shadow); border: 1px solid var(--border-color);">
+                    <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: var(--text-color);">3rd Trimester Academic Period</h2>
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                            <thead>
+                                <tr style="background: var(--table-header-bg);">
+                                    <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">Date</th>
+                                    <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">Event</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600;">January 5, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600;">Start of Classes (3rd Trimester)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">January 1, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">New Year's Day</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">January 6-9, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">NSTP: Community Service Activities</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">January 10, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Dropping of Subjects with Refund (10% Surcharge)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">January 25, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">Chinese New Year (Special Holiday)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">February 1-5, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Midterm Examinations</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">February 6, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Submission of Midterm Grades</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">February 9, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">People Power Anniversary</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #ffc107;">March 1-5, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #ffc107;">Final Examinations</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">March 6, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Submission of Final Grades</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">March 15, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">Graduation Ceremony</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">March 16-31, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">Summer Break Begins</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 1st Semester Content -->
+            <div id="calendar-step-4" class="calendar-step-content">
+                <div style="background: var(--card-bg); border-radius: var(--border-radius); padding: 25px; box-shadow: var(--box-shadow); border: 1px solid var(--border-color);">
+                    <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: var(--text-color);">1st Semester Academic Period</h2>
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                            <thead>
+                                <tr style="background: var(--table-header-bg);">
+                                    <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">Date</th>
+                                    <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">Event</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600;">August 1-15, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600;">Enrollment Period</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600;">August 18, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600;">Start of Classes (1st Semester)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">August 25, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">National Heroes Day</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">August 19-22, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">NSTP: Civic Welfare Training Service</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">August 25, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Dropping of Subjects with Refund (10% Surcharge)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">September 1, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">New Society Anniversary</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">September 15-19, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Midterm Examinations</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">September 22, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Submission of Midterm Grades</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">October 31, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">All Saints' Day</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #ffc107;">November 10-14, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #ffc107;">Final Examinations</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">November 17, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Submission of Final Grades</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">November 30, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">Bonifacio Day</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">December 8-12, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">Christmas Break Begins</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">December 25, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">Christmas Day</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">December 30, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">Rizal Day</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">December 31, 2025</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">New Year's Eve</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 2nd Semester Content -->
+            <div id="calendar-step-5" class="calendar-step-content">
+                <div style="background: var(--card-bg); border-radius: var(--border-radius); padding: 25px; box-shadow: var(--box-shadow); border: 1px solid var(--border-color);">
+                    <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: var(--text-color);">2nd Semester Academic Period</h2>
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                            <thead>
+                                <tr style="background: var(--table-header-bg);">
+                                    <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">Date</th>
+                                    <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">Event</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600;">January 5, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600;">Start of Classes (2nd Semester)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">January 1, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">New Year's Day</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">January 6-9, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">NSTP: Community Service Activities</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">January 12, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Dropping of Subjects with Refund (10% Surcharge)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">January 25, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">Chinese New Year (Special Holiday)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">February 9, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">People Power Anniversary</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">February 16-20, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Midterm Examinations</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">February 23, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Submission of Midterm Grades</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">March 9, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">Lenten Season Begins</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #ffc107;">March 23-27, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #ffc107;">Final Examinations</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">March 30, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color);">Submission of Final Grades</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">April 2, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">Maundy Thursday</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">April 3, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">Good Friday</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">April 4, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">Black Saturday</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">April 9, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">Araw ng Kagitingan</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">April 13-17, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">Semestral Break Begins</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">May 1, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #28a745;">Labor Day</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">May 18-31, 2026</td>
+                                    <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: 600; color: #dc3545;">Summer Break Begins</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+            
+            
+            
+            
+            
             <!-- Clearance Section -->
             <div id="clearance" class="content-section">
             <div class="breadcrumb">
@@ -10413,7 +11040,7 @@
             <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>SkoLink</span>
             </div>
             <h1 class="page-title">SkoLink - Compose Message</h1>
-            <div class="card123" style="max-width: 800px; margin: 0 auto;">
+            <div class="card123" style="max-width: 1000px; margin: 0 auto;">
             <div class="skolink-compose-header">
             <h2><i class="fas fa-paper-plane"></i> Compose Message</h2>
             </div>
@@ -10687,9 +11314,10 @@
 
             </div>
             <!-- Payment Compliance Section -->
-            
             <div id="payment" class="content-section">
-            <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Payment Compliance</span>
+    <div class="breadcrumb">
+        <a href="#" data-section="dashboard">Dashboard</a> <i class="fas fa-chevron-right"></i> <span>Curriculum Prospectus</span>
+    </div>
             <h1 class="page-title">Payment Compliance</h1>
             <p style="color: var(--gray); margin-bottom: 20px;">For faculty viewing — real-time snapshot of who has paid on/before exam period.</p>
             
@@ -14555,6 +15183,48 @@
           console.warn('Failed to load saved emergency contact', e);
         }
       });
+      
+      // Calendar Sidebar Functions
+      function showMonthlyView() {
+        document.querySelectorAll('.calendar-step-content').forEach(content => content.classList.remove('active'));
+        document.querySelectorAll('.calendar-step').forEach(step => step.classList.remove('calendar-active'));
+        document.getElementById('calendar-step-1').classList.add('active');
+        document.getElementById('calendar-1').classList.add('calendar-active');
+      }
+      
+      function showWeeklyView() {
+        document.querySelectorAll('.calendar-step-content').forEach(content => content.classList.remove('active'));
+        document.querySelectorAll('.calendar-step').forEach(step => step.classList.remove('calendar-active'));
+        document.getElementById('calendar-step-2').classList.add('active');
+        document.getElementById('calendar-2').classList.add('calendar-active');
+      }
+      
+      function showDailyView() {
+        document.querySelectorAll('.calendar-step-content').forEach(content => content.classList.remove('active'));
+        document.querySelectorAll('.calendar-step').forEach(step => step.classList.remove('calendar-active'));
+        document.getElementById('calendar-step-3').classList.add('active');
+        document.getElementById('calendar-3').classList.add('calendar-active');
+      }
+      
+      function showEvents() {
+        document.querySelectorAll('.calendar-step-content').forEach(content => content.classList.remove('active'));
+        document.querySelectorAll('.calendar-step').forEach(step => step.classList.remove('calendar-active'));
+        document.getElementById('calendar-step-4').classList.add('active');
+        document.getElementById('calendar-4').classList.add('calendar-active');
+      }
+      
+      function showSettings() {
+        document.querySelectorAll('.calendar-step-content').forEach(content => content.classList.remove('active'));
+        document.querySelectorAll('.calendar-step').forEach(step => step.classList.remove('calendar-active'));
+        document.getElementById('calendar-step-5').classList.add('active');
+        document.getElementById('calendar-5').classList.add('calendar-active');
+      }
+      
+      // Initialize first calendar view as active
+      document.addEventListener('DOMContentLoaded', function() {
+        showMonthlyView();
+      });
             </script>
             </body>
             </html>
+            
